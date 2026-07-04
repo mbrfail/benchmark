@@ -1,0 +1,25 @@
+{
+  "target": "Qwen3.6-27B-NVFP4 (local, v4, 4K context)",
+  "model": "/home/tenglong/models/Qwen3.6-27B-NVFP4",
+  "summary": {
+    "passed": 147,
+    "failed": 17,
+    "total": 164,
+    "pass_rate": 89.6,
+    "total_time_seconds": 325.0,
+    "avg_time_per_problem": 1.98,
+    "avg_tok_s": 58.4,
+    "avg_latency_s": 1.70,
+    "avg_completion_tokens": 103
+  },
+  "description": "v4 script with import stripping + improved prompt. 4K context, 768 max_tokens. Reconstructed from terminal output (original file overwritten by 128K run).",
+  "config": {
+    "context_length": 4096,
+    "max_tokens": 768,
+    "temperature": 0.2,
+    "gpu_memory_utilization": 0.75,
+    "spec_method": "qwen3_5_mtp",
+    "spec_tokens": 3,
+    "enforce_eager": true
+  }
+}
