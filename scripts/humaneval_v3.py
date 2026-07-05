@@ -26,27 +26,17 @@ if TARGET == "deepseek":
         "headers": {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
     }
 elif TARGET == "gguf":
-    # Auto-detect model name from running server
-    import urllib.request
-    try:
-        resp = urllib.request.urlopen("http://localhost:8082/v1/models", timeout=5)
-        model_list = json.loads(resp.read())
-        model_name = model_list["data"][0]["id"]
-        print(f"  Auto-detected model: {model_name}")
-    except Exception as e:
-        print(f"  WARNING: Could not detect model name: {e}")
-        model_name = "gguf"
     CONFIG = {
-        "name": f"{model_name} (GGUF)",
-        "url": "http://localhost:8082/v1/chat/completions",
-        "model": model_name,
+        "name": "Qwen3.6-35B-A3B-UD-Q4_K_XL (GGUF)",
+        "url": "http://localhost:8081/v1/chat/completions",
+        "model": "gguf",
         "headers": {"Content-Type": "application/json"},
     }
 else:
     CONFIG = {
-        "name": "Qwen3.6-27B-NVFP4 (local)",
+        "name": "Qwen3.6-35B-A3B-NVFP4 (local)",
         "url": "http://localhost:8082/v1/chat/completions",
-        "model": "/home/tenglong/models/Qwen3.6-27B-NVFP4",
+        "model": "/home/tenglong/models/Qwen3.6-35B-A3B-NVFP4",
         "headers": {"Content-Type": "application/json"},
     }
 
@@ -233,7 +223,8 @@ if failed_results:
     for r in failed_results:
         err = r.get("error", "") or ""
         gen = r.get("generated_preview", "") or ""
-        print(f"\n  {r['task_id']} ({r['completion_tokens']} tok): ", end="")
+        ct = r.get("completion_tokens", 0)
+        print(f"\n  {r['task_id']} ({ct} tok): ", end="")
         # Show first line of error
         for line in err.split("\n"):
             line = line.strip()
