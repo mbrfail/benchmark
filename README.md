@@ -2,24 +2,38 @@
 
 Evaluating **Qwen3.6-27B** across 3 local backends (NVFP4/vLLM, GGUF Q4/llama.cpp, GGUF Q8/llama.cpp) vs **DeepSeek V4 Flash** (remote API) on the full [HumanEval+](https://github.com/evalplus/evalplus) test suite — 164 Python coding problems with edge-case test inputs. All local runs on RTX PRO 5000 (48 GB).
 
-## Quick Summary
+## Quick Summary — Qwen3.6-35B-A3B (MoE, recommended daily driver)
 
-| Model | Quant | Context | Pass@1 | Avg Time | Tok/s | Cost |
-|-------|:-----:|:-------:|:-----:|:--------:|:-----:|:----:|
-| **— vLLM (local)** | | | | | | |
-| Qwen3.6-27B | NVFP4 | 4,096 | **89.6%** | 1.98s | 58.4 | Free |
-| Qwen3.6-27B | NVFP4 | 65,536 | **89.6%** | 5.05s | 20.9 | Free |
-| Qwen3.6-27B | NVFP4 | 131,072 | **89.6%** | 5.55s | 20.7 | Free |
-| **— llama.cpp (GGUF, MTP spec)** | | | | | | |
-| Qwen3.6-27B | Q4_K_XL | 4,096 | **88.4%** | 1.22s | 80.6 | Free |
-| Qwen3.6-27B | Q4_K_XL | 65,536 | **87.8%** | 1.17s | 80.1 | Free |
-| Qwen3.6-27B | Q4_K_XL | 131,072 | **89.0%** | 1.17s | 81.5 | Free |
-| Qwen3.6-27B | Q8_K_XL | 4,096 | **89.6%** | 1.48s | 65.8 | Free |
-| Qwen3.6-27B | Q8_K_XL | 65,536 | **89.6%** | 1.52s | 65.1 | Free |
-| Qwen3.6-27B | Q8_K_XL | 131,072 | **90.2%** | 1.47s | 65.8 | Free |
-| Qwen3.6-27B | Q8_K_XL | 262,144 | **89.0%** | 1.52s | 65.5 | Free |
-| **— Remote API** | | | | | | |
-| DeepSeek V4 Flash | — | N/A | **87.8%** | 6.26s | 80.1 | API |
+| Quant | Ctx | MTP | Pass@1 | Speed | Time | VRAM |
+|:-----:|:---:|:---:|:------:|:-----:|:----:|:----:|
+| **Q4_K_XL** | **4K** | **✅** | 89.0% | **264 tok/s** | **1.9m** | 23.0 GB |
+| **Q4_K_XL** | **64K** | **✅** | 88.4% | **269 tok/s** | **1.8m** | 23.9 GB |
+| **Q4_K_XL** | **128K** | **✅** | **91.5%** | **268 tok/s** | **1.9m** | 23.9 GB |
+| Q4_K_XL | 4K | ✗ | 89.6% | 170 tok/s | 2.8m | 23.0 GB |
+| Q4_K_XL | 64K | ✗ | 90.2% | 170 tok/s | 2.8m | 23.9 GB |
+| Q4_K_XL | 128K | ✗ | 90.2% | 170 tok/s | 2.8m | 23.9 GB |
+| **Q8_K_XL** | **4K** | **✅** | 87.2% | **228 tok/s** | **1.9m** | 37.7 GB |
+| **Q8_K_XL** | **64K** | **✅*** | **90.9%** | **231 tok/s** | **1.9m** | 38.2 GB |
+| **Q8_K_XL** | **128K** | **✅*** | **90.9%** | **226 tok/s** | **1.9m** | 38.7 GB |
+| Q8_K_XL | 4K | ✗ | 89.0% | 154 tok/s | 3.1m | 37.7 GB |
+| Q8_K_XL | 64K | ✗* | 90.9% | 149 tok/s | 3.1m | 38.2 GB |
+| Q8_K_XL | 128K | ✗* | 89.6% | 155 tok/s | 3.1m | 38.7 GB |
+
+*\* Q8 64K/128K requires `--cache-type-k q4_0` to fit 48 GB VRAM.*
+
+**🏆 Best overall: Q4_K_XL + MTP @ 128K** — 268 tok/s, 91.5% accuracy, 24 GB VRAM
+
+## Qwen3.6-27B (Dense) — Legacy Reference
+
+| Quant | Context | MTP | Pass@1 | Speed | Time |
+|:-----:|:-------:|:---:|:------:|:-----:|:----:|
+| Q4_K_XL | 4K | ✅ | 88.4% | 81 tok/s | 3.3m |
+| Q4_K_XL | 64K | ✅ | 87.8% | 80 tok/s | 3.2m |
+| Q4_K_XL | 128K | ✅ | 89.0% | 82 tok/s | 3.2m |
+| Q8_K_XL | 4K | ✅ | 89.6% | 66 tok/s | 4.0m |
+| Q8_K_XL | 64K | ✅ | 89.6% | 65 tok/s | 4.2m |
+| Q8_K_XL | 128K | ✅ | **90.2%** | 66 tok/s | 4.0m |
+| Q8_K_XL | 256K | ✅ | 89.0% | 66 tok/s | 4.1m |
 
 > **Key insight:** GGUF MTP (speculative decoding) fully decouples generation speed from context length. Q8 GGUF achieves the same Pass@1 as NVFP4 vLLM (89.6%) at 3× the speed, regardless of context length — even at 256K. This makes it the optimal configuration for practical use.
 >
