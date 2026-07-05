@@ -1,0 +1,43 @@
+==============================================
+  HumanEval+ Benchmark
+  Model:   Qwen3.6-35B-A3B-UD-Q4_K_XL-MTP
+  Context: 65536
+  Date:    Sat Jul  4 23:43:39 PDT 2026
+  Host:    Tengs-Mac-Studio.local
+  Chip:    Apple M3 Ultra
+==============================================
+🔄 Starting llama-server on port 8082 (ctx=65536, model=Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf)...
+  PID: 5713
+  Waiting for server...
+  Server ready after 2s
+🔄 Running HumanEval+ (164 problems)...
+/Users/tenglong/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+  Auto-detected model: /Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-8bit
+🧪 /Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-8bit (GGUF)
+📦 Loaded 164 HumanEval+ problems
+
+======================================================================
+  /Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-8bit (GGUF) — 164 problems
+======================================================================
+  Pass@1:              0/164 = 0.0%
+  Failed:              164
+  Total time:          0s (0.0m)
+  Avg per problem:     0.00s
+
+======================================================================
+  FAILURE BREAKDOWN (164):
+======================================================================
+  • Other: 164
+Traceback (most recent call last):
+  File "/Users/tenglong/benchmark-m3ultra/scripts/humaneval_v3.py", line 236, in <module>
+    print(f"\n  {r['task_id']} ({r['completion_tokens']} tok): ", end="")
+KeyError: 'completion_tokens'
+  Total elapsed: 1s (0m 1s)
+✅ Results saved to results/35b-a3b-q4xl_65536/20260704_234339.json
+✅ Server stopped
+==============================================
+  BENCHMARK COMPLETE
+  Results: results/35b-a3b-q4xl_65536/20260704_234339.json
+  Log:     results/35b-a3b-q4xl_65536/20260704_234339.log
+==============================================

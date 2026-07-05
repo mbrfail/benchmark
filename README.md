@@ -228,3 +228,59 @@ python3 scripts/humaneval_deepseek.py
 | NVFP4 (vLLM) | ~25 GiB | ~35 GiB | ~43 GiB | ~46 GiB | — |
 | Q4 GGUF (llama.cpp) | ~17 GiB | ~18 GiB | ~21 GiB | ~24 GiB | — |
 | Q8 GGUF (llama.cpp) | ~33 GiB | ~34 GiB | ~37 GiB | ~40 GiB | ~43 GiB |
+
+---
+
+## Apple M3 Ultra (macOS) Results
+
+Benchmarks on **Mac Studio (Mac15,14)** — Apple M3 Ultra (28-core CPU, 60-core GPU, 256 GB unified memory, 800 GB/s bandwidth), macOS 26.5.1, llama.cpp with Metal GPU offload (ngl 99) + MTP speculative decoding (spec-draft-n-max=3).
+
+### Results Table
+
+| Model | Ctx | Pass@1 | Avg tok/s | Avg time | Total time |
+|-------|:---:|:-----:|:---------:|:--------:|:----------:|
+| **— llama.cpp GGUF (MTP) — M3 Ultra** |
+| Qwen3.6-27B-UD-Q4_K_XL | 4K | **89.0%** | 20.2 | 5.01s | 13.7m |
+| Qwen3.6-27B-UD-Q4_K_XL | 64K | **89.6%** | 20.1 | 4.82s | 13.2m |
+| Qwen3.6-27B-UD-Q4_K_XL | 128K | **87.8%** | 20.2 | 5.01s | 13.7m |
+| Qwen3.6-27B-UD-Q4_K_XL | 256K | **88.4%** | 20.3 | 5.12s | 14.0m |
+| Qwen3.6-27B-UD-Q8_K_XL | 4K | **89.6%** | 21.6 | 4.19s | 11.4m |
+| Qwen3.6-27B-UD-Q8_K_XL | 64K | **89.6%** | 21.7 | 4.30s | 11.7m |
+| Qwen3.6-27B-UD-Q8_K_XL | 128K | **89.6%** | 21.7 | 4.53s | 12.4m |
+| Qwen3.6-27B-UD-Q8_K_XL | 256K | **89.6%** | 21.6 | 4.39s | 12.0m |
+| Qwen3.6-35B-A3B-UD-Q4_K_XL | 4K | **90.2%** | 93.9 | 1.77s | 4.8m |
+| Qwen3.6-35B-A3B-UD-Q4_K_XL | 64K | **89.6%** | 93.5 | 1.81s | 5.0m |
+| Qwen3.6-35B-A3B-UD-Q4_K_XL | 128K | **90.9%** | 92.9 | 1.77s | 4.8m |
+| Qwen3.6-35B-A3B-UD-Q4_K_XL | 256K | **92.1%** | 93.0 | 1.82s | 5.0m |
+| **— Remote API** |
+| DeepSeek V4 Flash | N/A | **60.4%** | 71.7 | 4.76s | 13.0m |
+
+### Analysis
+
+- **Best overall: 35B-A3B MoE** achieves **92.1% Pass@1** at 256K context — the highest score across all platforms — at **93 tok/s**, 4.6× faster than the 27B dense model.
+- **27B Q8 remarkably stable**: exactly 89.6% Pass@1 across all 4 context lengths (4K–256K).
+- **MTP speculation decouples speed from context**: tok/s is virtually identical across 4K, 64K, 128K, and 256K for every model variant.
+- **DeepSeek result is lower** due to the 27B-optimized system prompt causing format failures (50/164 "no function definition" errors from code not starting with `def`).
+
+### Test Platform
+
+| Component | Specification |
+|-----------|--------------|
+| **Model** | Mac Studio (Mac15,14) |
+| **Chip** | Apple M3 Ultra — 28-core (20P + 8E) |
+| **GPU** | 60-core Metal GPU |
+| **Memory** | 256 GB LPDDR5 (800 GB/s) |
+| **OS** | macOS 26.5.1 |
+| **llama.cpp** | Latest (Metal backend, ngl 99) |
+| **Python** | 3.9 (macOS system) |
+
+### New Model: Qwen3.6-35B-A3B
+
+The Qwen3.6-35B-A3B is a **Mixture-of-Experts (MoE)** variant of Qwen3.6: 35.5B total parameters with only ~3.5B activated per token (via 60 small experts). Despite the large model size, it runs at ~93 tok/s on M3 Ultra — 4.6× faster than the 27B dense model — because only ~3.5B weights participate in each forward pass.
+
+| Model | Total Params | Active/token | File Size |
+|-------|:-----------:|:------------:|:---------:|
+| Qwen3.6-27B (dense) | 27.3B | 27.3B | 17 GB (Q4) / 33 GB (Q8) |
+| Qwen3.6-35B-A3B (MoE) | 35.5B | ~3.5B | 21 GB (Q4) |
+
+**Source:** [havenoammo/Qwen3.6-35B-A3B-MTP-GGUF](https://huggingface.co/havenoammo/Qwen3.6-35B-A3B-MTP-GGUF) on HuggingFace.

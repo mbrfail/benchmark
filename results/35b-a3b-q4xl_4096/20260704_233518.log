@@ -1,0 +1,35 @@
+==============================================
+  HumanEval+ Benchmark
+  Model:   Qwen3.6-35B-A3B-UD-Q4_K_XL-MTP
+  Context: 4096
+  Date:    Sat Jul  4 23:35:18 PDT 2026
+  Host:    Tengs-Mac-Studio.local
+  Chip:    Apple M3 Ultra
+==============================================
+🔄 Starting llama-server on port 8081 (ctx=4096, model=Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf)...
+  PID: 5186
+  Waiting for server...
+  Server ready after 2s
+🔄 Running HumanEval+ (164 problems)...
+/Users/tenglong/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+🧪 Qwen3.6-27B-UD-Q4_K_XL-MTP (GGUF)
+📦 Loaded 164 HumanEval+ problems
+
+======================================================================
+  Qwen3.6-27B-UD-Q4_K_XL-MTP (GGUF) — 164 problems
+======================================================================
+  Pass@1:              0/164 = 0.0%
+  Failed:              164
+  Total time:          20s (0.3m)
+  Avg per problem:     0.12s
+
+======================================================================
+  FAILURE BREAKDOWN (164):
+======================================================================
+  • Other: 164
+Traceback (most recent call last):
+  File "/Users/tenglong/benchmark-m3ultra/scripts/humaneval_v3.py", line 226, in <module>
+    print(f"\n  {r['task_id']} ({r['completion_tokens']} tok): ", end="")
+KeyError: 'completion_tokens'
+  Total elapsed: 21s (0m 21s)

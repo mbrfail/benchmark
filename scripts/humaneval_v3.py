@@ -26,10 +26,20 @@ if TARGET == "deepseek":
         "headers": {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
     }
 elif TARGET == "gguf":
+    # Auto-detect model name from running server
+    import urllib.request
+    try:
+        resp = urllib.request.urlopen("http://localhost:8082/v1/models", timeout=5)
+        model_list = json.loads(resp.read())
+        model_name = model_list["data"][0]["id"]
+        print(f"  Auto-detected model: {model_name}")
+    except Exception as e:
+        print(f"  WARNING: Could not detect model name: {e}")
+        model_name = "gguf"
     CONFIG = {
-        "name": "Qwen3.6-27B-UD-Q4_K_XL-MTP (GGUF)",
-        "url": "http://localhost:8081/v1/chat/completions",
-        "model": "gguf",
+        "name": f"{model_name} (GGUF)",
+        "url": "http://localhost:8082/v1/chat/completions",
+        "model": model_name,
         "headers": {"Content-Type": "application/json"},
     }
 else:
