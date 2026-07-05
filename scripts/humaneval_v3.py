@@ -25,6 +25,13 @@ if TARGET == "deepseek":
         "model": "deepseek-v4-flash",
         "headers": {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
     }
+elif TARGET == "gguf":
+    CONFIG = {
+        "name": "Qwen3.6-27B-UD-Q4_K_XL-MTP (GGUF)",
+        "url": "http://localhost:8081/v1/chat/completions",
+        "model": "gguf",
+        "headers": {"Content-Type": "application/json"},
+    }
 else:
     CONFIG = {
         "name": "Qwen3.6-27B-NVFP4 (local)",
