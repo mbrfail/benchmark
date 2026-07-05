@@ -266,13 +266,18 @@ Benchmarks on **Mac Studio (Mac15,14)** — Apple M3 Ultra (28-core CPU, 60-core
 | Qwen3.6-35B-A3B-UD-Q4_K_XL | 64K | **89.6%** | 93.5 | 1.81s | 5.0m |
 | Qwen3.6-35B-A3B-UD-Q4_K_XL | 128K | **90.9%** | 92.9 | 1.77s | 4.8m |
 | Qwen3.6-35B-A3B-UD-Q4_K_XL | 256K | **92.1%** | 93.0 | 1.82s | 5.0m |
+| Qwen3.6-35B-A3B-UD-Q8_K_XL | 4K | **85.4%** | 91.6 | 2.02s | 5.5m |
+| Qwen3.6-35B-A3B-UD-Q8_K_XL | 64K | **85.4%** | 91.5 | 2.00s | 5.5m |
+| Qwen3.6-35B-A3B-UD-Q8_K_XL | 128K | **83.5%** | 91.2 | 2.05s | 5.6m |
+| Qwen3.6-35B-A3B-UD-Q8_K_XL | 256K | **84.8%** | 91.8 | 2.07s | 5.7m |
 | Qwen3.6-35B-A3B-MLX-8bit | 4K | **89.6%** | 52.2 | 3.97s | 10.8m |
 | **— Remote API** |
 | DeepSeek V4 Flash | N/A | **60.4%** | 71.7 | 4.76s | 13.0m |
 
 ### Analysis
 
-- **Best overall: 35B-A3B MoE** achieves **92.1% Pass@1** at 256K context — the highest score across all platforms — at **93 tok/s**, 4.6× faster than the 27B dense model.
+- **Best overall: 35B-A3B MoE Q4_K_XL** achieves **92.1% Pass@1** at 256K context — the highest score across all platforms — at **93 tok/s**, 4.6× faster than the 27B dense model.
+- **35B-A3B Q8 yields lower accuracy (85.4%) than Q4 (90.2%)**, likely due to the UD-Q4_K_XL quantization strategy preserving important weights better for MoE architectures, or because the Q4 variant uses non-MTP base weights while Q8 uses the MTP-release branch.
 - **GGUF Q4 + MTP outperforms MLX 8bit**: same model at 89.6% Pass@1 but GGUF Q4 runs 1.8× faster (93 vs 52 tok/s) thanks to MTP speculative decoding.
 - **27B Q8 remarkably stable**: exactly 89.6% Pass@1 across all 4 context lengths (4K–256K).
 - **MTP speculation decouples speed from context**: tok/s is virtually identical across 4K, 64K, 128K, and 256K for every model variant.
@@ -298,6 +303,6 @@ The Qwen3.6-35B-A3B is a **Mixture-of-Experts (MoE)** variant of Qwen3.6: 35.5B 
 | Model | Total Params | Active/token | File Size |
 |-------|:-----------:|:------------:|:---------:|
 | Qwen3.6-27B (dense) | 27.3B | 27.3B | 17 GB (Q4) / 33 GB (Q8) |
-| Qwen3.6-35B-A3B (MoE) | 35.5B | ~3.5B | 21 GB (Q4) |
+| Qwen3.6-35B-A3B (MoE) | 35.5B | ~3.5B | 21 GB (Q4) / 37 GB (Q8) |
 
 **Source:** [havenoammo/Qwen3.6-35B-A3B-MTP-GGUF](https://huggingface.co/havenoammo/Qwen3.6-35B-A3B-MTP-GGUF) on HuggingFace.

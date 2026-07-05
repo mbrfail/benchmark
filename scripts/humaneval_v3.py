@@ -27,8 +27,8 @@ if TARGET == "deepseek":
     }
 elif TARGET == "gguf":
     CONFIG = {
-        "name": "Qwen3.6-35B-A3B-UD-Q4_K_XL (GGUF)",
-        "url": "http://localhost:8081/v1/chat/completions",
+        "name": "Qwen3.6-35B-A3B-UD-Q8_K_XL (GGUF)",
+        "url": "http://localhost:8082/v1/chat/completions",
         "model": "gguf",
         "headers": {"Content-Type": "application/json"},
     }

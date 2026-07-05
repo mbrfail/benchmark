@@ -42,13 +42,19 @@ case "$MODEL" in
     MODEL_LABEL="Qwen3.6-27B-UD-Q8_K_XL-MTP"
     PORT=8082
     ;;
+  35b-a3b-q8xl)
+    MODEL_DIR="$HOME/models/qwen3.6-35b-a3b-q8xl"
+    MODEL_FILE="Qwen3.6-35B-A3B-MTP-UD-Q8_K_XL.gguf"
+    MODEL_LABEL="Qwen3.6-35B-A3B-UD-Q8_K_XL-MTP"
+    PORT=8082
+    ;;
   deepseek)
     MODEL_LABEL="DeepSeek V4 Flash"
     PORT=0
     ;;
   *)
     echo "❌ Unknown model: $MODEL"
-    echo "Valid: 27b-q4xl, 35b-a3b-q4xl, 27b-q8xl, deepseek"
+    echo "Valid: 27b-q4xl, 35b-a3b-q4xl, 27b-q8xl, 35b-a3b-q8xl, deepseek"
     exit 1
     ;;
 esac
