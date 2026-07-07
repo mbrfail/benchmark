@@ -37,3 +37,20 @@
 - **MTP:** Enabled
 - **Reasoning:** Disabled (`--reasoning off`)
 - **Serving:** Port 8081, ~269 tok/s
+
+## Failure Reproduction & Model Comparison
+
+**30 benchmark failures retested with Local (Qwen3.6-35B Q4 MTP) and DeepSeek v4-flash**
+
+| Model | PASS count | Rate |
+|---|---|---|
+| Local (Qwen3.6-35B) | 15/30 | 50% |
+| DeepSeek v4-flash | 19/30 | 63% |
+| Both fail (truly hard) | 10/30 | 33% |
+| At least one passes | 20/30 | 67% |
+
+**DeepSeek better on:** 5 problems, **Local better on:** 1 problem
+
+This shows that ~67% of benchmark failures are solvable by at least one model, indicating significant stochastic variance in pass@1. A pass@5 evaluation would yield a more accurate estimate of true capability.
+
+Full per-problem comparison: `local_vs_deepseek_comparison.json`

@@ -1,0 +1,806 @@
+{
+  "timestamp": "2026-07-07T10:29:18.682110",
+  "local_model": "Qwen3.6-35B-A3B Q4 MTP",
+  "deepseek_model": "deepseek-v4-flash",
+  "results": [
+    {
+      "problem_id": 4448,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 7520,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 16384,
+        "latency": 102.63,
+        "code_preview": "import sys\nfrom collections import defaultdict\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    iterator = iter(input_data)\n    n = int(next(itera",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "8",
+            "stderr": "File \"<string>\", line 1163\n    # Hmm, maybe the issue is that he can only buy one item per day?\n                                                                    ^\nIndentationError: expected an inde"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 5991,
+        "latency": 78.42,
+        "code_preview": "import sys\n\ndef can(D, n, k, offers):\n    # last_day[t] = latest sale day for type t (1-indexed) not exceeding D\n    last_day = [0] * (n + 1)\n    for d, t in offers:\n        if d <= D:\n            if "
+      }
+    },
+    {
+      "problem_id": 4198,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 493,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 737,
+        "latency": 5.6,
+        "code_preview": "import sys\nimport math\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    A = int(input_data[0])\n    B = int(input_data[1])\n    X = int(input_data[2])\n    \n    # The price of N is A * N + B *",
+        "test_detail": [
+          {
+            "pass": true,
+            "actual": "9",
+            "expected": "9"
+          },
+          {
+            "pass": false,
+            "actual": "9999999999",
+            "expected": "1000000000"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 1404,
+        "latency": 15.76,
+        "code_preview": "import sys\n\ndef solve() -> None:\n    data = sys.stdin.read().strip().split()\n    if not data:\n        return\n    A, B, X = map(int, data)\n    ans = 0\n    # digit lengths 1 to 10 (since 10^9 has 10 dig"
+      }
+    },
+    {
+      "problem_id": 4656,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 789,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 1169,
+        "latency": 8.44,
+        "code_preview": "import sys\nimport math\nfrom collections import Counter\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    idx = 0\n    t = int(input_data[idx])\n    idx += 1\n    \n    results = []\n    \n    for "
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 2525,
+        "latency": 31.28,
+        "code_preview": "import sys\nimport math\n\ndef solve() -> None:\n    data = sys.stdin.read().strip().split()\n    if not data:\n        return\n    it = iter(data)\n    t = int(next(it))\n    out_lines = []\n    for _ in range"
+      }
+    },
+    {
+      "problem_id": 4439,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 116,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 117,
+        "latency": 0.84,
+        "code_preview": "import sys\n\ndef solve():\n    a = int(sys.stdin.readline().strip())\n    b = int(sys.stdin.readline().strip())\n    \n    # The choices are 1, 2, 3. We know A and B are wrong.\n    # The correct choice is "
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 191,
+        "latency": 3.04,
+        "code_preview": "import sys\n\ndef main():\n    a = int(sys.stdin.readline().strip())\n    b = int(sys.stdin.readline().strip())\n    # The three numbers are 1, 2, 3. Their sum is 6.\n    ans = 6 - a - b\n    print(ans)\n\nif "
+      }
+    },
+    {
+      "problem_id": 4912,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 379,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 304,
+        "latency": 2.42,
+        "code_preview": "import sys\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    h = int(input_data[0])\n    w = int(input_data[1])\n    n = int(input_data[2])\n    \n    "
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 1447,
+        "latency": 17.18,
+        "code_preview": "import sys\n\ndef solve() -> None:\n    data = sys.stdin.read().strip().split()\n    if not data:\n        return\n    it = iter(data)\n    h = int(next(it))\n    w = int(next(it))\n    n = int(next(it))\n    b"
+      }
+    },
+    {
+      "problem_id": 4433,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 970,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 1099,
+        "latency": 8.63,
+        "code_preview": "import sys\nfrom collections import deque\n\ndef solve():\n    input = sys.stdin.read\n    data = input().split()\n    \n    idx = 0\n    n = int(data[idx])\n    idx += 1\n    m = int(data[idx])\n    idx += 1\n  ",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "3 2\n3 5\n3 4\n2 1",
+            "expected": "4 3\n3 5\n2 3\n1 2"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 5158,
+        "latency": 61.33,
+        "code_preview": "import sys\nfrom collections import deque\n\ndef solve() -> None:\n    data = sys.stdin.buffer.read().split()\n    if not data:\n        return\n    it = iter(data)\n    n = int(next(it))\n    m = int(next(it)",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "3 2\n3 5\n3 4\n2 1",
+            "expected": "4 3\n3 5\n2 3\n1 2"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 4171,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 360,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 290,
+        "latency": 2.32,
+        "code_preview": "import sys\nfrom collections import defaultdict\n\ndef solve():\n    input = sys.stdin.read\n    data = input().split()\n    \n    n = int(data[0])\n    k = int(data[1])\n    a = list(map(int, data[2:2+n]))\n  "
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 2538,
+        "latency": 34.26,
+        "code_preview": "import sys\nfrom collections import defaultdict\n\ndef solve() -> None:\n    data = sys.stdin.read().strip().split()\n    if not data:\n        return\n    it = iter(data)\n    n = int(next(it))\n    k = int(n"
+      }
+    },
+    {
+      "problem_id": 4396,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 145,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 139,
+        "latency": 1.13,
+        "code_preview": "import sys\n\ndef main():\n    input = sys.stdin.read\n    data = input().split()\n    \n    N = int(data[0])\n    total = 0.0\n    idx = 1\n    for _ in range(N):\n        x = float(data[idx])\n        u = data"
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 301,
+        "latency": 4.14,
+        "code_preview": "import sys\n\ndef main():\n    data = sys.stdin.read().strip().splitlines()\n    if not data:\n        return\n    n = int(data[0].strip())\n    total = 0.0\n    for i in range(1, n+1):\n        parts = data[i"
+      }
+    },
+    {
+      "problem_id": 4304,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 338,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 291,
+        "latency": 1.95,
+        "code_preview": "import sys\nimport math\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    a = int(input_data[0])\n    b = int(input_data[1])\n    \n    # The heights of the towers are triangular numbers: T_n = "
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 616,
+        "latency": 6.78,
+        "code_preview": "import sys\n\ndef main():\n    a, b = map(int, sys.stdin.readline().split())\n    diff = b - a\n    k = diff - 1\n    t_k = k * (k + 1) // 2\n    x = t_k - a\n    print(x)\n\nif __name__ == \"__main__\":\n    main"
+      }
+    },
+    {
+      "problem_id": 4743,
+      "difficulty": "introductory",
+      "original_status": "fail",
+      "original_tokens": 4458,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 5026,
+        "latency": 35.45,
+        "code_preview": "import sys\n\nHARD_CONSONANTS = set('bcdgknpt')\nVOWELS = set('aeiou')\n\ndef nearest_hard_consonant(c):\n    \"\"\"Replace a character with the nearest hard consonant.\n    If it's already a hard consonant, ke",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "G kove bababa",
+            "expected": "Gah kove bababa"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 7080,
+        "latency": 79.81,
+        "code_preview": "import sys\n\ndef nearest_hard_consonant(ch):\n    hard = ['b', 'c', 'd', 'g', 'k', 'n', 'p', 't']\n    target = ord(ch) - ord('a') + 1\n    best = None\n    best_dist = float('inf')\n    for h in hard:\n    "
+      }
+    },
+    {
+      "problem_id": 772,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 350,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 352,
+        "latency": 2.65,
+        "code_preview": "import sys\n\ndef main():\n    # Read input\n    lines = sys.stdin.read().strip().split('\\n')\n    presses = []\n    for line in lines:\n        presses.append(list(map(int, line.split())))\n    \n    # Initia"
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 848,
+        "latency": 7.86,
+        "code_preview": "import sys\n\ndef solve() -> None:\n    # Read the 3x3 grid of press counts\n    presses = [list(map(int, sys.stdin.readline().split())) for _ in range(3)]\n\n    for i in range(3):\n        out_row = []\n   "
+      }
+    },
+    {
+      "problem_id": 1988,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 341,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 996,
+        "latency": 7.91,
+        "code_preview": "import sys\n\ndef solve():\n    input = sys.stdin.read\n    data = input().split()\n    \n    idx = 0\n    t = int(data[idx])\n    idx += 1\n    \n    results = []\n    \n    for _ in range(t):\n        n = int(da"
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 6055,
+        "latency": 57.16,
+        "code_preview": "import sys\n\ndef solve():\n    data = sys.stdin.read().split()\n    it = iter(data)\n    t = int(next(it))\n    out_lines = []\n    for _ in range(t):\n        n = int(next(it))\n        s = next(it).strip()\n"
+      }
+    },
+    {
+      "problem_id": 197,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 2536,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 3257,
+        "latency": 25.23,
+        "code_preview": "import sys\n\ndef solve():\n    MOD = 998244353\n    \n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    n = int(input_data[0])\n    problems = []\n    idx = 1\n    for ",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "623902721",
+            "expected": "499122177"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 16384,
+        "latency": 162.86,
+        "code_preview": "",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "499122177"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 1338,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 8265,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 3814,
+        "latency": 27.62,
+        "code_preview": "import sys\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    n = int(input_data[0])\n    m = int(input_data[1])\n    \n    # Let's analyze the problem.\n   ",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "2 1",
+            "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 220, in <module>\n  File \"<string>\", line 217, in solve\n  File \"<string>\", line 196, in get_bitonic_permutation\nNameError: name 'b' is not def"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 16384,
+        "latency": 168.42,
+        "code_preview": "",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "2 1"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 1202,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 4008,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 4825,
+        "latency": 33.0,
+        "code_preview": "import sys\nimport bisect\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    n = int(input_data[0])\n    \n    a = []\n    b = []\n    \n    for i in rang"
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 15001,
+        "latency": 139.5,
+        "code_preview": "import sys\nimport bisect\n\ndef solve():\n    data = sys.stdin.read().strip().split()\n    if not data:\n        return\n    it = iter(data)\n    n = int(next(it))\n    A = []\n    B = []\n    for _ in range(n)"
+      }
+    },
+    {
+      "problem_id": 2836,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 1230,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 1109,
+        "latency": 8.75,
+        "code_preview": "import sys\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    n = int(input_data[0])\n    boys = []\n    for i in range(n):\n        boys.append(int(in",
+        "test_detail": [
+          {
+            "pass": true,
+            "actual": "49",
+            "expected": "49"
+          },
+          {
+            "pass": true,
+            "actual": "11",
+            "expected": "11"
+          },
+          {
+            "pass": false,
+            "actual": "1",
+            "expected": "5"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 5843,
+        "latency": 59.19,
+        "code_preview": "import sys\n\ndef solve() -> None:\n    data = sys.stdin.read().strip().split()\n    if not data:\n        return\n    it = iter(data)\n    N = int(next(it))\n    P = [int(next(it)) for _ in range(N)]\n    A =",
+        "test_detail": [
+          {
+            "pass": true,
+            "actual": "49",
+            "expected": "49"
+          },
+          {
+            "pass": true,
+            "actual": "11",
+            "expected": "11"
+          },
+          {
+            "pass": false,
+            "actual": "1",
+            "expected": "5"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 851,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 1057,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 1903,
+        "latency": 15.41,
+        "code_preview": "import sys\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    n = int(input_data[0])\n    k = int(input_data[1])\n    s = input_data[2]\n    \n    # Find all minutes where Polycarp can eat chocol",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "3",
+            "expected": "1"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 5070,
+        "latency": 50.62,
+        "code_preview": "import sys\n\ndef solve() -> None:\n    data = sys.stdin.read().split()\n    if not data:\n        return\n    n = int(data[0])\n    k = int(data[1])\n    s = data[2].strip()\n    # list of free minutes (1-ind"
+      }
+    },
+    {
+      "problem_id": 1553,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 2822,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 2885,
+        "latency": 23.07,
+        "code_preview": "import sys\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    n = int(input_data[0])\n    h = int(input_data[1])\n    a = [int(x) for x in input_data["
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 6033,
+        "latency": 67.62,
+        "code_preview": "import sys\n\ndef main() -> None:\n    data = sys.stdin.read().split()\n    if not data:\n        return\n    n, h = int(data[0]), int(data[1])\n    a = list(map(int, data[2:2+n]))\n\n    best = 0\n    for k in"
+      }
+    },
+    {
+      "problem_id": 933,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 380,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 168,
+        "latency": 1.33,
+        "code_preview": "import sys\n\ndef solve():\n    s = sys.stdin.readline().strip()\n    if not s:\n        print()\n        return\n    \n    result = []\n    for char in s:\n        result.append(char)\n        n = len(result)\n "
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 7000,
+        "latency": 81.92,
+        "code_preview": "import sys\n\ndef solve() -> None:\n    s = sys.stdin.readline().strip()\n    res = []\n    for ch in s:\n        n = len(res)\n        # avoid three in a row\n        if n >= 2 and res[-1] == res[-2] == ch:\n"
+      }
+    },
+    {
+      "problem_id": 2305,
+      "difficulty": "interview",
+      "original_status": "fail",
+      "original_tokens": 4577,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 16384,
+        "latency": 93.22,
+        "code_preview": "import sys\nsys.setrecursionlimit(300000)\n\ndef solve():\n    input = sys.stdin.read\n    data = input().split()\n    \n    idx = 0\n    N = int(data[idx]); idx += 1\n    \n    c = [0] * (N + 1)\n    for i in r",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "5\n4\n0"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 16384,
+        "latency": 170.58,
+        "code_preview": "",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "5\n4\n0"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 3799,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 5083,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 2593,
+        "latency": 20.16,
+        "code_preview": "import sys\n\ndef solve():\n    s = sys.stdin.readline().strip()\n    n = len(s)\n    \n    # The game is played on the inner characters (indices 1 to n-2).\n    # A character at index i (1 <= i <= n-2) can ",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "n=3\n  aba: Second\n  bab: Second\n\nn=4\n  abab: Second\n  baba: Second\n\nn=5\n  ababa: Second\n  babab: Second",
+            "expected": "Second"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 16384,
+        "latency": 154.23,
+        "code_preview": "",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "Second"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 3801,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 5750,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 2554,
+        "latency": 17.25,
+        "code_preview": "import sys\n\ndef solve():\n    MOD = 998244353\n    \n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    n = int(input_data[0])\n    m = int(input_data[1])\n    \n    a "
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 16384,
+        "latency": 166.19,
+        "code_preview": "import sys\n\nMOD = 998",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "332748119\n332748119"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 3262,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 4007,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 1603,
+        "latency": 13.15,
+        "code_preview": "import sys\nimport heapq\nfrom collections import defaultdict\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    iterator = iter(input_data)\n    \n    "
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 9490,
+        "latency": 94.72,
+        "code_preview": "import sys\nimport heapq\n\ndef solve() -> None:\n    data = sys.stdin.buffer.read().split()\n    it = iter(data)\n    N = int(next(it))\n    M = int(next(it))\n    C = int(next(it))\n    clients = [int(next(i"
+      }
+    },
+    {
+      "problem_id": 3192,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 1235,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 750,
+        "latency": 5.04,
+        "code_preview": "import sys\nfrom collections import deque\n\ndef solve():\n    input_data = sys.stdin.read().split('\\n')\n    if not input_data:\n        return\n    \n    iterator = iter(input_data)\n    \n    try:\n        n_",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "SHIP IT",
+            "expected": "c"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 6080,
+        "latency": 58.08,
+        "code_preview": "import sys\nfrom collections import deque\n\ndef solve() -> None:\n    data = sys.stdin\n    n = int(data.readline().strip())\n    names = data.readline().strip().split()\n    name2idx = {name: i for i, name"
+      }
+    },
+    {
+      "problem_id": 3266,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 1168,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 1320,
+        "latency": 9.4,
+        "code_preview": "import sys\nfrom collections import deque\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    iterator = iter(input_data)\n    \n    try:\n        n = in",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "4 3 5\n0 1 2\n1 2 1\n1 3 1\n0 2 1\n2 3 2",
+            "expected": "4 3 5\n0 1 2\n0 2 1\n1 2 1\n1 3 1\n2 3 2"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 6024,
+        "latency": 59.27,
+        "code_preview": "import sys\nfrom collections import deque, defaultdict\n\ndef main() -> None:\n    data = list(map(int, sys.stdin.buffer.read().split()))\n    if not data:\n        return\n    it = iter(data)\n    n = next(i",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "4 3 5\n0 1 2\n1 2 1\n1 3 1\n0 2 1\n2 3 2",
+            "expected": "4 3 5\n0 1 2\n0 2 1\n1 2 1\n1 3 1\n2 3 2"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 3084,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 1117,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 856,
+        "latency": 5.46,
+        "code_preview": "import sys\n\ndef solve():\n    lines = sys.stdin.read().splitlines()\n    if not lines:\n        return\n    start_str = lines[0].strip()\n    end_str = lines[1].strip()\n    \n    def parse_time(t):\n        ",
+        "test_detail": [
+          {
+            "pass": true,
+            "actual": "3\n00:00\n01:00\n01:01",
+            "expected": "3\n00:00\n01:00\n01:01"
+          },
+          {
+            "pass": true,
+            "actual": "3\n00:08\n00:09\n00:00",
+            "expected": "3\n00:08\n00:09\n00:00"
+          },
+          {
+            "pass": false,
+            "actual": "6\n09:09\n19:09\n10:09\n20:09\n20:19\n20:10",
+            "expected": "6\n09:09\n09:00\n09:10\n00:10\n10:10\n20:10"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 2319,
+        "latency": 21.94,
+        "code_preview": "import sys\nfrom collections import deque\n\ndef time_to_int(s):\n    h, m = map(int, s.split(':'))\n    return h * 60 + m\n\ndef int_to_time(t):\n    h = t // 60\n    m = t % 60\n    return f\"{h:02d}:{m:02d}\"\n",
+        "test_detail": [
+          {
+            "pass": true,
+            "actual": "3\n00:00\n01:00\n01:01",
+            "expected": "3\n00:00\n01:00\n01:01"
+          },
+          {
+            "pass": true,
+            "actual": "3\n00:08\n00:09\n00:00",
+            "expected": "3\n00:08\n00:09\n00:00"
+          },
+          {
+            "pass": false,
+            "actual": "6\n09:09\n19:09\n10:09\n20:09\n20:19\n20:10",
+            "expected": "6\n09:09\n09:00\n09:10\n00:10\n10:10\n20:10"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 3039,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 1039,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 901,
+        "latency": 6.38,
+        "code_preview": "import sys\nfrom collections import deque\n\ndef solve():\n    grid = []\n    for line in sys.stdin:\n        line = line.strip()\n        if line:\n            grid.append(line)\n    \n    # Find all # positio",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "can fold",
+            "expected": "cannot fold"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 16384,
+        "latency": 198.77,
+        "code_preview": "",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "cannot fold"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": 3183,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 971,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 821,
+        "latency": 5.54,
+        "code_preview": "import sys\nimport heapq\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    iterator = iter(input_data)\n    \n    try:\n        n = int(next(iterator))"
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 4568,
+        "latency": 54.63,
+        "code_preview": "import sys\nimport heapq\n\ndef solve() -> None:\n    data = sys.stdin.buffer.read().split()\n    if not data:\n        return\n    it = iter(data)\n    n = int(next(it))\n    m = int(next(it))\n    s = int(nex"
+      }
+    },
+    {
+      "problem_id": 3860,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 324,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "PASS",
+        "tokens": 327,
+        "latency": 2.32,
+        "code_preview": "import sys\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    b = int(input_data[0])\n    g = int(input_data[1])\n    n = int(input_data[2])\n    \n    # We need to determine the minimum number o"
+      },
+      "deepseek": {
+        "status": "PASS",
+        "tokens": 869,
+        "latency": 10.81,
+        "code_preview": "import sys\n\ndef main():\n    data = sys.stdin.read().strip().split()\n    if not data:\n        return\n    b = int(data[0])\n    g = int(data[1])\n    n = int(data[2])\n    L = max(0, n - g)\n    R = min(n, "
+      }
+    },
+    {
+      "problem_id": 3502,
+      "difficulty": "competition",
+      "original_status": "fail",
+      "original_tokens": 7335,
+      "original_error": "Wrong answer",
+      "local": {
+        "status": "FAIL",
+        "tokens": 4200,
+        "latency": 30.8,
+        "code_preview": "import sys\nimport math\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    \n    iterator = iter(input_data)\n    n = int(next(iterator))\n    \n    lights = ",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "0.200000000000\n0.000000000000\n0.400000000000\n0.171428571429\n0.228571428571",
+            "expected": "0.4\n0\n0.2\n0.171428571429\n0.228571428571"
+          }
+        ]
+      },
+      "deepseek": {
+        "status": "FAIL",
+        "tokens": 16383,
+        "latency": 227.79,
+        "code_preview": "",
+        "test_detail": [
+          {
+            "pass": false,
+            "actual": "",
+            "expected": "0.4\n0\n0.2\n0.171428571429\n0.228571428571"
+          }
+        ]
+      }
+    }
+  ]
+}
