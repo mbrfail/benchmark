@@ -1,0 +1,112 @@
+{
+  "performance": {
+    "code_short": {
+      "nomtp": {
+        "median_elapsed_s": 1.0702442500000005,
+        "min_elapsed_s": 1.065868333,
+        "max_elapsed_s": 1.074706458,
+        "median_e2e_completion_tok_s": 71.01182744032492,
+        "completion_tokens": [
+          76
+        ]
+      },
+      "mtp": {
+        "median_elapsed_s": 0.8247481670000001,
+        "min_elapsed_s": 0.824105125,
+        "max_elapsed_s": 0.8314852910000001,
+        "median_e2e_completion_tok_s": 92.14934090299104,
+        "completion_tokens": [
+          76
+        ]
+      },
+      "mtp_e2e_tok_s_delta_percent": 29.766187161468437
+    },
+    "explanation": {
+      "nomtp": {
+        "median_elapsed_s": 7.901454082999997,
+        "min_elapsed_s": 7.892110292000005,
+        "max_elapsed_s": 7.92482025,
+        "median_e2e_completion_tok_s": 76.56818525360532,
+        "completion_tokens": [
+          605
+        ]
+      },
+      "mtp": {
+        "median_elapsed_s": 9.212914416,
+        "min_elapsed_s": 9.191473667000004,
+        "max_elapsed_s": 9.219844792000004,
+        "median_e2e_completion_tok_s": 69.46770273785641,
+        "completion_tokens": [
+          640
+        ]
+      },
+      "mtp_e2e_tok_s_delta_percent": -9.273411002534592,
+      "comparability_note": "MTP hit max_tokens=640 while no-MTP naturally stopped at 605; throughput is still measured but end-to-end latency is not an equal-token comparison."
+    }
+  },
+  "humaneval_plus": {
+    "nomtp": {
+      "passed": 145,
+      "failed": 19,
+      "total": 164,
+      "pass_rate": 88.4,
+      "total_time_seconds": 400.5,
+      "avg_time_per_problem": 2.44,
+      "avg_tok_s": 67.9,
+      "avg_latency_s": 2.44,
+      "avg_completion_tokens": 174.8
+    },
+    "mtp": {
+      "passed": 144,
+      "failed": 20,
+      "total": 164,
+      "pass_rate": 87.8,
+      "total_time_seconds": 315.9,
+      "avg_time_per_problem": 1.93,
+      "avg_tok_s": 83.9,
+      "avg_latency_s": 1.93,
+      "avg_completion_tokens": 172.6
+    },
+    "pass_rate_delta_points": -0.6000000000000085,
+    "avg_tok_s_delta_percent": 23.56406480117821,
+    "total_time_delta_percent": -21.12359550561799
+  },
+  "mtp_draft_acceptance": {
+    "all_requests": {
+      "count": 176,
+      "median": 0.887995,
+      "min": 0.49352,
+      "max": 1.0
+    },
+    "code_short": {
+      "count": 6,
+      "median": 0.95,
+      "min": 0.95,
+      "max": 0.95
+    },
+    "explanation": {
+      "count": 6,
+      "median": 0.49352,
+      "min": 0.49352,
+      "max": 0.49352
+    },
+    "humaneval_plus": {
+      "count": 164,
+      "median": 0.887995,
+      "min": 0.64762,
+      "max": 1.0
+    }
+  },
+  "rss": {
+    "nomtp": {
+      "startup_rss_kib": 27570240,
+      "post_benchmark_rss_kib": 36862416,
+      "post_benchmark_rss_gib": 35.15473937988281
+    },
+    "mtp": {
+      "startup_rss_kib": 28101248,
+      "post_benchmark_rss_kib": 37502128,
+      "post_benchmark_rss_gib": 35.76481628417969
+    }
+  }
+}

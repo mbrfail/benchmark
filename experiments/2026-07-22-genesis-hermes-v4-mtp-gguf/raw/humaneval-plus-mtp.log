@@ -1,0 +1,106 @@
+🧪 Genesis Hermes V4 MTP-APEX GGUF (MTP, 128K)
+📦 Loaded 164 HumanEval+ problems
+  [ 10/164] ✅ HumanEval/9           0.87s   70tok   80.2t/s  (13s)
+  [ 20/164] ✅ HumanEval/19          3.98s  382tok   96.0t/s  (29s)
+  [ 30/164] ✅ HumanEval/29          0.51s   32tok   63.1t/s  (42s)
+  [ 33/164] ❌ HumanEval/32          5.55s  512tok   92.3t/s  (49s)
+  [ 39/164] ❌ HumanEval/38          2.14s  188tok   87.7t/s  (60s)
+  [ 40/164] ✅ HumanEval/39          2.64s  258tok   97.7t/s  (63s)
+  [ 50/164] ✅ HumanEval/49          1.38s  129tok   93.7t/s  (75s)
+  [ 51/164] ❌ HumanEval/50          0.76s   64tok   84.0t/s  (76s)
+  [ 60/164] ✅ HumanEval/59          1.81s  151tok   83.5t/s  (85s)
+  [ 63/164] ❌ HumanEval/62          1.72s  161tok   93.6t/s  (88s)
+  [ 70/164] ✅ HumanEval/69          0.91s   62tok   68.0t/s  (98s)
+  [ 80/164] ✅ HumanEval/79          1.43s  115tok   80.3t/s  (121s)
+  [ 82/164] ❌ HumanEval/81          5.05s  512tok  101.4t/s  (127s)
+  [ 90/164] ❌ HumanEval/89          2.67s  259tok   97.0t/s  (143s)
+  [ 94/164] ❌ HumanEval/93          3.73s  342tok   91.6t/s  (151s)
+  [100/164] ✅ HumanEval/99          3.62s  330tok   91.3t/s  (163s)
+  [110/164] ✅ HumanEval/109         1.78s  133tok   74.9t/s  (183s)
+  [120/164] ✅ HumanEval/119         3.10s  308tok   99.5t/s  (209s)
+  [125/164] ❌ HumanEval/124         5.65s  512tok   90.6t/s  (223s)
+  [127/164] ❌ HumanEval/126         1.33s  112tok   84.1t/s  (225s)
+  [130/164] ❌ HumanEval/129         5.44s  512tok   94.2t/s  (238s)
+  [131/164] ❌ HumanEval/130         5.77s  512tok   88.7t/s  (244s)
+  [133/164] ❌ HumanEval/132         6.16s  512tok   83.1t/s  (251s)
+  [135/164] ❌ HumanEval/134         4.24s  339tok   80.0t/s  (256s)
+  [140/164] ✅ HumanEval/139         1.86s  177tok   95.2t/s  (265s)
+  [146/164] ❌ HumanEval/145         1.87s  138tok   73.9t/s  (281s)
+  [148/164] ❌ HumanEval/147         5.61s  512tok   91.2t/s  (289s)
+  [150/164] ✅ HumanEval/149         1.47s  104tok   70.6t/s  (292s)
+  [160/164] ✅ HumanEval/159         0.97s   61tok   63.0t/s  (308s)
+  [164/164] ❌ HumanEval/163         2.11s  195tok   92.3t/s  (316s)
+
+======================================================================
+  Genesis Hermes V4 MTP-APEX GGUF (MTP, 128K) — 164 problems
+======================================================================
+  Pass@1:              144/164 = 87.8%
+  Failed:              20
+  Total time:          316s (5.3m)
+  Avg per problem:     1.93s
+
+  ── Generation Speed ──
+  Avg tok/s:          83.9
+  Median tok/s:       87.9
+  Min tok/s:          38.8
+  Max tok/s:          101.4
+
+  ── Latency ──
+  Avg:                1.93s
+  Median:             1.59s
+  Min:                0.31s
+  Max:                6.16s
+
+  ── Tokens ──
+  Avg prompt tok:     226
+  Avg completion:     173
+
+======================================================================
+  FAILURE BREAKDOWN (20):
+======================================================================
+  • Wrong answer: 10
+  • NameError (missing helper): 2
+  • Syntax/Indent error: 4
+  • No function def: 4
+
+  HumanEval/6 (214 tok): No function definition generated
+
+  HumanEval/12 (165 tok): No function definition generated
+
+  HumanEval/17 (248 tok): No function definition generated
+
+  HumanEval/21 (195 tok): No function definition generated
+
+  HumanEval/32 (512 tok): IndentationError: expected an indented block
+
+  HumanEval/38 (188 tok): NameError: name 'encode_cyclic' is
+
+  HumanEval/50 (64 tok): NameError: name 'encode_shift' is
+
+  HumanEval/62 (161 tok): AssertionError
+
+  HumanEval/81 (512 tok): SyntaxError: invalid syntax
+
+  HumanEval/89 (259 tok): SyntaxError: invalid syntax
+
+  HumanEval/93 (342 tok): AssertionError: This prints if thi
+
+  HumanEval/124 (512 tok): AssertionError
+
+  HumanEval/126 (112 tok): AssertionError: This prints if thi
+
+  HumanEval/129 (512 tok): AssertionError
+
+  HumanEval/130 (512 tok): AssertionError
+
+  HumanEval/132 (512 tok): SyntaxError: invalid syntax
+
+  HumanEval/134 (339 tok): AssertionError
+
+  HumanEval/145 (138 tok): AssertionError
+
+  HumanEval/147 (512 tok): AssertionError
+
+  HumanEval/163 (195 tok): AssertionError: Test 1
+
+✅ Results saved to /Users/tenglong/benchmark-runs/2026-07-22-genesis-hermes-v4-mtp-gguf/raw/humaneval-plus-mtp.json

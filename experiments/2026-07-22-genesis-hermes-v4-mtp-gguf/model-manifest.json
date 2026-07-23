@@ -1,0 +1,28 @@
+{
+  "repository": "burningfeet/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V4-MTP-GGUF",
+  "revision": "0d6ad5b1ce57a25e10ae2d506b8450da076193ee",
+  "selected_file": {
+    "name": "Hermes3.6-35B-A3B-Uncensored-Genesis-V4-MTP-APEX.gguf",
+    "size_bytes": 26522914240,
+    "lfs_sha256": "ed31eb5c800e10a2132f3d37fb34cf1fca1a17a5214fa9dd7baa4a887f3064d0"
+  },
+  "related_files": {
+    "non_mtp_apex": {
+      "name": "Hermes3.6-35B-A3B-Uncensored-Genesis-V4-APEX.gguf",
+      "size_bytes": 25624957056,
+      "lfs_sha256": "abf2eb563570d7cc3db03ca1b542001f07be1d63f2b41554b39176ef2ed70711"
+    },
+    "standalone_mtp": {
+      "name": "35B-A3B-MTP.gguf",
+      "size_bytes": 897957280,
+      "lfs_sha256": "506857edf75dc5ba19291d47febb745752f4754a569d674a654cf03cb0d249d9"
+    },
+    "vision_projector": {
+      "name": "mmproj-Hermes3.6-35B-A3B-Uncensored-Genesis-F16.gguf",
+      "size_bytes": 899283072,
+      "lfs_sha256": "aa99753f29540d1442b48f37fb72a36d264874888d42f4018f9e01e17ace3323"
+    }
+  },
+  "selection_rationale": "The publisher recommends APEX or Q8_K_P. The MTP-APEX file is the full APEX package plus embedded MTP tensors; its byte-size delta from non-MTP APEX matches the standalone MTP payload to within GGUF container overhead. One file can therefore be tested with draft-MTP disabled and enabled while holding model weights constant.",
+  "source_metadata_retrieved_utc": "2026-07-23T06:25:00Z"
+}

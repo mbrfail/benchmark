@@ -1,0 +1,22 @@
+2026-07-23T07:06:29Z
+Teng’s Mac Studio
+ProductName:		macOS
+ProductVersion:		26.5.1
+BuildVersion:		25F80
+2026-07-23 00:06:30.041 system_profiler[5691:9210318] hw.cpufamily: 0x72015832
+      Model Name: Mac Studio
+      Model Identifier: Mac15,14
+      Chip: Apple M3 Ultra
+      Total Number of Cores: 28 (20 Performance and 8 Efficiency)
+      Memory: 256 GB
+version: 9430 (d48a56eff)
+built with AppleClang 21.0.0.21000099 for Darwin arm64
+ed31eb5c800e10a2132f3d37fb34cf1fca1a17a5214fa9dd7baa4a887f3064d0  /Users/tenglong/.local/share/models/burningfeet/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V4-MTP-GGUF/Hermes3.6-35B-A3B-Uncensored-Genesis-V4-MTP-APEX.gguf
+size_bytes=26522914240
+mode=mtp
+context=131072
+port=8091
+launch_command=/opt/homebrew/bin/llama-server -m /Users/tenglong/.local/share/models/burningfeet/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V4-MTP-GGUF/Hermes3.6-35B-A3B-Uncensored-Genesis-V4-MTP-APEX.gguf --host 127.0.0.1 --port 8091 -c 131072 -np 1 -ngl 99 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --cont-batching --jinja --reasoning off -b 2048 -ub 4096 --metrics --spec-type draft-mtp --spec-draft-n-max 3
+server_pid=5698
+ 5698 28101248 00:03 /opt/homebrew/bin/llama-server -m /Users/tenglong/.local/share/models/burningfeet/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V4-MTP-GGUF/Hermes3.6-35B-A3B-Uncensored-Genesis-V4-MTP-APEX.gguf --host 127.0.0.1 --port 8091 -c 131072 -np 1 -ngl 99 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --cont-batching --jinja --reasoning off -b 2048 -ub 4096 --metrics --spec-type draft-mtp --spec-draft-n-max 3
+ 5698 37502128 06:20 /opt/homebrew/bin/llama-server -m /Users/tenglong/.local/share/models/burningfeet/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V4-MTP-GGUF/Hermes3.6-35B-A3B-Uncensored-Genesis-V4-MTP-APEX.gguf --host 127.0.0.1 --port 8091 -c 131072 -np 1 -ngl 99 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --cont-batching --jinja --reasoning off -b 2048 -ub 4096 --metrics --spec-type draft-mtp --spec-draft-n-max 3

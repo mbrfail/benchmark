@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-07-23T06:28:04.094553+00:00",
+  "endpoint": "https://qwen3.6-moe.home.helenteng.org/v1/chat/completions",
+  "model": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-8bit",
+  "payload": {
+    "model": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-8bit",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are Qwen, a large language model created by Tongyi Lab team from Alibaba Group. You are a helpful assistant."
+      },
+      {
+        "role": "user",
+        "content": "Write a Python function fibonacci(n) using iteration. Return only the code."
+      }
+    ],
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 256
+  },
+  "warmup_runs": 1,
+  "measured_runs": 5,
+  "runs": [
+    {
+      "warmup": true,
+      "elapsed_s": 1.749445625,
+      "prompt_tokens": 57,
+      "completion_tokens": 76,
+      "e2e_completion_tok_s": 43.44233333916852,
+      "finish_reason": "stop",
+      "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```"
+    },
+    {
+      "warmup": false,
+      "elapsed_s": 1.1374509580000003,
+      "prompt_tokens": 57,
+      "completion_tokens": 76,
+      "e2e_completion_tok_s": 66.81606751084206,
+      "finish_reason": "stop",
+      "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```"
+    },
+    {
+      "warmup": false,
+      "elapsed_s": 1.2010195000000006,
+      "prompt_tokens": 57,
+      "completion_tokens": 76,
+      "e2e_completion_tok_s": 63.27957206356763,
+      "finish_reason": "stop",
+      "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```"
+    },
+    {
+      "warmup": false,
+      "elapsed_s": 1.1490687500000005,
+      "prompt_tokens": 57,
+      "completion_tokens": 76,
+      "e2e_completion_tok_s": 66.14051596129471,
+      "finish_reason": "stop",
+      "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```"
+    },
+    {
+      "warmup": false,
+      "elapsed_s": 1.1291050409999999,
+      "prompt_tokens": 57,
+      "completion_tokens": 76,
+      "e2e_completion_tok_s": 67.30994658627161,
+      "finish_reason": "stop",
+      "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```"
+    },
+    {
+      "warmup": false,
+      "elapsed_s": 1.119383,
+      "prompt_tokens": 57,
+      "completion_tokens": 76,
+      "e2e_completion_tok_s": 67.89454547728525,
+      "finish_reason": "stop",
+      "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```"
+    }
+  ],
+  "summary": {
+    "median_elapsed_s": 1.1374509580000003,
+    "min_elapsed_s": 1.119383,
+    "max_elapsed_s": 1.2010195000000006,
+    "median_e2e_completion_tok_s": 66.81606751084206
+  }
+}

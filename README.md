@@ -2,6 +2,10 @@
 
 Evaluating **Qwen3.6-27B** across 3 local backends (NVFP4/vLLM, GGUF Q4/llama.cpp, GGUF Q8/llama.cpp) vs **DeepSeek V4 Flash** (remote API) on the full [HumanEval+](https://github.com/evalplus/evalplus) test suite — 164 Python coding problems with edge-case test inputs. All local runs on RTX PRO 5000 (48 GB).
 
+## Latest controlled experiment
+
+- [Genesis Hermes V4 MTP-APEX GGUF on Apple M3 Ultra](experiments/2026-07-22-genesis-hermes-v4-mtp-gguf/README.md) — MTP on/off performance, draft acceptance, memory, and full HumanEval+ evidence at 128K context.
+
 ## Quick Summary — Qwen3.6-35B-A3B (MoE, recommended daily driver)
 
 | Quant | Ctx | MTP | Pass@1 | Speed | Time | VRAM |

@@ -1,0 +1,346 @@
+{
+  "timestamp_utc": "2026-07-23T07:15:41.869388+00:00",
+  "label": "nomtp",
+  "base_url": "http://127.0.0.1:8091",
+  "model_list_response": {
+    "models": [
+      {
+        "name": "Hermes3.6-35B-A3B-Uncensored-Genesis-V4-MTP-APEX.gguf",
+        "model": "Hermes3.6-35B-A3B-Uncensored-Genesis-V4-MTP-APEX.gguf",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "Hermes3.6-35B-A3B-Uncensored-Genesis-V4-MTP-APEX.gguf",
+        "aliases": [],
+        "tags": [],
+        "object": "model",
+        "created": 1784790941,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 248320,
+          "n_ctx": 131072,
+          "n_ctx_train": 262144,
+          "n_embd": 2048,
+          "n_params": 35505251456,
+          "size": 26511923712
+        }
+      }
+    ]
+  },
+  "request_defaults": {
+    "system": "You are Qwen, a large language model created by Tongyi Lab team from Alibaba Group. You are a helpful assistant.",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "warmup_runs": 1,
+  "measured_runs": 5,
+  "workloads": {
+    "code_short": {
+      "prompt": "Write a Python function fibonacci(n) using iteration. Return only the code.",
+      "max_tokens": 256,
+      "runs": [
+        {
+          "warmup": true,
+          "elapsed_s": 1.157853292,
+          "prompt_tokens": 57,
+          "completion_tokens": 76,
+          "e2e_completion_tok_s": 65.63871306072168,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 57,
+            "prompt_ms": 178.326,
+            "prompt_per_token_ms": 3.1285263157894736,
+            "prompt_per_second": 319.63931227078496,
+            "predicted_n": 76,
+            "predicted_ms": 970.159,
+            "predicted_per_token_ms": 12.76525,
+            "predicted_per_second": 78.3376745461311
+          },
+          "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 1.074706458,
+          "prompt_tokens": 57,
+          "completion_tokens": 76,
+          "e2e_completion_tok_s": 70.71698456286748,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 27,
+            "prompt_ms": 93.674,
+            "prompt_per_token_ms": 3.4694074074074077,
+            "prompt_per_second": 288.2336614215257,
+            "predicted_n": 76,
+            "predicted_ms": 964.329,
+            "predicted_per_token_ms": 12.68853947368421,
+            "predicted_per_second": 78.8112770641555
+          },
+          "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 1.065868333,
+          "prompt_tokens": 57,
+          "completion_tokens": 76,
+          "e2e_completion_tok_s": 71.30336613537425,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 27,
+            "prompt_ms": 93.578,
+            "prompt_per_token_ms": 3.465851851851852,
+            "prompt_per_second": 288.5293551903225,
+            "predicted_n": 76,
+            "predicted_ms": 963.072,
+            "predicted_per_token_ms": 12.672,
+            "predicted_per_second": 78.91414141414141
+          },
+          "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 1.0702442500000005,
+          "prompt_tokens": 57,
+          "completion_tokens": 76,
+          "e2e_completion_tok_s": 71.01182744032492,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 27,
+            "prompt_ms": 94.3,
+            "prompt_per_token_ms": 3.4925925925925925,
+            "prompt_per_second": 286.3202545068929,
+            "predicted_n": 76,
+            "predicted_ms": 966.822,
+            "predicted_per_token_ms": 12.721342105263158,
+            "predicted_per_second": 78.60805815341396
+          },
+          "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 1.0665598330000003,
+          "prompt_tokens": 57,
+          "completion_tokens": 76,
+          "e2e_completion_tok_s": 71.25713686988246,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 27,
+            "prompt_ms": 94.403,
+            "prompt_per_token_ms": 3.4964074074074074,
+            "prompt_per_second": 286.00785991970594,
+            "predicted_n": 76,
+            "predicted_ms": 962.983,
+            "predicted_per_token_ms": 12.67082894736842,
+            "predicted_per_second": 78.92143475014618
+          },
+          "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 1.070901042,
+          "prompt_tokens": 57,
+          "completion_tokens": 76,
+          "e2e_completion_tok_s": 70.96827533014951,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 27,
+            "prompt_ms": 94.105,
+            "prompt_per_token_ms": 3.4853703703703705,
+            "prompt_per_second": 286.9135540088199,
+            "predicted_n": 76,
+            "predicted_ms": 967.576,
+            "predicted_per_token_ms": 12.731263157894738,
+            "predicted_per_second": 78.54680149156242
+          },
+          "content": "```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n```",
+          "reasoning_content": null
+        }
+      ],
+      "summary": {
+        "median_elapsed_s": 1.0702442500000005,
+        "min_elapsed_s": 1.065868333,
+        "max_elapsed_s": 1.074706458,
+        "median_e2e_completion_tok_s": 71.01182744032492,
+        "completion_tokens": [
+          76
+        ]
+      }
+    },
+    "explanation_512": {
+      "prompt": "Explain how speculative decoding accelerates autoregressive language-model inference. Discuss draft acceptance, verification, latency, throughput, and failure modes. Be technically precise and use about 450 words.",
+      "max_tokens": 640,
+      "runs": [
+        {
+          "warmup": true,
+          "elapsed_s": 7.900358083,
+          "prompt_tokens": 81,
+          "completion_tokens": 605,
+          "e2e_completion_tok_s": 76.57880739631786,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 51,
+            "prompt_ms": 129.468,
+            "prompt_per_token_ms": 2.5385882352941174,
+            "prompt_per_second": 393.9197330614515,
+            "predicted_n": 605,
+            "predicted_ms": 7761.207,
+            "predicted_per_token_ms": 12.82844132231405,
+            "predicted_per_second": 77.95179280748471
+          },
+          "content": "Speculative decoding, also known as speculative sampling, accelerates autoregressive language model inference by decoupling the generation of candidate tokens from their verification. Standard autoregressive models generate one token per forward pass, creating a sequential bottleneck. Speculative decoding introduces a smaller, faster \"draft\" model that generates $k$ candidate tokens in parallel. These candidates are then verified by the larger, more accurate \"target\" model in a single forward pass.\n\nThe process begins with the draft model generating a sequence of $k$ tokens based on the current context. Let the target model\u2019s probability distribution for the next token be $P_{target}$ and the draft model\u2019s be $P_{draft}$. The target model evaluates the joint probability of the entire sequence of $k$ candidates. For each candidate token $x_i$, the algorithm accepts the token with probability $\\min(1, \\frac{P_{target}(x_i | \\text{context})}{P_{draft}(x_i | \\text{context})})$. If accepted, the token is appended to the output, and the context updates. If rejected, the algorithm samples a new token from a corrected distribution that accounts for the discrepancy between $P_{draft}$ and $P_{target}$, ensuring the final output remains statistically identical to standard autoregressive sampling.\n\nThis mechanism significantly impacts latency and throughput. In terms of throughput, if the draft model is sufficiently accurate, the target model processes $k$ tokens per forward pass instead of one. This yields a theoretical speedup of up to $k$ times, limited only by the overhead of running the draft model and the acceptance rate. Regarding latency, while the first token still requires a full target model pass, subsequent batches of tokens benefit from parallel verification. The end-to-end latency per token decreases because the expensive target model inference is amortized over multiple generated tokens.\n\nHowever, speculative decoding is not without failure modes. The primary risk is the \"draft error.\" If the draft model\u2019s predictions diverge significantly from the target model\u2019s distribution, the acceptance rate drops. When a rejection occurs, the target model must sample a replacement token, which may not align with the draft\u2019s subsequent predictions, forcing the draft model to restart its sequence generation. This \"restart penalty\" can negate the speedup if the draft model is too inaccurate or if the target model exhibits high entropy (i.e., is highly uncertain).\n\nAnother failure mode arises from hardware constraints. If the target model is memory-bound rather than compute-bound, the overhead of loading the draft model and managing the verification logic may outweigh the benefits of parallel token generation. Additionally, if the draft model is too large, its inference time may approach that of the target model, reducing the net gain. Therefore, the effectiveness of speculative decoding hinges on a careful balance: the draft model must be small enough to generate tokens rapidly but accurate enough to maintain a high acceptance rate, typically above 50-70%, to realize significant acceleration.",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 7.92482025,
+          "prompt_tokens": 81,
+          "completion_tokens": 605,
+          "e2e_completion_tok_s": 76.34242555848506,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 51,
+            "prompt_ms": 129.177,
+            "prompt_per_token_ms": 2.532882352941176,
+            "prompt_per_second": 394.8071251074108,
+            "predicted_n": 605,
+            "predicted_ms": 7778.481,
+            "predicted_per_token_ms": 12.856993388429752,
+            "predicted_per_second": 77.77868198173911
+          },
+          "content": "Speculative decoding, also known as speculative sampling, accelerates autoregressive language model inference by decoupling the generation of candidate tokens from their verification. Standard autoregressive models generate one token per forward pass, creating a sequential bottleneck. Speculative decoding introduces a smaller, faster \"draft\" model that generates $k$ candidate tokens in parallel. These candidates are then verified by the larger, more accurate \"target\" model in a single forward pass.\n\nThe process begins with the draft model generating a sequence of $k$ tokens based on the current context. Let the target model\u2019s probability distribution for the next token be $P_{target}$ and the draft model\u2019s be $P_{draft}$. The target model evaluates the joint probability of the entire sequence of $k$ candidates. For each candidate token $x_i$, the algorithm accepts the token with probability $\\min(1, \\frac{P_{target}(x_i | \\text{context})}{P_{draft}(x_i | \\text{context})})$. If accepted, the token is appended to the output, and the context updates. If rejected, the algorithm samples a new token from a corrected distribution that accounts for the discrepancy between $P_{draft}$ and $P_{target}$, ensuring the final output remains statistically identical to standard autoregressive sampling.\n\nThis mechanism significantly impacts latency and throughput. In terms of throughput, if the draft model is sufficiently accurate, the target model processes $k$ tokens per forward pass instead of one. This yields a theoretical speedup of up to $k$ times, limited only by the overhead of running the draft model and the acceptance rate. Regarding latency, while the first token still requires a full target model pass, subsequent batches of tokens benefit from parallel verification. The end-to-end latency per token decreases because the expensive target model inference is amortized over multiple generated tokens.\n\nHowever, speculative decoding is not without failure modes. The primary risk is the \"draft error.\" If the draft model\u2019s predictions diverge significantly from the target model\u2019s distribution, the acceptance rate drops. When a rejection occurs, the target model must sample a replacement token, which may not align with the draft\u2019s subsequent predictions, forcing the draft model to restart its sequence generation. This \"restart penalty\" can negate the speedup if the draft model is too inaccurate or if the target model exhibits high entropy (i.e., is highly uncertain).\n\nAnother failure mode arises from hardware constraints. If the target model is memory-bound rather than compute-bound, the overhead of loading the draft model and managing the verification logic may outweigh the benefits of parallel token generation. Additionally, if the draft model is too large, its inference time may approach that of the target model, reducing the net gain. Therefore, the effectiveness of speculative decoding hinges on a careful balance: the draft model must be small enough to generate tokens rapidly but accurate enough to maintain a high acceptance rate, typically above 50-70%, to realize significant acceleration.",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 7.906303916999999,
+          "prompt_tokens": 81,
+          "completion_tokens": 605,
+          "e2e_completion_tok_s": 76.5212172908177,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 51,
+            "prompt_ms": 129.164,
+            "prompt_per_token_ms": 2.532627450980392,
+            "prompt_per_second": 394.84686135455706,
+            "predicted_n": 605,
+            "predicted_ms": 7767.762,
+            "predicted_per_token_ms": 12.839276033057851,
+            "predicted_per_second": 77.88601144061829
+          },
+          "content": "Speculative decoding, also known as speculative sampling, accelerates autoregressive language model inference by decoupling the generation of candidate tokens from their verification. Standard autoregressive models generate one token per forward pass, creating a sequential bottleneck. Speculative decoding introduces a smaller, faster \"draft\" model that generates $k$ candidate tokens in parallel. These candidates are then verified by the larger, more accurate \"target\" model in a single forward pass.\n\nThe process begins with the draft model generating a sequence of $k$ tokens based on the current context. Let the target model\u2019s probability distribution for the next token be $P_{target}$ and the draft model\u2019s be $P_{draft}$. The target model evaluates the joint probability of the entire sequence of $k$ candidates. For each candidate token $x_i$, the algorithm accepts the token with probability $\\min(1, \\frac{P_{target}(x_i | \\text{context})}{P_{draft}(x_i | \\text{context})})$. If accepted, the token is appended to the output, and the context updates. If rejected, the algorithm samples a new token from a corrected distribution that accounts for the discrepancy between $P_{draft}$ and $P_{target}$, ensuring the final output remains statistically identical to standard autoregressive sampling.\n\nThis mechanism significantly impacts latency and throughput. In terms of throughput, if the draft model is sufficiently accurate, the target model processes $k$ tokens per forward pass instead of one. This yields a theoretical speedup of up to $k$ times, limited only by the overhead of running the draft model and the acceptance rate. Regarding latency, while the first token still requires a full target model pass, subsequent batches of tokens benefit from parallel verification. The end-to-end latency per token decreases because the expensive target model inference is amortized over multiple generated tokens.\n\nHowever, speculative decoding is not without failure modes. The primary risk is the \"draft error.\" If the draft model\u2019s predictions diverge significantly from the target model\u2019s distribution, the acceptance rate drops. When a rejection occurs, the target model must sample a replacement token, which may not align with the draft\u2019s subsequent predictions, forcing the draft model to restart its sequence generation. This \"restart penalty\" can negate the speedup if the draft model is too inaccurate or if the target model exhibits high entropy (i.e., is highly uncertain).\n\nAnother failure mode arises from hardware constraints. If the target model is memory-bound rather than compute-bound, the overhead of loading the draft model and managing the verification logic may outweigh the benefits of parallel token generation. Additionally, if the draft model is too large, its inference time may approach that of the target model, reducing the net gain. Therefore, the effectiveness of speculative decoding hinges on a careful balance: the draft model must be small enough to generate tokens rapidly but accurate enough to maintain a high acceptance rate, typically above 50-70%, to realize significant acceleration.",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 7.901246458000003,
+          "prompt_tokens": 81,
+          "completion_tokens": 605,
+          "e2e_completion_tok_s": 76.57019727405645,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 51,
+            "prompt_ms": 129.301,
+            "prompt_per_token_ms": 2.535313725490196,
+            "prompt_per_second": 394.42850403322484,
+            "predicted_n": 605,
+            "predicted_ms": 7762.598,
+            "predicted_per_token_ms": 12.830740495867769,
+            "predicted_per_second": 77.93782442424559
+          },
+          "content": "Speculative decoding, also known as speculative sampling, accelerates autoregressive language model inference by decoupling the generation of candidate tokens from their verification. Standard autoregressive models generate one token per forward pass, creating a sequential bottleneck. Speculative decoding introduces a smaller, faster \"draft\" model that generates $k$ candidate tokens in parallel. These candidates are then verified by the larger, more accurate \"target\" model in a single forward pass.\n\nThe process begins with the draft model generating a sequence of $k$ tokens based on the current context. Let the target model\u2019s probability distribution for the next token be $P_{target}$ and the draft model\u2019s be $P_{draft}$. The target model evaluates the joint probability of the entire sequence of $k$ candidates. For each candidate token $x_i$, the algorithm accepts the token with probability $\\min(1, \\frac{P_{target}(x_i | \\text{context})}{P_{draft}(x_i | \\text{context})})$. If accepted, the token is appended to the output, and the context updates. If rejected, the algorithm samples a new token from a corrected distribution that accounts for the discrepancy between $P_{draft}$ and $P_{target}$, ensuring the final output remains statistically identical to standard autoregressive sampling.\n\nThis mechanism significantly impacts latency and throughput. In terms of throughput, if the draft model is sufficiently accurate, the target model processes $k$ tokens per forward pass instead of one. This yields a theoretical speedup of up to $k$ times, limited only by the overhead of running the draft model and the acceptance rate. Regarding latency, while the first token still requires a full target model pass, subsequent batches of tokens benefit from parallel verification. The end-to-end latency per token decreases because the expensive target model inference is amortized over multiple generated tokens.\n\nHowever, speculative decoding is not without failure modes. The primary risk is the \"draft error.\" If the draft model\u2019s predictions diverge significantly from the target model\u2019s distribution, the acceptance rate drops. When a rejection occurs, the target model must sample a replacement token, which may not align with the draft\u2019s subsequent predictions, forcing the draft model to restart its sequence generation. This \"restart penalty\" can negate the speedup if the draft model is too inaccurate or if the target model exhibits high entropy (i.e., is highly uncertain).\n\nAnother failure mode arises from hardware constraints. If the target model is memory-bound rather than compute-bound, the overhead of loading the draft model and managing the verification logic may outweigh the benefits of parallel token generation. Additionally, if the draft model is too large, its inference time may approach that of the target model, reducing the net gain. Therefore, the effectiveness of speculative decoding hinges on a careful balance: the draft model must be small enough to generate tokens rapidly but accurate enough to maintain a high acceptance rate, typically above 50-70%, to realize significant acceleration.",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 7.901454082999997,
+          "prompt_tokens": 81,
+          "completion_tokens": 605,
+          "e2e_completion_tok_s": 76.56818525360532,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 51,
+            "prompt_ms": 129.565,
+            "prompt_per_token_ms": 2.5404901960784314,
+            "prompt_per_second": 393.6248215181569,
+            "predicted_n": 605,
+            "predicted_ms": 7762.402,
+            "predicted_per_token_ms": 12.83041652892562,
+            "predicted_per_second": 77.93979234778101
+          },
+          "content": "Speculative decoding, also known as speculative sampling, accelerates autoregressive language model inference by decoupling the generation of candidate tokens from their verification. Standard autoregressive models generate one token per forward pass, creating a sequential bottleneck. Speculative decoding introduces a smaller, faster \"draft\" model that generates $k$ candidate tokens in parallel. These candidates are then verified by the larger, more accurate \"target\" model in a single forward pass.\n\nThe process begins with the draft model generating a sequence of $k$ tokens based on the current context. Let the target model\u2019s probability distribution for the next token be $P_{target}$ and the draft model\u2019s be $P_{draft}$. The target model evaluates the joint probability of the entire sequence of $k$ candidates. For each candidate token $x_i$, the algorithm accepts the token with probability $\\min(1, \\frac{P_{target}(x_i | \\text{context})}{P_{draft}(x_i | \\text{context})})$. If accepted, the token is appended to the output, and the context updates. If rejected, the algorithm samples a new token from a corrected distribution that accounts for the discrepancy between $P_{draft}$ and $P_{target}$, ensuring the final output remains statistically identical to standard autoregressive sampling.\n\nThis mechanism significantly impacts latency and throughput. In terms of throughput, if the draft model is sufficiently accurate, the target model processes $k$ tokens per forward pass instead of one. This yields a theoretical speedup of up to $k$ times, limited only by the overhead of running the draft model and the acceptance rate. Regarding latency, while the first token still requires a full target model pass, subsequent batches of tokens benefit from parallel verification. The end-to-end latency per token decreases because the expensive target model inference is amortized over multiple generated tokens.\n\nHowever, speculative decoding is not without failure modes. The primary risk is the \"draft error.\" If the draft model\u2019s predictions diverge significantly from the target model\u2019s distribution, the acceptance rate drops. When a rejection occurs, the target model must sample a replacement token, which may not align with the draft\u2019s subsequent predictions, forcing the draft model to restart its sequence generation. This \"restart penalty\" can negate the speedup if the draft model is too inaccurate or if the target model exhibits high entropy (i.e., is highly uncertain).\n\nAnother failure mode arises from hardware constraints. If the target model is memory-bound rather than compute-bound, the overhead of loading the draft model and managing the verification logic may outweigh the benefits of parallel token generation. Additionally, if the draft model is too large, its inference time may approach that of the target model, reducing the net gain. Therefore, the effectiveness of speculative decoding hinges on a careful balance: the draft model must be small enough to generate tokens rapidly but accurate enough to maintain a high acceptance rate, typically above 50-70%, to realize significant acceleration.",
+          "reasoning_content": null
+        },
+        {
+          "warmup": false,
+          "elapsed_s": 7.892110292000005,
+          "prompt_tokens": 81,
+          "completion_tokens": 605,
+          "e2e_completion_tok_s": 76.65883744849211,
+          "finish_reason": "stop",
+          "timings": {
+            "cache_n": 30,
+            "prompt_n": 51,
+            "prompt_ms": 129.053,
+            "prompt_per_token_ms": 2.530450980392157,
+            "prompt_per_second": 395.1864737743408,
+            "predicted_n": 605,
+            "predicted_ms": 7753.663,
+            "predicted_per_token_ms": 12.815971900826446,
+            "predicted_per_second": 78.02763674407825
+          },
+          "content": "Speculative decoding, also known as speculative sampling, accelerates autoregressive language model inference by decoupling the generation of candidate tokens from their verification. Standard autoregressive models generate one token per forward pass, creating a sequential bottleneck. Speculative decoding introduces a smaller, faster \"draft\" model that generates $k$ candidate tokens in parallel. These candidates are then verified by the larger, more accurate \"target\" model in a single forward pass.\n\nThe process begins with the draft model generating a sequence of $k$ tokens based on the current context. Let the target model\u2019s probability distribution for the next token be $P_{target}$ and the draft model\u2019s be $P_{draft}$. The target model evaluates the joint probability of the entire sequence of $k$ candidates. For each candidate token $x_i$, the algorithm accepts the token with probability $\\min(1, \\frac{P_{target}(x_i | \\text{context})}{P_{draft}(x_i | \\text{context})})$. If accepted, the token is appended to the output, and the context updates. If rejected, the algorithm samples a new token from a corrected distribution that accounts for the discrepancy between $P_{draft}$ and $P_{target}$, ensuring the final output remains statistically identical to standard autoregressive sampling.\n\nThis mechanism significantly impacts latency and throughput. In terms of throughput, if the draft model is sufficiently accurate, the target model processes $k$ tokens per forward pass instead of one. This yields a theoretical speedup of up to $k$ times, limited only by the overhead of running the draft model and the acceptance rate. Regarding latency, while the first token still requires a full target model pass, subsequent batches of tokens benefit from parallel verification. The end-to-end latency per token decreases because the expensive target model inference is amortized over multiple generated tokens.\n\nHowever, speculative decoding is not without failure modes. The primary risk is the \"draft error.\" If the draft model\u2019s predictions diverge significantly from the target model\u2019s distribution, the acceptance rate drops. When a rejection occurs, the target model must sample a replacement token, which may not align with the draft\u2019s subsequent predictions, forcing the draft model to restart its sequence generation. This \"restart penalty\" can negate the speedup if the draft model is too inaccurate or if the target model exhibits high entropy (i.e., is highly uncertain).\n\nAnother failure mode arises from hardware constraints. If the target model is memory-bound rather than compute-bound, the overhead of loading the draft model and managing the verification logic may outweigh the benefits of parallel token generation. Additionally, if the draft model is too large, its inference time may approach that of the target model, reducing the net gain. Therefore, the effectiveness of speculative decoding hinges on a careful balance: the draft model must be small enough to generate tokens rapidly but accurate enough to maintain a high acceptance rate, typically above 50-70%, to realize significant acceleration.",
+          "reasoning_content": null
+        }
+      ],
+      "summary": {
+        "median_elapsed_s": 7.901454082999997,
+        "min_elapsed_s": 7.892110292000005,
+        "max_elapsed_s": 7.92482025,
+        "median_e2e_completion_tok_s": 76.56818525360532,
+        "completion_tokens": [
+          605
+        ]
+      }
+    }
+  }
+}
