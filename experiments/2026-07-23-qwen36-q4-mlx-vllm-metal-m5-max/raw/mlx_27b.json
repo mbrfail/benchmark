@@ -1,0 +1,3262 @@
+{
+  "schema_version": 1,
+  "engine": "mlx-lm-0.31.3",
+  "model_label": "qwen3.6-27b-mlx-4bit",
+  "served_model_id": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-27B-MLX-4bit",
+  "base_url": "http://127.0.0.1:8088/v1",
+  "sampling": {
+    "temperature": 0.0,
+    "thinking": false
+  },
+  "repetitions": 5,
+  "sequential": {
+    "short": {
+      "cache_state": "warm after one identical warmup",
+      "warmup": {
+        "http_status": 200,
+        "ttft_s": 0.91702525,
+        "total_s": 3.057536833,
+        "decode_s": 2.1405115830000003,
+        "prompt_tokens": 40,
+        "completion_tokens": 64,
+        "decode_tok_s": 29.899394382300798,
+        "finish_reason": "length",
+        "output": "*   **Eliminates Redundant Computation**: It bypasses the expensive forward pass for repeated input tokens (such as system prompts or conversation history), allowing the model to skip directly to generating new content.\n*   **Reduces Latency**: By reusing previously computed key-value states, the server significantly"
+      },
+      "trials": [
+        {
+          "http_status": 200,
+          "ttft_s": 0.18107833299999987,
+          "total_s": 4.540740916000001,
+          "decode_s": 4.359662583,
+          "prompt_tokens": 40,
+          "completion_tokens": 118,
+          "decode_tok_s": 27.066314824483744,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It bypasses the expensive forward pass for repeated input tokens (such as system prompts or conversation history), allowing the model to skip directly to generating new content.\n*   **Reduces Latency**: By reusing previously computed key-value states, the server significantly decreases the time-to-first-token (TTFT) for requests sharing common prefixes.\n*   **Optimizes Resource Utilization**: It lowers GPU memory bandwidth pressure and compute load, enabling the server to handle higher throughput and more concurrent users with the same hardware.",
+          "trial": 1
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.21732291699999973,
+          "total_s": 4.1848061670000005,
+          "decode_s": 3.967483250000001,
+          "prompt_tokens": 40,
+          "completion_tokens": 118,
+          "decode_tok_s": 29.741776477569243,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It bypasses the expensive forward pass for repeated input tokens (such as system prompts or conversation history), allowing the model to skip directly to generating new content.\n*   **Reduces Latency**: By reusing previously computed key-value states, the server significantly decreases the time-to-first-token (TTFT) for requests sharing common prefixes.\n*   **Optimizes Resource Utilization**: It lowers GPU memory bandwidth pressure and compute load, enabling the server to handle higher throughput and more concurrent users with the same hardware.",
+          "trial": 2
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.1704857079999993,
+          "total_s": 4.025757791,
+          "decode_s": 3.855272083000001,
+          "prompt_tokens": 40,
+          "completion_tokens": 118,
+          "decode_tok_s": 30.607437674846974,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It bypasses the expensive forward pass for repeated input tokens (such as system prompts or conversation history), allowing the model to skip directly to generating new content.\n*   **Reduces Latency**: By reusing previously computed key-value states, the server significantly decreases the time-to-first-token (TTFT) for requests sharing common prefixes.\n*   **Optimizes Resource Utilization**: It lowers GPU memory bandwidth pressure and compute load, enabling the server to handle higher throughput and more concurrent users with the same hardware.",
+          "trial": 3
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.16636420799999918,
+          "total_s": 4.026907750000001,
+          "decode_s": 3.860543542000002,
+          "prompt_tokens": 40,
+          "completion_tokens": 118,
+          "decode_tok_s": 30.56564411623464,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It bypasses the expensive forward pass for repeated input tokens (such as system prompts or conversation history), allowing the model to skip directly to generating new content.\n*   **Reduces Latency**: By reusing previously computed key-value states, the server significantly decreases the time-to-first-token (TTFT) for requests sharing common prefixes.\n*   **Optimizes Resource Utilization**: It lowers GPU memory bandwidth pressure and compute load, enabling the server to handle higher throughput and more concurrent users with the same hardware.",
+          "trial": 4
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.17136724999999942,
+          "total_s": 4.011179833,
+          "decode_s": 3.8398125830000005,
+          "prompt_tokens": 40,
+          "completion_tokens": 118,
+          "decode_tok_s": 30.730666523262443,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It bypasses the expensive forward pass for repeated input tokens (such as system prompts or conversation history), allowing the model to skip directly to generating new content.\n*   **Reduces Latency**: By reusing previously computed key-value states, the server significantly decreases the time-to-first-token (TTFT) for requests sharing common prefixes.\n*   **Optimizes Resource Utilization**: It lowers GPU memory bandwidth pressure and compute load, enabling the server to handle higher throughput and more concurrent users with the same hardware.",
+          "trial": 5
+        }
+      ],
+      "summary": {
+        "ttft_s": {
+          "median": 0.17136724999999942,
+          "min": 0.16636420799999918,
+          "max": 0.21732291699999973,
+          "n": 5
+        },
+        "total_s": {
+          "median": 4.026907750000001,
+          "min": 4.011179833,
+          "max": 4.540740916000001,
+          "n": 5
+        },
+        "decode_tok_s": {
+          "median": 30.56564411623464,
+          "min": 27.066314824483744,
+          "max": 30.730666523262443,
+          "n": 5
+        },
+        "prompt_tokens": {
+          "median": 40,
+          "min": 40,
+          "max": 40,
+          "n": 5
+        },
+        "completion_tokens": {
+          "median": 118,
+          "min": 118,
+          "max": 118,
+          "n": 5
+        }
+      }
+    },
+    "code": {
+      "cache_state": "warm after one identical warmup",
+      "warmup": {
+        "http_status": 200,
+        "ttft_s": 0.32812895800000064,
+        "total_s": 2.4294378330000015,
+        "decode_s": 2.101308875000001,
+        "prompt_tokens": 47,
+        "completion_tokens": 64,
+        "decode_tok_s": 30.457207296571273,
+        "finish_reason": "length",
+        "output": "```python\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    intervals.sort()\n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last"
+      },
+      "trials": [
+        {
+          "http_status": 200,
+          "ttft_s": 0.16694637499999843,
+          "total_s": 5.175306374999998,
+          "decode_s": 5.00836,
+          "prompt_tokens": 47,
+          "completion_tokens": 151,
+          "decode_tok_s": 30.149589885711094,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    intervals.sort()\n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            last[1] = max(last[1], current[1])\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example\nprint(merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]))\n```",
+          "trial": 1
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.18584862499999844,
+          "total_s": 5.2121426249999985,
+          "decode_s": 5.026294,
+          "prompt_tokens": 47,
+          "completion_tokens": 151,
+          "decode_tok_s": 30.042015051248494,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    intervals.sort()\n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            last[1] = max(last[1], current[1])\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example\nprint(merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]))\n```",
+          "trial": 2
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.17840950000000078,
+          "total_s": 5.174638958999999,
+          "decode_s": 4.9962294589999985,
+          "prompt_tokens": 47,
+          "completion_tokens": 151,
+          "decode_tok_s": 30.222791254712075,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    intervals.sort()\n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            last[1] = max(last[1], current[1])\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example\nprint(merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]))\n```",
+          "trial": 3
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.1680127500000026,
+          "total_s": 5.185414084000001,
+          "decode_s": 5.017401333999999,
+          "prompt_tokens": 47,
+          "completion_tokens": 151,
+          "decode_tok_s": 30.095260464169208,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    intervals.sort()\n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            last[1] = max(last[1], current[1])\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example\nprint(merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]))\n```",
+          "trial": 4
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.1837443750000034,
+          "total_s": 5.210005000000002,
+          "decode_s": 5.026260624999999,
+          "prompt_tokens": 47,
+          "completion_tokens": 151,
+          "decode_tok_s": 30.04221453399067,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List\n\ndef merge_intervals(intervals: List[List[int]]) -> List[List[int]]:\n    if not intervals:\n        return []\n    \n    intervals.sort()\n    merged = [intervals[0]]\n    \n    for current in intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            last[1] = max(last[1], current[1])\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example\nprint(merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]))\n```",
+          "trial": 5
+        }
+      ],
+      "summary": {
+        "ttft_s": {
+          "median": 0.17840950000000078,
+          "min": 0.16694637499999843,
+          "max": 0.18584862499999844,
+          "n": 5
+        },
+        "total_s": {
+          "median": 5.185414084000001,
+          "min": 5.174638958999999,
+          "max": 5.2121426249999985,
+          "n": 5
+        },
+        "decode_tok_s": {
+          "median": 30.095260464169208,
+          "min": 30.042015051248494,
+          "max": 30.222791254712075,
+          "n": 5
+        },
+        "prompt_tokens": {
+          "median": 47,
+          "min": 47,
+          "max": 47,
+          "n": 5
+        },
+        "completion_tokens": {
+          "median": 151,
+          "min": 151,
+          "max": 151,
+          "n": 5
+        }
+      }
+    },
+    "long_prefill": {
+      "cache_state": "warm after one identical warmup",
+      "warmup": {
+        "http_status": 200,
+        "ttft_s": 13.17883225,
+        "total_s": 15.232297500000001,
+        "decode_s": 2.053465250000002,
+        "prompt_tokens": 9938,
+        "completion_tokens": 59,
+        "decode_tok_s": 28.73192034781204,
+        "finish_reason": "stop",
+        "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation."
+      },
+      "trials": [
+        {
+          "http_status": 200,
+          "ttft_s": 0.2736520409999912,
+          "total_s": 2.4161499999999876,
+          "decode_s": 2.1424979589999964,
+          "prompt_tokens": 9938,
+          "completion_tokens": 59,
+          "decode_tok_s": 27.5379492205155,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 1
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.21134337499999845,
+          "total_s": 2.2427185829999985,
+          "decode_s": 2.031375208,
+          "prompt_tokens": 9938,
+          "completion_tokens": 59,
+          "decode_tok_s": 29.04436352656323,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 2
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.21618691599999806,
+          "total_s": 2.313984832999992,
+          "decode_s": 2.097797916999994,
+          "prompt_tokens": 9938,
+          "completion_tokens": 59,
+          "decode_tok_s": 28.124729995143838,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 3
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.18891466600000228,
+          "total_s": 2.2399295410000093,
+          "decode_s": 2.051014875000007,
+          "prompt_tokens": 9938,
+          "completion_tokens": 59,
+          "decode_tok_s": 28.76624675869296,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 4
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.19514845799999136,
+          "total_s": 2.3446515410000046,
+          "decode_s": 2.1495030830000132,
+          "prompt_tokens": 9938,
+          "completion_tokens": 59,
+          "decode_tok_s": 27.448204409018583,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 5
+        }
+      ],
+      "summary": {
+        "ttft_s": {
+          "median": 0.21134337499999845,
+          "min": 0.18891466600000228,
+          "max": 0.2736520409999912,
+          "n": 5
+        },
+        "total_s": {
+          "median": 2.313984832999992,
+          "min": 2.2399295410000093,
+          "max": 2.4161499999999876,
+          "n": 5
+        },
+        "decode_tok_s": {
+          "median": 28.124729995143838,
+          "min": 27.448204409018583,
+          "max": 29.04436352656323,
+          "n": 5
+        },
+        "prompt_tokens": {
+          "median": 9938,
+          "min": 9938,
+          "max": 9938,
+          "n": 5
+        },
+        "completion_tokens": {
+          "median": 59,
+          "min": 59,
+          "max": 59,
+          "n": 5
+        }
+      }
+    },
+    "long_prefill_cold": {
+      "cache_state": "cache-busting nonce before long body; no identical-prefix warmup",
+      "trials": [
+        {
+          "http_status": 200,
+          "ttft_s": 15.149936374999996,
+          "total_s": 17.193690040999996,
+          "decode_s": 2.0437536660000006,
+          "prompt_tokens": 9967,
+          "completion_tokens": 59,
+          "decode_tok_s": 28.868449745939188,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 1
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 15.946033499999999,
+          "total_s": 17.975072999999995,
+          "decode_s": 2.029039499999996,
+          "prompt_tokens": 9967,
+          "completion_tokens": 59,
+          "decode_tok_s": 29.077797647606225,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 2
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 16.902789124999998,
+          "total_s": 18.996914375000017,
+          "decode_s": 2.094125250000019,
+          "prompt_tokens": 9967,
+          "completion_tokens": 59,
+          "decode_tok_s": 28.1740550141399,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 3
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 16.560082917000017,
+          "total_s": 18.585464916999996,
+          "decode_s": 2.025381999999979,
+          "prompt_tokens": 9967,
+          "completion_tokens": 59,
+          "decode_tok_s": 29.13030727043126,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 4
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 15.466491000000019,
+          "total_s": 17.48638545900002,
+          "decode_s": 2.0198944589999996,
+          "prompt_tokens": 9967,
+          "completion_tokens": 59,
+          "decode_tok_s": 29.209446927840705,
+          "finish_reason": "stop",
+          "output": "1. Receive documents and normalize Unicode.\n2. Split text into passages.\n3. Create embeddings for the passages.\n4. Store vectors with source metadata.\n5. Process queries using hybrid lexical and vector retrieval, reciprocal-rank fusion, reranking, and citation validation.",
+          "trial": 5
+        }
+      ],
+      "summary": {
+        "ttft_s": {
+          "median": 15.946033499999999,
+          "min": 15.149936374999996,
+          "max": 16.902789124999998,
+          "n": 5
+        },
+        "total_s": {
+          "median": 17.975072999999995,
+          "min": 17.193690040999996,
+          "max": 18.996914375000017,
+          "n": 5
+        },
+        "decode_tok_s": {
+          "median": 29.077797647606225,
+          "min": 28.1740550141399,
+          "max": 29.209446927840705,
+          "n": 5
+        },
+        "prompt_tokens": {
+          "median": 9967,
+          "min": 9967,
+          "max": 9967,
+          "n": 5
+        },
+        "completion_tokens": {
+          "median": 59,
+          "min": 59,
+          "max": 59,
+          "n": 5
+        }
+      }
+    }
+  },
+  "concurrency_4": {
+    "waves": [
+      {
+        "wave": 1,
+        "wall_s": 7.713364249999984,
+        "aggregate_completion_tokens": 378,
+        "aggregate_tok_s": 49.00585370384924,
+        "requests": [
+          {
+            "http_status": 200,
+            "ttft_s": 0.8325935409999943,
+            "total_s": 7.705387416000008,
+            "decode_s": 6.8727938750000135,
+            "prompt_tokens": 44,
+            "completion_tokens": 112,
+            "decode_tok_s": 16.296138373566425,
+            "finish_reason": "stop",
+            "output": "*   **Computational Efficiency**: It eliminates redundant processing by reusing the hidden states of identical prefix tokens, significantly reducing the computational load for the prefill phase.\n*   **Latency Reduction**: By bypassing the need to recompute attention mechanisms for cached tokens, it drastically shortens the time-to-first-token (TTFT) for requests sharing common contexts.\n*   **Throughput Improvement**: It frees up GPU memory and compute resources that would otherwise be wasted on repetitive calculations, allowing the server to handle a higher volume of concurrent requests."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.8320213339999896,
+            "total_s": 7.32641774999999,
+            "decode_s": 6.494396416000001,
+            "prompt_tokens": 44,
+            "completion_tokens": 101,
+            "decode_tok_s": 15.551868646510412,
+            "finish_reason": "stop",
+            "output": "*   **Computational Efficiency**: It eliminates redundant processing by reusing cached attention outputs for repeated prefix tokens, significantly reducing the computational load on the server.\n*   **Latency Reduction**: It bypasses the expensive prefill phase for common prompts, allowing the model to jump directly to token generation and delivering faster response times to users.\n*   **Throughput Improvement**: By saving hardware resources on repetitive calculations, the server can handle a higher volume of concurrent requests, increasing overall system capacity."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.8318236669999806,
+            "total_s": 7.328512541999999,
+            "decode_s": 6.496688875000018,
+            "prompt_tokens": 44,
+            "completion_tokens": 101,
+            "decode_tok_s": 15.54638092469831,
+            "finish_reason": "stop",
+            "output": "*   **Computational Efficiency**: It eliminates redundant processing by reusing cached attention outputs for repeated prefix tokens, significantly reducing the computational load on the server.\n*   **Latency Reduction**: It bypasses the expensive prefill phase for common prompts, allowing the model to jump directly to token generation and delivering faster response times to users.\n*   **Throughput Improvement**: By saving hardware resources on repetitive calculations, the server can handle a higher volume of concurrent requests, increasing overall system capacity."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.8334629999999947,
+            "total_s": 5.310029374999999,
+            "decode_s": 4.476566375000004,
+            "prompt_tokens": 44,
+            "completion_tokens": 64,
+            "decode_tok_s": 14.296671743195127,
+            "finish_reason": "stop",
+            "output": "*   Eliminates redundant computation by reusing cached representations for repeated prompt prefixes, significantly reducing latency.\n*   Lowers GPU memory bandwidth and compute load, allowing the server to handle higher concurrent request throughput.\n*   Improves cost-efficiency by minimizing the energy and hardware resources required for each inference request."
+          }
+        ]
+      },
+      {
+        "wave": 2,
+        "wall_s": 7.54369087500001,
+        "aggregate_completion_tokens": 378,
+        "aggregate_tok_s": 50.10809778177708,
+        "requests": [
+          {
+            "http_status": 200,
+            "ttft_s": 0.6268927499999961,
+            "total_s": 7.542942499999981,
+            "decode_s": 6.916049749999985,
+            "prompt_tokens": 44,
+            "completion_tokens": 112,
+            "decode_tok_s": 16.19421549129259,
+            "finish_reason": "stop",
+            "output": "*   **Computational Efficiency**: It eliminates redundant processing by reusing the hidden states of identical prefix tokens, significantly reducing the computational load for the prefill phase.\n*   **Latency Reduction**: By bypassing the need to recompute attention mechanisms for cached tokens, it drastically shortens the time-to-first-token (TTFT) for requests sharing common contexts.\n*   **Throughput Improvement**: It frees up GPU memory and compute resources that would otherwise be wasted on repetitive calculations, allowing the server to handle a higher volume of concurrent requests."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.6268304170000079,
+            "total_s": 7.159285208,
+            "decode_s": 6.532454790999992,
+            "prompt_tokens": 44,
+            "completion_tokens": 101,
+            "decode_tok_s": 15.461262761305518,
+            "finish_reason": "stop",
+            "output": "*   **Computational Efficiency**: It eliminates redundant processing by reusing cached attention outputs for repeated prefix tokens, significantly reducing the computational load on the server.\n*   **Latency Reduction**: It bypasses the expensive prefill phase for common prompts, allowing the model to jump directly to token generation and delivering faster response times to users.\n*   **Throughput Improvement**: By saving hardware resources on repetitive calculations, the server can handle a higher volume of concurrent requests, increasing overall system capacity."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.6292512920000206,
+            "total_s": 7.161516458000023,
+            "decode_s": 6.532265166000002,
+            "prompt_tokens": 44,
+            "completion_tokens": 101,
+            "decode_tok_s": 15.461711586005137,
+            "finish_reason": "stop",
+            "output": "*   **Computational Efficiency**: It eliminates redundant processing by reusing cached attention outputs for repeated prefix tokens, significantly reducing the computational load on the server.\n*   **Latency Reduction**: It bypasses the expensive prefill phase for common prompts, allowing the model to jump directly to token generation and delivering faster response times to users.\n*   **Throughput Improvement**: By saving hardware resources on repetitive calculations, the server can handle a higher volume of concurrent requests, increasing overall system capacity."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.6260606660000008,
+            "total_s": 4.989202040999999,
+            "decode_s": 4.363141374999998,
+            "prompt_tokens": 44,
+            "completion_tokens": 64,
+            "decode_tok_s": 14.668330567216614,
+            "finish_reason": "stop",
+            "output": "*   Eliminates redundant computation by reusing cached representations for repeated prompt prefixes, significantly reducing latency.\n*   Lowers GPU memory bandwidth and compute load, allowing the server to handle higher concurrent request throughput.\n*   Improves cost-efficiency by minimizing the energy and hardware resources required for each inference request."
+          }
+        ]
+      },
+      {
+        "wave": 3,
+        "wall_s": 7.512274041000012,
+        "aggregate_completion_tokens": 378,
+        "aggregate_tok_s": 50.31765320819976,
+        "requests": [
+          {
+            "http_status": 200,
+            "ttft_s": 0.6770064170000012,
+            "total_s": 7.511772792000016,
+            "decode_s": 6.834766375000015,
+            "prompt_tokens": 44,
+            "completion_tokens": 112,
+            "decode_tok_s": 16.38680736911066,
+            "finish_reason": "stop",
+            "output": "*   **Computational Efficiency**: It eliminates redundant processing by reusing the hidden states of identical prefix tokens, significantly reducing the computational load for the prefill phase.\n*   **Latency Reduction**: By bypassing the need to recompute attention mechanisms for cached tokens, it drastically shortens the time-to-first-token (TTFT) for requests sharing common contexts.\n*   **Throughput Improvement**: It frees up GPU memory and compute resources that would otherwise be wasted on repetitive calculations, allowing the server to handle a higher volume of concurrent requests."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.6768625409999913,
+            "total_s": 7.135119165999981,
+            "decode_s": 6.45825662499999,
+            "prompt_tokens": 44,
+            "completion_tokens": 101,
+            "decode_tok_s": 15.638895427138614,
+            "finish_reason": "stop",
+            "output": "*   **Computational Efficiency**: It eliminates redundant processing by reusing cached attention outputs for repeated prefix tokens, significantly reducing the computational load on the server.\n*   **Latency Reduction**: It bypasses the expensive prefill phase for common prompts, allowing the model to jump directly to token generation and delivering faster response times to users.\n*   **Throughput Improvement**: By saving hardware resources on repetitive calculations, the server can handle a higher volume of concurrent requests, increasing overall system capacity."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.6768146669999737,
+            "total_s": 7.137199958999986,
+            "decode_s": 6.460385292000012,
+            "prompt_tokens": 44,
+            "completion_tokens": 101,
+            "decode_tok_s": 15.63374248360539,
+            "finish_reason": "stop",
+            "output": "*   **Computational Efficiency**: It eliminates redundant processing by reusing cached attention outputs for repeated prefix tokens, significantly reducing the computational load on the server.\n*   **Latency Reduction**: It bypasses the expensive prefill phase for common prompts, allowing the model to jump directly to token generation and delivering faster response times to users.\n*   **Throughput Improvement**: By saving hardware resources on repetitive calculations, the server can handle a higher volume of concurrent requests, increasing overall system capacity."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.6787095830000283,
+            "total_s": 5.084404708000022,
+            "decode_s": 4.405695124999994,
+            "prompt_tokens": 44,
+            "completion_tokens": 64,
+            "decode_tok_s": 14.526652022931362,
+            "finish_reason": "stop",
+            "output": "*   Eliminates redundant computation by reusing cached representations for repeated prompt prefixes, significantly reducing latency.\n*   Lowers GPU memory bandwidth and compute load, allowing the server to handle higher concurrent request throughput.\n*   Improves cost-efficiency by minimizing the energy and hardware resources required for each inference request."
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "median_wall_s": 7.54369087500001,
+      "median_aggregate_tok_s": 50.10809778177708
+    }
+  },
+  "rss_kib_samples": [
+    {
+      "t": 1784871910.711971,
+      "rss_kib": 12108624
+    },
+    {
+      "t": 1784871910.9969542,
+      "rss_kib": 12137280
+    },
+    {
+      "t": 1784871911.285855,
+      "rss_kib": 12137520
+    },
+    {
+      "t": 1784871911.574225,
+      "rss_kib": 12139536
+    },
+    {
+      "t": 1784871911.863473,
+      "rss_kib": 12139872
+    },
+    {
+      "t": 1784871912.150314,
+      "rss_kib": 12139904
+    },
+    {
+      "t": 1784871912.440757,
+      "rss_kib": 12139904
+    },
+    {
+      "t": 1784871912.728163,
+      "rss_kib": 12139936
+    },
+    {
+      "t": 1784871913.016315,
+      "rss_kib": 12140336
+    },
+    {
+      "t": 1784871913.3025558,
+      "rss_kib": 12141120
+    },
+    {
+      "t": 1784871913.592148,
+      "rss_kib": 12141936
+    },
+    {
+      "t": 1784871913.8815832,
+      "rss_kib": 12166176
+    },
+    {
+      "t": 1784871914.1679392,
+      "rss_kib": 12166384
+    },
+    {
+      "t": 1784871914.457272,
+      "rss_kib": 12166384
+    },
+    {
+      "t": 1784871914.746447,
+      "rss_kib": 12166384
+    },
+    {
+      "t": 1784871915.035721,
+      "rss_kib": 12166384
+    },
+    {
+      "t": 1784871915.324758,
+      "rss_kib": 12166384
+    },
+    {
+      "t": 1784871915.615715,
+      "rss_kib": 12166384
+    },
+    {
+      "t": 1784871915.90114,
+      "rss_kib": 12166384
+    },
+    {
+      "t": 1784871916.187936,
+      "rss_kib": 12166400
+    },
+    {
+      "t": 1784871916.47683,
+      "rss_kib": 12166400
+    },
+    {
+      "t": 1784871916.765703,
+      "rss_kib": 12166528
+    },
+    {
+      "t": 1784871917.053675,
+      "rss_kib": 12166528
+    },
+    {
+      "t": 1784871917.350849,
+      "rss_kib": 12166544
+    },
+    {
+      "t": 1784871917.6367722,
+      "rss_kib": 12166528
+    },
+    {
+      "t": 1784871917.985667,
+      "rss_kib": 12166528
+    },
+    {
+      "t": 1784871918.3060741,
+      "rss_kib": 12166544
+    },
+    {
+      "t": 1784871918.5962691,
+      "rss_kib": 12167344
+    },
+    {
+      "t": 1784871918.8871691,
+      "rss_kib": 12167344
+    },
+    {
+      "t": 1784871919.18352,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871919.475001,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871919.766507,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871920.066335,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871920.352737,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871920.643785,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871920.934658,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871921.22644,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871921.514213,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871921.8055072,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871922.09659,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871922.387764,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871922.675252,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871922.962392,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871923.250313,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871923.5388548,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871923.8269901,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871924.118051,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871924.4065359,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871924.698719,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871924.988601,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871925.279886,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871925.570365,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871925.861948,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871926.150833,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871926.4399822,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871926.731748,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871927.022465,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871927.3111339,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871927.598179,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871927.884938,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871928.172611,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871928.463548,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871928.754713,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871929.038707,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871929.329673,
+      "rss_kib": 12166928
+    },
+    {
+      "t": 1784871929.617088,
+      "rss_kib": 12166992
+    },
+    {
+      "t": 1784871929.908982,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871930.1971982,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871930.488402,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871930.77513,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871931.0637262,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871931.352457,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871931.642238,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871931.933187,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871932.219415,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871932.510695,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871932.7979178,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871933.08319,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871933.37437,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871933.6621299,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871933.948844,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871934.2364218,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871934.527364,
+      "rss_kib": 12167232
+    },
+    {
+      "t": 1784871934.818733,
+      "rss_kib": 12167392
+    },
+    {
+      "t": 1784871935.104297,
+      "rss_kib": 12167392
+    },
+    {
+      "t": 1784871935.394398,
+      "rss_kib": 12167392
+    },
+    {
+      "t": 1784871935.685933,
+      "rss_kib": 12167392
+    },
+    {
+      "t": 1784871935.974389,
+      "rss_kib": 12167392
+    },
+    {
+      "t": 1784871936.261545,
+      "rss_kib": 12167392
+    },
+    {
+      "t": 1784871936.549958,
+      "rss_kib": 12167392
+    },
+    {
+      "t": 1784871936.8406248,
+      "rss_kib": 12167392
+    },
+    {
+      "t": 1784871937.131488,
+      "rss_kib": 12167440
+    },
+    {
+      "t": 1784871937.423168,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871937.715245,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871938.004073,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871938.297073,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871938.5881789,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871938.875942,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871939.166723,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871939.4548311,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871939.745443,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871940.032722,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871940.323987,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871940.611755,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871940.899473,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871941.1896589,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871941.478591,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871941.770421,
+      "rss_kib": 12167488
+    },
+    {
+      "t": 1784871942.057709,
+      "rss_kib": 12167504
+    },
+    {
+      "t": 1784871942.348983,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871942.637623,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871942.924659,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871943.215474,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871943.506582,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871943.7942688,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871944.0851898,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871944.375669,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871944.666497,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871944.955637,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871945.240671,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871945.5283682,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871945.812547,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871946.0989928,
+      "rss_kib": 12167616
+    },
+    {
+      "t": 1784871946.3881521,
+      "rss_kib": 12167568
+    },
+    {
+      "t": 1784871946.679481,
+      "rss_kib": 12167568
+    },
+    {
+      "t": 1784871946.966113,
+      "rss_kib": 12167568
+    },
+    {
+      "t": 1784871947.257181,
+      "rss_kib": 12167568
+    },
+    {
+      "t": 1784871947.54671,
+      "rss_kib": 12167600
+    },
+    {
+      "t": 1784871947.8321412,
+      "rss_kib": 12167920
+    },
+    {
+      "t": 1784871948.117007,
+      "rss_kib": 12167920
+    },
+    {
+      "t": 1784871948.403262,
+      "rss_kib": 12167920
+    },
+    {
+      "t": 1784871948.691404,
+      "rss_kib": 12167920
+    },
+    {
+      "t": 1784871948.9830132,
+      "rss_kib": 12167936
+    },
+    {
+      "t": 1784871949.268973,
+      "rss_kib": 12167968
+    },
+    {
+      "t": 1784871949.554529,
+      "rss_kib": 12167968
+    },
+    {
+      "t": 1784871949.841046,
+      "rss_kib": 12167984
+    },
+    {
+      "t": 1784871950.131943,
+      "rss_kib": 12167984
+    },
+    {
+      "t": 1784871950.421314,
+      "rss_kib": 12167984
+    },
+    {
+      "t": 1784871950.7073998,
+      "rss_kib": 12168000
+    },
+    {
+      "t": 1784871950.996487,
+      "rss_kib": 12168000
+    },
+    {
+      "t": 1784871951.2871192,
+      "rss_kib": 12168016
+    },
+    {
+      "t": 1784871951.573838,
+      "rss_kib": 12168016
+    },
+    {
+      "t": 1784871951.861708,
+      "rss_kib": 12168016
+    },
+    {
+      "t": 1784871952.152997,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871952.4402308,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871952.731346,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871953.0200598,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871953.307513,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871953.5984929,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871953.887106,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871954.177301,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871954.464415,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871954.748634,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871955.0349162,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871955.32443,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871955.614208,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871955.9018319,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871956.189068,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871956.480562,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871956.767754,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871957.0585659,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871957.3427489,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871957.629515,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871957.913768,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871958.201104,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871958.492063,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871958.7803562,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871959.069916,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871959.354883,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871959.641632,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871959.929759,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871960.220315,
+      "rss_kib": 12168048
+    },
+    {
+      "t": 1784871960.507155,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871960.796176,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871961.0864189,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871961.3740768,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871961.6652532,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871961.952362,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871962.2419782,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871962.5315242,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871962.8228009,
+      "rss_kib": 12168032
+    },
+    {
+      "t": 1784871963.111593,
+      "rss_kib": 12171328
+    },
+    {
+      "t": 1784871963.402596,
+      "rss_kib": 12171008
+    },
+    {
+      "t": 1784871963.6956859,
+      "rss_kib": 12170976
+    },
+    {
+      "t": 1784871963.984171,
+      "rss_kib": 12169744
+    },
+    {
+      "t": 1784871964.2771788,
+      "rss_kib": 12169744
+    },
+    {
+      "t": 1784871964.566518,
+      "rss_kib": 12168976
+    },
+    {
+      "t": 1784871964.855725,
+      "rss_kib": 12168976
+    },
+    {
+      "t": 1784871965.1470358,
+      "rss_kib": 12168976
+    },
+    {
+      "t": 1784871965.439175,
+      "rss_kib": 12168608
+    },
+    {
+      "t": 1784871965.7249558,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871966.013203,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871966.30076,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871966.591153,
+      "rss_kib": 12168592
+    },
+    {
+      "t": 1784871966.88026,
+      "rss_kib": 12168592
+    },
+    {
+      "t": 1784871967.1708941,
+      "rss_kib": 12168592
+    },
+    {
+      "t": 1784871967.465305,
+      "rss_kib": 12168592
+    },
+    {
+      "t": 1784871967.75243,
+      "rss_kib": 12168592
+    },
+    {
+      "t": 1784871968.0400178,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871968.324121,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871968.6110778,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871968.897714,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871969.1850328,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871969.4725811,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871969.760949,
+      "rss_kib": 12168592
+    },
+    {
+      "t": 1784871970.053646,
+      "rss_kib": 12168592
+    },
+    {
+      "t": 1784871970.348246,
+      "rss_kib": 12168592
+    },
+    {
+      "t": 1784871970.637718,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871970.924662,
+      "rss_kib": 12168704
+    },
+    {
+      "t": 1784871971.214564,
+      "rss_kib": 12168704
+    },
+    {
+      "t": 1784871971.5006988,
+      "rss_kib": 12168704
+    },
+    {
+      "t": 1784871971.7889311,
+      "rss_kib": 12168704
+    },
+    {
+      "t": 1784871972.074225,
+      "rss_kib": 12168704
+    },
+    {
+      "t": 1784871972.365929,
+      "rss_kib": 12168704
+    },
+    {
+      "t": 1784871972.659251,
+      "rss_kib": 12168704
+    },
+    {
+      "t": 1784871972.949707,
+      "rss_kib": 12168624
+    },
+    {
+      "t": 1784871973.241156,
+      "rss_kib": 12168640
+    },
+    {
+      "t": 1784871973.529721,
+      "rss_kib": 12168768
+    },
+    {
+      "t": 1784871973.819633,
+      "rss_kib": 12168768
+    },
+    {
+      "t": 1784871974.109102,
+      "rss_kib": 12168784
+    },
+    {
+      "t": 1784871974.403348,
+      "rss_kib": 12168784
+    },
+    {
+      "t": 1784871974.6984801,
+      "rss_kib": 12168784
+    },
+    {
+      "t": 1784871974.9896698,
+      "rss_kib": 12168784
+    },
+    {
+      "t": 1784871975.282615,
+      "rss_kib": 12168784
+    },
+    {
+      "t": 1784871975.569761,
+      "rss_kib": 12168784
+    },
+    {
+      "t": 1784871975.860408,
+      "rss_kib": 12168784
+    },
+    {
+      "t": 1784871976.147443,
+      "rss_kib": 12169680
+    },
+    {
+      "t": 1784871976.434889,
+      "rss_kib": 12169680
+    },
+    {
+      "t": 1784871976.724973,
+      "rss_kib": 12169680
+    },
+    {
+      "t": 1784871977.016466,
+      "rss_kib": 12169680
+    },
+    {
+      "t": 1784871977.305948,
+      "rss_kib": 12169680
+    },
+    {
+      "t": 1784871977.5983949,
+      "rss_kib": 12169680
+    },
+    {
+      "t": 1784871977.893813,
+      "rss_kib": 12169680
+    },
+    {
+      "t": 1784871978.1836932,
+      "rss_kib": 12169680
+    },
+    {
+      "t": 1784871978.4758568,
+      "rss_kib": 12172560
+    },
+    {
+      "t": 1784871978.767197,
+      "rss_kib": 12172752
+    },
+    {
+      "t": 1784871979.054086,
+      "rss_kib": 12172784
+    },
+    {
+      "t": 1784871979.345336,
+      "rss_kib": 12172784
+    },
+    {
+      "t": 1784871979.6339462,
+      "rss_kib": 12172784
+    },
+    {
+      "t": 1784871979.923386,
+      "rss_kib": 12172784
+    },
+    {
+      "t": 1784871980.214427,
+      "rss_kib": 12172784
+    },
+    {
+      "t": 1784871980.503257,
+      "rss_kib": 12172784
+    },
+    {
+      "t": 1784871980.793243,
+      "rss_kib": 12172832
+    },
+    {
+      "t": 1784871981.08016,
+      "rss_kib": 12172832
+    },
+    {
+      "t": 1784871981.369802,
+      "rss_kib": 12172832
+    },
+    {
+      "t": 1784871981.659533,
+      "rss_kib": 12172832
+    },
+    {
+      "t": 1784871981.950913,
+      "rss_kib": 12172832
+    },
+    {
+      "t": 1784871982.2405949,
+      "rss_kib": 12172832
+    },
+    {
+      "t": 1784871982.5279412,
+      "rss_kib": 12172832
+    },
+    {
+      "t": 1784871982.819196,
+      "rss_kib": 12172832
+    },
+    {
+      "t": 1784871983.1088629,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871983.398975,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871983.6965601,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871983.987486,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871984.277119,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871984.563396,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871984.851325,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871985.141877,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871985.430463,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871985.717178,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871986.006964,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871986.2931688,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871986.582243,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871986.871315,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871987.159795,
+      "rss_kib": 12172880
+    },
+    {
+      "t": 1784871987.44375,
+      "rss_kib": 12172864
+    },
+    {
+      "t": 1784871987.729077,
+      "rss_kib": 12172928
+    },
+    {
+      "t": 1784871988.026755,
+      "rss_kib": 12172928
+    },
+    {
+      "t": 1784871988.31617,
+      "rss_kib": 12172928
+    },
+    {
+      "t": 1784871988.608242,
+      "rss_kib": 12172928
+    },
+    {
+      "t": 1784871988.900831,
+      "rss_kib": 12172928
+    },
+    {
+      "t": 1784871989.1909661,
+      "rss_kib": 12172928
+    },
+    {
+      "t": 1784871989.482791,
+      "rss_kib": 12172928
+    },
+    {
+      "t": 1784871989.7712169,
+      "rss_kib": 12172912
+    },
+    {
+      "t": 1784871990.0638049,
+      "rss_kib": 12172896
+    },
+    {
+      "t": 1784871990.357329,
+      "rss_kib": 12172896
+    },
+    {
+      "t": 1784871990.651941,
+      "rss_kib": 12172896
+    },
+    {
+      "t": 1784871990.947341,
+      "rss_kib": 12172896
+    },
+    {
+      "t": 1784871991.2373,
+      "rss_kib": 12172128
+    },
+    {
+      "t": 1784871991.5247161,
+      "rss_kib": 12172128
+    },
+    {
+      "t": 1784871991.8111281,
+      "rss_kib": 12172128
+    },
+    {
+      "t": 1784871992.105731,
+      "rss_kib": 12116416
+    },
+    {
+      "t": 1784871992.3934028,
+      "rss_kib": 12116416
+    },
+    {
+      "t": 1784871992.689693,
+      "rss_kib": 12116416
+    },
+    {
+      "t": 1784871992.985634,
+      "rss_kib": 12116416
+    },
+    {
+      "t": 1784871993.270781,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871993.561986,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871993.85148,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871994.141043,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871994.433202,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871994.722792,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871995.013708,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871995.307594,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871995.5951738,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871995.889297,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784871996.18146,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871996.473632,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871996.761217,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871997.0502982,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871997.341689,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871997.633326,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871997.9209468,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871998.2146409,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871998.505595,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871998.797787,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871999.090275,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871999.382302,
+      "rss_kib": 12116032
+    },
+    {
+      "t": 1784871999.67439,
+      "rss_kib": 12116064
+    },
+    {
+      "t": 1784871999.966188,
+      "rss_kib": 12116064
+    },
+    {
+      "t": 1784872000.256074,
+      "rss_kib": 12116064
+    },
+    {
+      "t": 1784872000.549081,
+      "rss_kib": 12116064
+    },
+    {
+      "t": 1784872000.842347,
+      "rss_kib": 12116064
+    },
+    {
+      "t": 1784872001.12934,
+      "rss_kib": 12116064
+    },
+    {
+      "t": 1784872001.421045,
+      "rss_kib": 12116064
+    },
+    {
+      "t": 1784872001.714591,
+      "rss_kib": 12116064
+    },
+    {
+      "t": 1784872002.0024981,
+      "rss_kib": 12116080
+    },
+    {
+      "t": 1784872002.2955132,
+      "rss_kib": 12116096
+    },
+    {
+      "t": 1784872002.5876951,
+      "rss_kib": 12116096
+    },
+    {
+      "t": 1784872002.878546,
+      "rss_kib": 12116096
+    },
+    {
+      "t": 1784872003.169195,
+      "rss_kib": 12116096
+    },
+    {
+      "t": 1784872003.475088,
+      "rss_kib": 12104096
+    },
+    {
+      "t": 1784872003.7654982,
+      "rss_kib": 11885312
+    },
+    {
+      "t": 1784872004.0537071,
+      "rss_kib": 11885312
+    },
+    {
+      "t": 1784872004.344414,
+      "rss_kib": 11885312
+    },
+    {
+      "t": 1784872004.637812,
+      "rss_kib": 11885312
+    },
+    {
+      "t": 1784872004.925807,
+      "rss_kib": 11886032
+    },
+    {
+      "t": 1784872005.213731,
+      "rss_kib": 11886032
+    },
+    {
+      "t": 1784872005.502055,
+      "rss_kib": 11886032
+    },
+    {
+      "t": 1784872005.789901,
+      "rss_kib": 11886032
+    },
+    {
+      "t": 1784872006.076598,
+      "rss_kib": 11886032
+    },
+    {
+      "t": 1784872006.3595588,
+      "rss_kib": 11886032
+    },
+    {
+      "t": 1784872006.648292,
+      "rss_kib": 11886032
+    },
+    {
+      "t": 1784872006.9339561,
+      "rss_kib": 11886032
+    },
+    {
+      "t": 1784872007.226051,
+      "rss_kib": 11890352
+    },
+    {
+      "t": 1784872007.516983,
+      "rss_kib": 11890352
+    },
+    {
+      "t": 1784872007.81179,
+      "rss_kib": 11890352
+    },
+    {
+      "t": 1784872008.102108,
+      "rss_kib": 11890352
+    },
+    {
+      "t": 1784872008.392533,
+      "rss_kib": 11890352
+    },
+    {
+      "t": 1784872008.682373,
+      "rss_kib": 11890352
+    },
+    {
+      "t": 1784872008.973118,
+      "rss_kib": 11890352
+    },
+    {
+      "t": 1784872009.261348,
+      "rss_kib": 11890320
+    },
+    {
+      "t": 1784872009.557885,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872009.845203,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872010.133308,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872010.42434,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872010.713738,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872011.004009,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872011.296745,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872011.585999,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872011.877084,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872012.1690822,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872012.461177,
+      "rss_kib": 11889568
+    },
+    {
+      "t": 1784872012.75542,
+      "rss_kib": 11889568
+    },
+    {
+      "t": 1784872013.044439,
+      "rss_kib": 11889568
+    },
+    {
+      "t": 1784872013.3351822,
+      "rss_kib": 11889568
+    },
+    {
+      "t": 1784872013.626817,
+      "rss_kib": 11889584
+    },
+    {
+      "t": 1784872013.918584,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872014.205666,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872014.492835,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872014.782651,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872015.0765598,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872015.364865,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872015.6570911,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872015.948577,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872016.2361732,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872016.5273159,
+      "rss_kib": 11889568
+    },
+    {
+      "t": 1784872016.811425,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872017.102838,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872017.3910809,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872017.680713,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872017.971599,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872018.260511,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872018.550612,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872018.841277,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872019.131165,
+      "rss_kib": 11889552
+    },
+    {
+      "t": 1784872019.42433,
+      "rss_kib": 11889520
+    },
+    {
+      "t": 1784872019.718787,
+      "rss_kib": 11889520
+    },
+    {
+      "t": 1784872020.009871,
+      "rss_kib": 11889584
+    },
+    {
+      "t": 1784872020.303272,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872020.596577,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872020.8965068,
+      "rss_kib": 11889600
+    },
+    {
+      "t": 1784872021.190766,
+      "rss_kib": 11889040
+    },
+    {
+      "t": 1784872021.484064,
+      "rss_kib": 11782208
+    },
+    {
+      "t": 1784872021.775827,
+      "rss_kib": 11782208
+    },
+    {
+      "t": 1784872022.066972,
+      "rss_kib": 11780608
+    },
+    {
+      "t": 1784872022.3629298,
+      "rss_kib": 11780608
+    },
+    {
+      "t": 1784872022.657913,
+      "rss_kib": 11780608
+    },
+    {
+      "t": 1784872022.943792,
+      "rss_kib": 11781344
+    },
+    {
+      "t": 1784872023.2326112,
+      "rss_kib": 11781344
+    },
+    {
+      "t": 1784872023.521755,
+      "rss_kib": 11781344
+    },
+    {
+      "t": 1784872023.8079302,
+      "rss_kib": 11781344
+    },
+    {
+      "t": 1784872024.096329,
+      "rss_kib": 11781344
+    },
+    {
+      "t": 1784872024.38722,
+      "rss_kib": 11781344
+    },
+    {
+      "t": 1784872024.6760268,
+      "rss_kib": 11781360
+    },
+    {
+      "t": 1784872024.9626381,
+      "rss_kib": 11782944
+    },
+    {
+      "t": 1784872025.2547991,
+      "rss_kib": 11830832
+    },
+    {
+      "t": 1784872025.542819,
+      "rss_kib": 11830832
+    },
+    {
+      "t": 1784872025.836294,
+      "rss_kib": 11830832
+    },
+    {
+      "t": 1784872026.123889,
+      "rss_kib": 11830832
+    },
+    {
+      "t": 1784872026.4121878,
+      "rss_kib": 11830832
+    },
+    {
+      "t": 1784872026.699261,
+      "rss_kib": 11830832
+    },
+    {
+      "t": 1784872026.9907,
+      "rss_kib": 11830832
+    },
+    {
+      "t": 1784872027.283669,
+      "rss_kib": 11830032
+    },
+    {
+      "t": 1784872027.572721,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872027.864104,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872028.1537821,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872028.442146,
+      "rss_kib": 11784912
+    },
+    {
+      "t": 1784872028.733367,
+      "rss_kib": 11784960
+    },
+    {
+      "t": 1784872029.021033,
+      "rss_kib": 11784960
+    },
+    {
+      "t": 1784872029.310666,
+      "rss_kib": 11784992
+    },
+    {
+      "t": 1784872029.5971022,
+      "rss_kib": 11784992
+    },
+    {
+      "t": 1784872029.8886132,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872030.1825652,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872030.469794,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872030.760726,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872031.047773,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872031.337695,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872031.6257,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872031.917548,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872032.209246,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872032.501297,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872032.792875,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872033.0836558,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872033.372255,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872033.658974,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872033.9499772,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872034.2373,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872034.526212,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872034.8165948,
+      "rss_kib": 11784976
+    },
+    {
+      "t": 1784872035.10423,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872035.395802,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872035.688268,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872035.976109,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872036.2672,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872036.560757,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872036.850589,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872037.1382132,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872037.426229,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872037.7153568,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872038.007221,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872038.29492,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872038.5825632,
+      "rss_kib": 11784896
+    },
+    {
+      "t": 1784872038.873056,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872039.164458,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872039.4509308,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872039.740236,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872040.026505,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872040.314569,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872040.6028328,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872040.893713,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872041.1851468,
+      "rss_kib": 11784928
+    },
+    {
+      "t": 1784872041.476248,
+      "rss_kib": 11784848
+    },
+    {
+      "t": 1784872041.7684639,
+      "rss_kib": 11785680
+    },
+    {
+      "t": 1784872042.058054,
+      "rss_kib": 11785728
+    },
+    {
+      "t": 1784872042.3428018,
+      "rss_kib": 11785728
+    },
+    {
+      "t": 1784872042.632546,
+      "rss_kib": 11785728
+    },
+    {
+      "t": 1784872042.922667,
+      "rss_kib": 11785728
+    },
+    {
+      "t": 1784872043.212503,
+      "rss_kib": 11785728
+    },
+    {
+      "t": 1784872043.501057,
+      "rss_kib": 11785728
+    },
+    {
+      "t": 1784872043.789571,
+      "rss_kib": 11785728
+    },
+    {
+      "t": 1784872044.07407,
+      "rss_kib": 11785792
+    },
+    {
+      "t": 1784872044.367477,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872044.659462,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872044.950048,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872045.2373009,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872045.52809,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872045.819726,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872046.109495,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872046.401721,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872046.688396,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872046.974706,
+      "rss_kib": 11832976
+    },
+    {
+      "t": 1784872047.266211,
+      "rss_kib": 11832944
+    },
+    {
+      "t": 1784872047.558347,
+      "rss_kib": 11832192
+    },
+    {
+      "t": 1784872047.849389,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872048.137154,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872048.424458,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872048.712668,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872049.004472,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872049.29726,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872049.586694,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872049.876831,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872050.169173,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872050.452123,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872050.737961,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872051.032678,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872051.319814,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872051.6080608,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872051.898182,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872052.191436,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872052.483978,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872052.771231,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872053.060856,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872053.352045,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872053.642418,
+      "rss_kib": 11832240
+    },
+    {
+      "t": 1784872053.930691,
+      "rss_kib": 11832192
+    },
+    {
+      "t": 1784872054.2215989,
+      "rss_kib": 11832192
+    },
+    {
+      "t": 1784872054.509989,
+      "rss_kib": 11832192
+    },
+    {
+      "t": 1784872054.797085,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872055.087179,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872055.3771698,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872055.665505,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872055.955464,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872056.247442,
+      "rss_kib": 11832160
+    },
+    {
+      "t": 1784872056.535764,
+      "rss_kib": 11832160
+    },
+    {
+      "t": 1784872056.823599,
+      "rss_kib": 11832160
+    },
+    {
+      "t": 1784872057.117837,
+      "rss_kib": 11832160
+    },
+    {
+      "t": 1784872057.405281,
+      "rss_kib": 11832208
+    },
+    {
+      "t": 1784872057.695745,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872057.985915,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872058.276844,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872058.568046,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872058.857245,
+      "rss_kib": 11832224
+    },
+    {
+      "t": 1784872059.150044,
+      "rss_kib": 11832272
+    },
+    {
+      "t": 1784872059.43815,
+      "rss_kib": 11832272
+    },
+    {
+      "t": 1784872059.725038,
+      "rss_kib": 11787168
+    },
+    {
+      "t": 1784872060.016049,
+      "rss_kib": 11787168
+    },
+    {
+      "t": 1784872060.305425,
+      "rss_kib": 11913840
+    },
+    {
+      "t": 1784872060.594996,
+      "rss_kib": 11932112
+    },
+    {
+      "t": 1784872060.8812459,
+      "rss_kib": 11932112
+    },
+    {
+      "t": 1784872061.164803,
+      "rss_kib": 11932112
+    },
+    {
+      "t": 1784872061.453881,
+      "rss_kib": 11932112
+    },
+    {
+      "t": 1784872061.7403038,
+      "rss_kib": 11932112
+    },
+    {
+      "t": 1784872062.023756,
+      "rss_kib": 11932480
+    },
+    {
+      "t": 1784872062.3111732,
+      "rss_kib": 11932480
+    },
+    {
+      "t": 1784872062.598172,
+      "rss_kib": 11932464
+    },
+    {
+      "t": 1784872062.88713,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872063.178297,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872063.473679,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872063.76636,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872064.056919,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872064.347908,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872064.639891,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872064.930302,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872065.2208471,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872065.513474,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872065.8018088,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872066.090057,
+      "rss_kib": 11979760
+    },
+    {
+      "t": 1784872066.383028,
+      "rss_kib": 11979488
+    },
+    {
+      "t": 1784872066.6716852,
+      "rss_kib": 11979488
+    },
+    {
+      "t": 1784872066.9638138,
+      "rss_kib": 11979488
+    },
+    {
+      "t": 1784872067.251374,
+      "rss_kib": 11979488
+    },
+    {
+      "t": 1784872067.534525,
+      "rss_kib": 11979488
+    },
+    {
+      "t": 1784872067.8198268,
+      "rss_kib": 11979488
+    },
+    {
+      "t": 1784872068.1099389,
+      "rss_kib": 11978704
+    },
+    {
+      "t": 1784872068.402665,
+      "rss_kib": 11978704
+    },
+    {
+      "t": 1784872068.691844,
+      "rss_kib": 11978704
+    },
+    {
+      "t": 1784872068.981744,
+      "rss_kib": 11978704
+    },
+    {
+      "t": 1784872069.27073,
+      "rss_kib": 11978736
+    },
+    {
+      "t": 1784872069.558908,
+      "rss_kib": 11978736
+    },
+    {
+      "t": 1784872069.851709,
+      "rss_kib": 11978736
+    },
+    {
+      "t": 1784872070.1446028,
+      "rss_kib": 11978768
+    },
+    {
+      "t": 1784872070.435301,
+      "rss_kib": 11978768
+    },
+    {
+      "t": 1784872070.721977,
+      "rss_kib": 11978768
+    },
+    {
+      "t": 1784872071.009984,
+      "rss_kib": 11978768
+    },
+    {
+      "t": 1784872071.301962,
+      "rss_kib": 11978768
+    },
+    {
+      "t": 1784872071.589396,
+      "rss_kib": 11978768
+    },
+    {
+      "t": 1784872071.882061,
+      "rss_kib": 11978768
+    },
+    {
+      "t": 1784872072.1724641,
+      "rss_kib": 11978720
+    },
+    {
+      "t": 1784872072.463186,
+      "rss_kib": 11978720
+    },
+    {
+      "t": 1784872072.754308,
+      "rss_kib": 11978720
+    },
+    {
+      "t": 1784872073.0410712,
+      "rss_kib": 11978688
+    },
+    {
+      "t": 1784872073.327171,
+      "rss_kib": 11978688
+    },
+    {
+      "t": 1784872073.619471,
+      "rss_kib": 11978688
+    },
+    {
+      "t": 1784872073.91033,
+      "rss_kib": 11978656
+    },
+    {
+      "t": 1784872074.202166,
+      "rss_kib": 11978656
+    },
+    {
+      "t": 1784872074.496476,
+      "rss_kib": 11978656
+    },
+    {
+      "t": 1784872074.784678,
+      "rss_kib": 11978656
+    },
+    {
+      "t": 1784872075.075933,
+      "rss_kib": 11977792
+    },
+    {
+      "t": 1784872075.367148,
+      "rss_kib": 11977856
+    },
+    {
+      "t": 1784872075.6572192,
+      "rss_kib": 11977856
+    },
+    {
+      "t": 1784872075.9461231,
+      "rss_kib": 11977856
+    },
+    {
+      "t": 1784872076.238067,
+      "rss_kib": 11977856
+    },
+    {
+      "t": 1784872076.530109,
+      "rss_kib": 11977856
+    },
+    {
+      "t": 1784872076.8203268,
+      "rss_kib": 11977856
+    },
+    {
+      "t": 1784872077.111776,
+      "rss_kib": 11977856
+    },
+    {
+      "t": 1784872077.404392,
+      "rss_kib": 11977856
+    },
+    {
+      "t": 1784872077.692683,
+      "rss_kib": 11932752
+    },
+    {
+      "t": 1784872077.9769468,
+      "rss_kib": 11932192
+    },
+    {
+      "t": 1784872078.266166,
+      "rss_kib": 11932192
+    },
+    {
+      "t": 1784872078.5536268,
+      "rss_kib": 11932192
+    },
+    {
+      "t": 1784872078.843894,
+      "rss_kib": 11932192
+    },
+    {
+      "t": 1784872079.1306539,
+      "rss_kib": 11932192
+    },
+    {
+      "t": 1784872079.419426,
+      "rss_kib": 11932192
+    },
+    {
+      "t": 1784872079.70793,
+      "rss_kib": 11932192
+    },
+    {
+      "t": 1784872079.996625,
+      "rss_kib": 11932144
+    },
+    {
+      "t": 1784872080.284291,
+      "rss_kib": 12027600
+    },
+    {
+      "t": 1784872080.571007,
+      "rss_kib": 12054048
+    },
+    {
+      "t": 1784872080.860289,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872081.148841,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872081.4369369,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872081.724919,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872082.013185,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872082.2989728,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872082.586524,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872082.874331,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872083.161999,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872083.4509509,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872083.737967,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872084.0257611,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872084.311939,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872084.600517,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872084.887626,
+      "rss_kib": 12054480
+    },
+    {
+      "t": 1784872085.1743581,
+      "rss_kib": 12054496
+    },
+    {
+      "t": 1784872085.463535,
+      "rss_kib": 12034992
+    },
+    {
+      "t": 1784872085.7512991,
+      "rss_kib": 12034992
+    },
+    {
+      "t": 1784872086.03948,
+      "rss_kib": 12035024
+    },
+    {
+      "t": 1784872086.326168,
+      "rss_kib": 12035024
+    },
+    {
+      "t": 1784872086.614014,
+      "rss_kib": 12035024
+    },
+    {
+      "t": 1784872086.898904,
+      "rss_kib": 12035024
+    },
+    {
+      "t": 1784872087.1890051,
+      "rss_kib": 12035024
+    },
+    {
+      "t": 1784872087.478553,
+      "rss_kib": 11994016
+    },
+    {
+      "t": 1784872087.765694,
+      "rss_kib": 11994096
+    },
+    {
+      "t": 1784872088.051796,
+      "rss_kib": 12042096
+    },
+    {
+      "t": 1784872088.335436,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872088.623147,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872088.913974,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872089.2019079,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872089.491088,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872089.7777941,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872090.066248,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872090.3562071,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872090.644445,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872090.933434,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872091.222581,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872091.508211,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872091.798329,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872092.0861042,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872092.3748438,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872092.662017,
+      "rss_kib": 12045040
+    },
+    {
+      "t": 1784872092.953247,
+      "rss_kib": 12044992
+    },
+    {
+      "t": 1784872093.241178,
+      "rss_kib": 12044992
+    },
+    {
+      "t": 1784872093.527961,
+      "rss_kib": 12044992
+    },
+    {
+      "t": 1784872093.816868,
+      "rss_kib": 12044992
+    },
+    {
+      "t": 1784872094.103616,
+      "rss_kib": 12044992
+    },
+    {
+      "t": 1784872094.3926091,
+      "rss_kib": 12044992
+    },
+    {
+      "t": 1784872094.677808,
+      "rss_kib": 12044992
+    },
+    {
+      "t": 1784872094.965866,
+      "rss_kib": 12003936
+    },
+    {
+      "t": 1784872095.2512388,
+      "rss_kib": 12003984
+    },
+    {
+      "t": 1784872095.53805,
+      "rss_kib": 12012192
+    },
+    {
+      "t": 1784872095.82195,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872096.106383,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872096.390354,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872096.677152,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872096.9656708,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872097.254446,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872097.5407271,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872097.832075,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872098.122229,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872098.412579,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872098.7009668,
+      "rss_kib": 12045136
+    },
+    {
+      "t": 1784872098.987591,
+      "rss_kib": 12045152
+    },
+    {
+      "t": 1784872099.276372,
+      "rss_kib": 12045152
+    },
+    {
+      "t": 1784872099.566795,
+      "rss_kib": 12045152
+    },
+    {
+      "t": 1784872099.854511,
+      "rss_kib": 12045152
+    },
+    {
+      "t": 1784872100.143106,
+      "rss_kib": 12045152
+    },
+    {
+      "t": 1784872100.4307232,
+      "rss_kib": 12024624
+    },
+    {
+      "t": 1784872100.7184289,
+      "rss_kib": 12024624
+    },
+    {
+      "t": 1784872101.002765,
+      "rss_kib": 12024624
+    },
+    {
+      "t": 1784872101.2903209,
+      "rss_kib": 12024624
+    },
+    {
+      "t": 1784872101.579054,
+      "rss_kib": 12024624
+    },
+    {
+      "t": 1784872101.8660831,
+      "rss_kib": 12024624
+    },
+    {
+      "t": 1784872102.1559758,
+      "rss_kib": 12024624
+    },
+    {
+      "t": 1784872102.445181,
+      "rss_kib": 11991760
+    },
+    {
+      "t": 1784872102.731603,
+      "rss_kib": 11991760
+    }
+  ],
+  "rss_kib_summary": {
+    "min": 11780608,
+    "max": 12172928,
+    "median": 12054480.0
+  }
+}

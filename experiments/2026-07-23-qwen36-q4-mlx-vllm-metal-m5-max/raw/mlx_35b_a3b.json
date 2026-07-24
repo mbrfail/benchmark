@@ -1,0 +1,1366 @@
+{
+  "schema_version": 1,
+  "engine": "mlx-lm-0.31.3",
+  "model_label": "qwen3.6-35b-a3b-mlx-4bit",
+  "served_model_id": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-4bit",
+  "base_url": "http://127.0.0.1:8088/v1",
+  "sampling": {
+    "temperature": 0.0,
+    "thinking": false
+  },
+  "repetitions": 5,
+  "sequential": {
+    "short": {
+      "cache_state": "warm after one identical warmup",
+      "warmup": {
+        "http_status": 200,
+        "ttft_s": 1.435556667,
+        "total_s": 2.0241608749999997,
+        "decode_s": 0.588604208,
+        "prompt_tokens": 40,
+        "completion_tokens": 64,
+        "decode_tok_s": 108.731808454893,
+        "finish_reason": "length",
+        "output": "*   **Eliminates Redundant Computation**: It stores the key-value (KV) cache of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Reduces Latency**: By reusing cached KV states instead of performing expensive matrix multiplications for"
+      },
+      "trials": [
+        {
+          "http_status": 200,
+          "ttft_s": 0.14645458399999978,
+          "total_s": 1.230949292,
+          "decode_s": 1.0844947080000003,
+          "prompt_tokens": 40,
+          "completion_tokens": 120,
+          "decode_tok_s": 110.65060909453508,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It stores the key-value (KV) cache of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Reduces Latency**: By reusing cached KV states instead of performing expensive matrix multiplications for common inputs, the time to generate the next token is significantly shortened.\n*   **Optimizes Memory Bandwidth**: It minimizes data movement between GPU memory and compute units, as the server retrieves pre-calculated states rather than fetching and processing raw input embeddings repeatedly.",
+          "trial": 1
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.11831050000000021,
+          "total_s": 1.2101735840000005,
+          "decode_s": 1.0918630840000003,
+          "prompt_tokens": 40,
+          "completion_tokens": 120,
+          "decode_tok_s": 109.90388974447639,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It stores the key-value (KV) cache of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Reduces Latency**: By reusing cached KV states instead of performing expensive matrix multiplications for common inputs, the time to generate the next token is significantly shortened.\n*   **Optimizes Memory Bandwidth**: It minimizes data movement between GPU memory and compute units, as the server retrieves pre-calculated states rather than fetching and processing raw input embeddings repeatedly.",
+          "trial": 2
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.13331737499999985,
+          "total_s": 1.219641459,
+          "decode_s": 1.0863240840000001,
+          "prompt_tokens": 40,
+          "completion_tokens": 120,
+          "decode_tok_s": 110.46427283296794,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It stores the key-value (KV) cache of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Reduces Latency**: By reusing cached KV states instead of performing expensive matrix multiplications for common inputs, the time to generate the next token is significantly shortened.\n*   **Optimizes Memory Bandwidth**: It minimizes data movement between GPU memory and compute units, as the server retrieves pre-calculated states rather than fetching and processing raw input embeddings repeatedly.",
+          "trial": 3
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.12219495800000058,
+          "total_s": 1.2149692500000002,
+          "decode_s": 1.0927742919999996,
+          "prompt_tokens": 40,
+          "completion_tokens": 120,
+          "decode_tok_s": 109.81224657140821,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It stores the key-value (KV) cache of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Reduces Latency**: By reusing cached KV states instead of performing expensive matrix multiplications for common inputs, the time to generate the next token is significantly shortened.\n*   **Optimizes Memory Bandwidth**: It minimizes data movement between GPU memory and compute units, as the server retrieves pre-calculated states rather than fetching and processing raw input embeddings repeatedly.",
+          "trial": 4
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.127189875,
+          "total_s": 1.3397169590000004,
+          "decode_s": 1.2125270840000004,
+          "prompt_tokens": 40,
+          "completion_tokens": 120,
+          "decode_tok_s": 98.96686151053427,
+          "finish_reason": "stop",
+          "output": "*   **Eliminates Redundant Computation**: It stores the key-value (KV) cache of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Reduces Latency**: By reusing cached KV states instead of performing expensive matrix multiplications for common inputs, the time to generate the next token is significantly shortened.\n*   **Optimizes Memory Bandwidth**: It minimizes data movement between GPU memory and compute units, as the server retrieves pre-calculated states rather than fetching and processing raw input embeddings repeatedly.",
+          "trial": 5
+        }
+      ],
+      "summary": {
+        "ttft_s": {
+          "median": 0.127189875,
+          "min": 0.11831050000000021,
+          "max": 0.14645458399999978,
+          "n": 5
+        },
+        "total_s": {
+          "median": 1.219641459,
+          "min": 1.2101735840000005,
+          "max": 1.3397169590000004,
+          "n": 5
+        },
+        "decode_tok_s": {
+          "median": 109.90388974447639,
+          "min": 98.96686151053427,
+          "max": 110.65060909453508,
+          "n": 5
+        },
+        "prompt_tokens": {
+          "median": 40,
+          "min": 40,
+          "max": 40,
+          "n": 5
+        },
+        "completion_tokens": {
+          "median": 120,
+          "min": 120,
+          "max": 120,
+          "n": 5
+        }
+      }
+    },
+    "code": {
+      "cache_state": "warm after one identical warmup",
+      "warmup": {
+        "http_status": 200,
+        "ttft_s": 0.1717308329999998,
+        "total_s": 0.747080833,
+        "decode_s": 0.5753500000000003,
+        "prompt_tokens": 47,
+        "completion_tokens": 64,
+        "decode_tok_s": 111.23663856782824,
+        "finish_reason": "length",
+        "output": "```python\nfrom typing import List, Tuple\n\ndef merge_intervals(intervals: List[Tuple[int, int]]) -> List[Tuple[int, int]]:\n    if not intervals:\n        return []\n    \n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged ="
+      },
+      "trials": [
+        {
+          "http_status": 200,
+          "ttft_s": 0.1176179580000003,
+          "total_s": 1.9970310829999995,
+          "decode_s": 1.8794131249999992,
+          "prompt_tokens": 47,
+          "completion_tokens": 196,
+          "decode_tok_s": 104.28787443952754,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List, Tuple\n\ndef merge_intervals(intervals: List[Tuple[int, int]]) -> List[Tuple[int, int]]:\n    if not intervals:\n        return []\n    \n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [sorted_intervals[0]]\n    \n    for current in sorted_intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            merged[-1] = (last[0], max(last[1], current[1]))\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example: merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]) -> [(1, 6), (8, 10), (15, 18)]\n```",
+          "trial": 1
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.12413666600000006,
+          "total_s": 1.9401272499999997,
+          "decode_s": 1.8159905839999997,
+          "prompt_tokens": 47,
+          "completion_tokens": 196,
+          "decode_tok_s": 107.9300750383186,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List, Tuple\n\ndef merge_intervals(intervals: List[Tuple[int, int]]) -> List[Tuple[int, int]]:\n    if not intervals:\n        return []\n    \n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [sorted_intervals[0]]\n    \n    for current in sorted_intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            merged[-1] = (last[0], max(last[1], current[1]))\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example: merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]) -> [(1, 6), (8, 10), (15, 18)]\n```",
+          "trial": 2
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.13322995799999937,
+          "total_s": 1.9262957079999996,
+          "decode_s": 1.7930657500000002,
+          "prompt_tokens": 47,
+          "completion_tokens": 196,
+          "decode_tok_s": 109.30999044513564,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List, Tuple\n\ndef merge_intervals(intervals: List[Tuple[int, int]]) -> List[Tuple[int, int]]:\n    if not intervals:\n        return []\n    \n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [sorted_intervals[0]]\n    \n    for current in sorted_intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            merged[-1] = (last[0], max(last[1], current[1]))\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example: merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]) -> [(1, 6), (8, 10), (15, 18)]\n```",
+          "trial": 3
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.12109787500000024,
+          "total_s": 1.9095787920000014,
+          "decode_s": 1.7884809170000011,
+          "prompt_tokens": 47,
+          "completion_tokens": 196,
+          "decode_tok_s": 109.59021040535926,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List, Tuple\n\ndef merge_intervals(intervals: List[Tuple[int, int]]) -> List[Tuple[int, int]]:\n    if not intervals:\n        return []\n    \n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [sorted_intervals[0]]\n    \n    for current in sorted_intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            merged[-1] = (last[0], max(last[1], current[1]))\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example: merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]) -> [(1, 6), (8, 10), (15, 18)]\n```",
+          "trial": 4
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.11928616700000205,
+          "total_s": 1.9184466670000013,
+          "decode_s": 1.7991604999999993,
+          "prompt_tokens": 47,
+          "completion_tokens": 196,
+          "decode_tok_s": 108.9396971532001,
+          "finish_reason": "stop",
+          "output": "```python\nfrom typing import List, Tuple\n\ndef merge_intervals(intervals: List[Tuple[int, int]]) -> List[Tuple[int, int]]:\n    if not intervals:\n        return []\n    \n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [sorted_intervals[0]]\n    \n    for current in sorted_intervals[1:]:\n        last = merged[-1]\n        if current[0] <= last[1]:\n            merged[-1] = (last[0], max(last[1], current[1]))\n        else:\n            merged.append(current)\n    \n    return merged\n\n# Example: merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]) -> [(1, 6), (8, 10), (15, 18)]\n```",
+          "trial": 5
+        }
+      ],
+      "summary": {
+        "ttft_s": {
+          "median": 0.12109787500000024,
+          "min": 0.1176179580000003,
+          "max": 0.13322995799999937,
+          "n": 5
+        },
+        "total_s": {
+          "median": 1.9262957079999996,
+          "min": 1.9095787920000014,
+          "max": 1.9970310829999995,
+          "n": 5
+        },
+        "decode_tok_s": {
+          "median": 108.9396971532001,
+          "min": 104.28787443952754,
+          "max": 109.59021040535926,
+          "n": 5
+        },
+        "prompt_tokens": {
+          "median": 47,
+          "min": 47,
+          "max": 47,
+          "n": 5
+        },
+        "completion_tokens": {
+          "median": 196,
+          "min": 196,
+          "max": 196,
+          "n": 5
+        }
+      }
+    },
+    "long_prefill": {
+      "cache_state": "warm after one identical warmup",
+      "warmup": {
+        "http_status": 200,
+        "ttft_s": 2.7012134590000016,
+        "total_s": 3.328646292000002,
+        "decode_s": 0.6274328330000003,
+        "prompt_tokens": 9938,
+        "completion_tokens": 64,
+        "decode_tok_s": 102.00295017076348,
+        "finish_reason": "length",
+        "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using"
+      },
+      "trials": [
+        {
+          "http_status": 200,
+          "ttft_s": 0.13768508300000093,
+          "total_s": 1.3458531249999979,
+          "decode_s": 1.208168041999997,
+          "prompt_tokens": 9938,
+          "completion_tokens": 123,
+          "decode_tok_s": 101.807029919767,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently passed through a reranking stage.\n5. **Validation**: The final step involves citation validation to ensure the accuracy and relevance of the retrieved information.",
+          "trial": 1
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.13721037499999866,
+          "total_s": 1.3459221249999977,
+          "decode_s": 1.208711749999999,
+          "prompt_tokens": 9938,
+          "completion_tokens": 123,
+          "decode_tok_s": 101.76123463679417,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently passed through a reranking stage.\n5. **Validation**: The final step involves citation validation to ensure the accuracy and relevance of the retrieved information.",
+          "trial": 2
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.13827999999999818,
+          "total_s": 1.3521004999999988,
+          "decode_s": 1.2138205000000006,
+          "prompt_tokens": 9938,
+          "completion_tokens": 123,
+          "decode_tok_s": 101.33294008463355,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently passed through a reranking stage.\n5. **Validation**: The final step involves citation validation to ensure the accuracy and relevance of the retrieved information.",
+          "trial": 3
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.1339897910000012,
+          "total_s": 1.3436742499999994,
+          "decode_s": 1.2096844589999982,
+          "prompt_tokens": 9938,
+          "completion_tokens": 123,
+          "decode_tok_s": 101.67940828278441,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently passed through a reranking stage.\n5. **Validation**: The final step involves citation validation to ensure the accuracy and relevance of the retrieved information.",
+          "trial": 4
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 0.13134879100000063,
+          "total_s": 1.3388129999999983,
+          "decode_s": 1.2074642089999976,
+          "prompt_tokens": 9938,
+          "completion_tokens": 123,
+          "decode_tok_s": 101.86637341562829,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently passed through a reranking stage.\n5. **Validation**: The final step involves citation validation to ensure the accuracy and relevance of the retrieved information.",
+          "trial": 5
+        }
+      ],
+      "summary": {
+        "ttft_s": {
+          "median": 0.13721037499999866,
+          "min": 0.13134879100000063,
+          "max": 0.13827999999999818,
+          "n": 5
+        },
+        "total_s": {
+          "median": 1.3458531249999979,
+          "min": 1.3388129999999983,
+          "max": 1.3521004999999988,
+          "n": 5
+        },
+        "decode_tok_s": {
+          "median": 101.76123463679417,
+          "min": 101.33294008463355,
+          "max": 101.86637341562829,
+          "n": 5
+        },
+        "prompt_tokens": {
+          "median": 9938,
+          "min": 9938,
+          "max": 9938,
+          "n": 5
+        },
+        "completion_tokens": {
+          "median": 123,
+          "min": 123,
+          "max": 123,
+          "n": 5
+        }
+      }
+    },
+    "long_prefill_cold": {
+      "cache_state": "cache-busting nonce before long body; no identical-prefix warmup",
+      "trials": [
+        {
+          "http_status": 200,
+          "ttft_s": 2.451865292000001,
+          "total_s": 3.6549858749999977,
+          "decode_s": 1.203120582999997,
+          "prompt_tokens": 9967,
+          "completion_tokens": 120,
+          "decode_tok_s": 99.74062591529972,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently refined through a reranking process.\n5. **Validation**: The final output undergoes citation validation to ensure accuracy and source integrity.",
+          "trial": 1
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 2.5486123330000012,
+          "total_s": 3.784194915999997,
+          "decode_s": 1.2355825829999958,
+          "prompt_tokens": 9967,
+          "completion_tokens": 120,
+          "decode_tok_s": 97.12017768058844,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently passed through a reranking stage.\n5. **Validation**: The final output undergoes citation validation to ensure accuracy and source integrity.",
+          "trial": 2
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 2.614439541000003,
+          "total_s": 3.798230375000003,
+          "decode_s": 1.1837908339999998,
+          "prompt_tokens": 9967,
+          "completion_tokens": 120,
+          "decode_tok_s": 101.36925929264292,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently passed through a reranking stage.\n5. **Validation**: The final output undergoes citation validation to ensure accuracy and source integrity.",
+          "trial": 3
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 2.6980210420000006,
+          "total_s": 3.8863057919999946,
+          "decode_s": 1.188284749999994,
+          "prompt_tokens": 9967,
+          "completion_tokens": 120,
+          "decode_tok_s": 100.9858958469345,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently refined through a reranking process.\n5. **Validation**: The final output undergoes citation validation to ensure accuracy and source integrity.",
+          "trial": 4
+        },
+        {
+          "http_status": 200,
+          "ttft_s": 2.751626709,
+          "total_s": 3.9384466249999974,
+          "decode_s": 1.1868199159999975,
+          "prompt_tokens": 9967,
+          "completion_tokens": 120,
+          "decode_tok_s": 101.11053781810674,
+          "finish_reason": "stop",
+          "output": "1. **Ingestion and Preprocessing**: The service receives documents, normalizes Unicode, and splits the text into passages.\n2. **Embedding and Storage**: The system creates embeddings for the passages and stores the resulting vectors along with source metadata.\n3. **Hybrid Retrieval**: Queries are processed using a combination of lexical and vector retrieval methods.\n4. **Ranking and Fusion**: Results are combined using reciprocal-rank fusion and subsequently refined through a reranking process.\n5. **Validation**: The final output undergoes citation validation to ensure accuracy and source integrity.",
+          "trial": 5
+        }
+      ],
+      "summary": {
+        "ttft_s": {
+          "median": 2.614439541000003,
+          "min": 2.451865292000001,
+          "max": 2.751626709,
+          "n": 5
+        },
+        "total_s": {
+          "median": 3.798230375000003,
+          "min": 3.6549858749999977,
+          "max": 3.9384466249999974,
+          "n": 5
+        },
+        "decode_tok_s": {
+          "median": 100.9858958469345,
+          "min": 97.12017768058844,
+          "max": 101.36925929264292,
+          "n": 5
+        },
+        "prompt_tokens": {
+          "median": 9967,
+          "min": 9967,
+          "max": 9967,
+          "n": 5
+        },
+        "completion_tokens": {
+          "median": 120,
+          "min": 120,
+          "max": 120,
+          "n": 5
+        }
+      }
+    }
+  },
+  "concurrency_4": {
+    "waves": [
+      {
+        "wave": 1,
+        "wall_s": 2.4142929580000043,
+        "aggregate_completion_tokens": 504,
+        "aggregate_tok_s": 208.75677010527863,
+        "requests": [
+          {
+            "http_status": 200,
+            "ttft_s": 0.5733171250000026,
+            "total_s": 2.4035825420000023,
+            "decode_s": 1.8302654169999997,
+            "prompt_tokens": 44,
+            "completion_tokens": 128,
+            "decode_tok_s": 69.9352120250437,
+            "finish_reason": "length",
+            "output": "*   **Reduces Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for shared text segments across different requests.\n*   **Lowers Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full sequential processing of common introductory text, significantly speeding up time-to-first-token.\n*   **Optimizes Memory and Throughput**: It minimizes redundant memory bandwidth usage and GPU compute cycles, enabling the server to handle a higher volume of concurrent requests with the same hardware resources"
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.5728460840000054,
+            "total_s": 2.333695834000004,
+            "decode_s": 1.7608497499999984,
+            "prompt_tokens": 44,
+            "completion_tokens": 124,
+            "decode_tok_s": 70.42054553490445,
+            "finish_reason": "stop",
+            "output": "*   **Reduces Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for identical or overlapping input sequences.\n*   **Lowers Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full forward pass of the shared prefix, significantly speeding up response times.\n*   **Optimizes Memory Bandwidth**: It minimizes the amount of data transferred between GPU memory and compute units during inference, leading to more efficient hardware utilization and higher throughput."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.572765375000003,
+            "total_s": 2.357511708000004,
+            "decode_s": 1.784746333000001,
+            "prompt_tokens": 44,
+            "completion_tokens": 125,
+            "decode_tok_s": 70.03796432509601,
+            "finish_reason": "stop",
+            "output": "*   **Reduces Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Lowers Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full sequential processing of the common prefix, significantly speeding up response times.\n*   **Optimizes Memory and Throughput**: It minimizes redundant memory bandwidth usage and GPU compute cycles, enabling the server to handle a higher volume of concurrent requests with the same hardware resources."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.5742904999999965,
+            "total_s": 2.3866197919999976,
+            "decode_s": 1.8123292920000011,
+            "prompt_tokens": 44,
+            "completion_tokens": 127,
+            "decode_tok_s": 70.07556549497072,
+            "finish_reason": "stop",
+            "output": "*   **Eliminates Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Reduces Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full sequential processing of the common prefix, significantly speeding up response times.\n*   **Optimizes Memory Bandwidth**: It minimizes the amount of data transferred between GPU memory and compute units during the initial phase of inference, leading to higher throughput and more efficient resource utilization."
+          }
+        ]
+      },
+      {
+        "wave": 2,
+        "wall_s": 2.2917442499999936,
+        "aggregate_completion_tokens": 504,
+        "aggregate_tok_s": 219.91982744147887,
+        "requests": [
+          {
+            "http_status": 200,
+            "ttft_s": 0.45199591700000497,
+            "total_s": 2.2910847079999996,
+            "decode_s": 1.8390887909999947,
+            "prompt_tokens": 44,
+            "completion_tokens": 128,
+            "decode_tok_s": 69.59968470603351,
+            "finish_reason": "length",
+            "output": "*   **Reduces Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for shared text segments across different requests.\n*   **Lowers Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full sequential processing of common introductory text, significantly speeding up time-to-first-token.\n*   **Optimizes Memory and Throughput**: It minimizes redundant memory bandwidth usage and GPU compute cycles, enabling the server to handle a higher volume of concurrent requests with the same hardware resources"
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.4516034999999974,
+            "total_s": 2.2228618339999997,
+            "decode_s": 1.7712583340000023,
+            "prompt_tokens": 44,
+            "completion_tokens": 124,
+            "decode_tok_s": 70.00672777074416,
+            "finish_reason": "stop",
+            "output": "*   **Reduces Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for identical or overlapping input sequences.\n*   **Lowers Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full forward pass of the shared prefix, significantly speeding up response times.\n*   **Optimizes Memory Bandwidth**: It minimizes the amount of data transferred between GPU memory and compute units during inference, leading to more efficient hardware utilization and higher throughput."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.4515478749999957,
+            "total_s": 2.2458975830000014,
+            "decode_s": 1.7943497080000057,
+            "prompt_tokens": 44,
+            "completion_tokens": 125,
+            "decode_tok_s": 69.66312054037996,
+            "finish_reason": "stop",
+            "output": "*   **Reduces Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Lowers Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full sequential processing of the common prefix, significantly speeding up response times.\n*   **Optimizes Memory and Throughput**: It minimizes redundant memory bandwidth usage and GPU compute cycles, enabling the server to handle a higher volume of concurrent requests with the same hardware resources."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.453158583000004,
+            "total_s": 2.274233625000001,
+            "decode_s": 1.8210750419999968,
+            "prompt_tokens": 44,
+            "completion_tokens": 127,
+            "decode_tok_s": 69.73902616364572,
+            "finish_reason": "stop",
+            "output": "*   **Eliminates Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Reduces Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full sequential processing of the common prefix, significantly speeding up response times.\n*   **Optimizes Memory Bandwidth**: It minimizes the amount of data transferred between GPU memory and compute units during the initial phase of inference, leading to higher throughput and more efficient resource utilization."
+          }
+        ]
+      },
+      {
+        "wave": 3,
+        "wall_s": 2.275721125000004,
+        "aggregate_completion_tokens": 504,
+        "aggregate_tok_s": 221.46826096716887,
+        "requests": [
+          {
+            "http_status": 200,
+            "ttft_s": 0.4386429169999957,
+            "total_s": 2.2751774579999946,
+            "decode_s": 1.836534540999999,
+            "prompt_tokens": 44,
+            "completion_tokens": 128,
+            "decode_tok_s": 69.69648386264687,
+            "finish_reason": "length",
+            "output": "*   **Reduces Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for shared text segments across different requests.\n*   **Lowers Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full sequential processing of common introductory text, significantly speeding up time-to-first-token.\n*   **Optimizes Memory and Throughput**: It minimizes redundant memory bandwidth usage and GPU compute cycles, enabling the server to handle a higher volume of concurrent requests with the same hardware resources"
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.43815912499999854,
+            "total_s": 2.205645084000004,
+            "decode_s": 1.7674859590000054,
+            "prompt_tokens": 44,
+            "completion_tokens": 124,
+            "decode_tok_s": 70.15614430688647,
+            "finish_reason": "stop",
+            "output": "*   **Reduces Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for identical or overlapping input sequences.\n*   **Lowers Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full forward pass of the shared prefix, significantly speeding up response times.\n*   **Optimizes Memory Bandwidth**: It minimizes the amount of data transferred between GPU memory and compute units during inference, leading to more efficient hardware utilization and higher throughput."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.43802029100000084,
+            "total_s": 2.2286837079999984,
+            "decode_s": 1.7906634169999975,
+            "prompt_tokens": 44,
+            "completion_tokens": 125,
+            "decode_tok_s": 69.80653025760685,
+            "finish_reason": "stop",
+            "output": "*   **Reduces Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Lowers Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full sequential processing of the common prefix, significantly speeding up response times.\n*   **Optimizes Memory and Throughput**: It minimizes redundant memory bandwidth usage and GPU compute cycles, enabling the server to handle a higher volume of concurrent requests with the same hardware resources."
+          },
+          {
+            "http_status": 200,
+            "ttft_s": 0.43981908299999617,
+            "total_s": 2.258374165999996,
+            "decode_s": 1.8185550829999997,
+            "prompt_tokens": 44,
+            "completion_tokens": 127,
+            "decode_tok_s": 69.8356630421626,
+            "finish_reason": "stop",
+            "output": "*   **Eliminates Redundant Computation**: It caches the Key-Value (KV) states of previously processed prefixes, allowing the server to skip recomputing attention mechanisms for repeated text segments.\n*   **Reduces Latency**: By reusing cached KV pairs, the model can start generating new tokens immediately without waiting for the full sequential processing of the common prefix, significantly speeding up response times.\n*   **Optimizes Memory Bandwidth**: It minimizes the amount of data transferred between GPU memory and compute units during the initial phase of inference, leading to higher throughput and more efficient resource utilization."
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "median_wall_s": 2.2917442499999936,
+      "median_aggregate_tok_s": 219.91982744147887
+    }
+  },
+  "rss_kib_samples": [
+    {
+      "t": 1784871824.521408,
+      "rss_kib": 12045488
+    },
+    {
+      "t": 1784871824.810764,
+      "rss_kib": 12071088
+    },
+    {
+      "t": 1784871825.098083,
+      "rss_kib": 12071088
+    },
+    {
+      "t": 1784871825.392808,
+      "rss_kib": 12071088
+    },
+    {
+      "t": 1784871825.68452,
+      "rss_kib": 12071504
+    },
+    {
+      "t": 1784871825.968959,
+      "rss_kib": 12077920
+    },
+    {
+      "t": 1784871826.258137,
+      "rss_kib": 12079264
+    },
+    {
+      "t": 1784871826.543699,
+      "rss_kib": 12080576
+    },
+    {
+      "t": 1784871826.83111,
+      "rss_kib": 12104160
+    },
+    {
+      "t": 1784871827.119478,
+      "rss_kib": 12104160
+    },
+    {
+      "t": 1784871827.410801,
+      "rss_kib": 12104160
+    },
+    {
+      "t": 1784871827.70167,
+      "rss_kib": 12104160
+    },
+    {
+      "t": 1784871827.991925,
+      "rss_kib": 12104496
+    },
+    {
+      "t": 1784871828.2824278,
+      "rss_kib": 12104464
+    },
+    {
+      "t": 1784871828.5727592,
+      "rss_kib": 12104464
+    },
+    {
+      "t": 1784871828.860676,
+      "rss_kib": 12104464
+    },
+    {
+      "t": 1784871829.1505752,
+      "rss_kib": 12104464
+    },
+    {
+      "t": 1784871829.440107,
+      "rss_kib": 12104464
+    },
+    {
+      "t": 1784871829.727257,
+      "rss_kib": 12104464
+    },
+    {
+      "t": 1784871830.021923,
+      "rss_kib": 12104464
+    },
+    {
+      "t": 1784871830.3155808,
+      "rss_kib": 12104448
+    },
+    {
+      "t": 1784871830.60417,
+      "rss_kib": 12104464
+    },
+    {
+      "t": 1784871830.893328,
+      "rss_kib": 12104464
+    },
+    {
+      "t": 1784871831.181726,
+      "rss_kib": 12104704
+    },
+    {
+      "t": 1784871831.468469,
+      "rss_kib": 12104688
+    },
+    {
+      "t": 1784871831.756756,
+      "rss_kib": 12104768
+    },
+    {
+      "t": 1784871832.0522392,
+      "rss_kib": 12104864
+    },
+    {
+      "t": 1784871832.338838,
+      "rss_kib": 12104864
+    },
+    {
+      "t": 1784871832.628347,
+      "rss_kib": 12104864
+    },
+    {
+      "t": 1784871832.91267,
+      "rss_kib": 12104816
+    },
+    {
+      "t": 1784871833.197108,
+      "rss_kib": 12104832
+    },
+    {
+      "t": 1784871833.485663,
+      "rss_kib": 12104832
+    },
+    {
+      "t": 1784871833.7772381,
+      "rss_kib": 12104848
+    },
+    {
+      "t": 1784871834.068065,
+      "rss_kib": 12104848
+    },
+    {
+      "t": 1784871834.35463,
+      "rss_kib": 12104848
+    },
+    {
+      "t": 1784871834.643693,
+      "rss_kib": 12104848
+    },
+    {
+      "t": 1784871834.9305449,
+      "rss_kib": 12104848
+    },
+    {
+      "t": 1784871835.217472,
+      "rss_kib": 12104848
+    },
+    {
+      "t": 1784871835.500711,
+      "rss_kib": 12104848
+    },
+    {
+      "t": 1784871835.7884102,
+      "rss_kib": 12104864
+    },
+    {
+      "t": 1784871836.07182,
+      "rss_kib": 12104864
+    },
+    {
+      "t": 1784871836.3692281,
+      "rss_kib": 12104864
+    },
+    {
+      "t": 1784871836.658575,
+      "rss_kib": 12105024
+    },
+    {
+      "t": 1784871836.950828,
+      "rss_kib": 12105024
+    },
+    {
+      "t": 1784871837.236806,
+      "rss_kib": 12105024
+    },
+    {
+      "t": 1784871837.531557,
+      "rss_kib": 12105008
+    },
+    {
+      "t": 1784871837.817334,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871838.1056309,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871838.395992,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871838.687412,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871838.977947,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871839.272033,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871839.56079,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871839.849843,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871840.1372192,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871840.424729,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871840.7156212,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871841.0014322,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871841.2890189,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871841.579054,
+      "rss_kib": 12105040
+    },
+    {
+      "t": 1784871841.867285,
+      "rss_kib": 12105152
+    },
+    {
+      "t": 1784871842.155804,
+      "rss_kib": 12105152
+    },
+    {
+      "t": 1784871842.445377,
+      "rss_kib": 12105152
+    },
+    {
+      "t": 1784871842.7327502,
+      "rss_kib": 12105104
+    },
+    {
+      "t": 1784871843.0211809,
+      "rss_kib": 12105104
+    },
+    {
+      "t": 1784871843.309964,
+      "rss_kib": 11999776
+    },
+    {
+      "t": 1784871843.613039,
+      "rss_kib": 12000128
+    },
+    {
+      "t": 1784871843.904408,
+      "rss_kib": 11999952
+    },
+    {
+      "t": 1784871844.196074,
+      "rss_kib": 12000000
+    },
+    {
+      "t": 1784871844.489076,
+      "rss_kib": 12000000
+    },
+    {
+      "t": 1784871844.7790568,
+      "rss_kib": 11999264
+    },
+    {
+      "t": 1784871845.0705779,
+      "rss_kib": 11999280
+    },
+    {
+      "t": 1784871845.356867,
+      "rss_kib": 11999296
+    },
+    {
+      "t": 1784871845.649297,
+      "rss_kib": 11999424
+    },
+    {
+      "t": 1784871845.939818,
+      "rss_kib": 12000016
+    },
+    {
+      "t": 1784871846.226364,
+      "rss_kib": 12000016
+    },
+    {
+      "t": 1784871846.516997,
+      "rss_kib": 12000016
+    },
+    {
+      "t": 1784871846.803989,
+      "rss_kib": 12003968
+    },
+    {
+      "t": 1784871847.093927,
+      "rss_kib": 12003968
+    },
+    {
+      "t": 1784871847.382636,
+      "rss_kib": 12003968
+    },
+    {
+      "t": 1784871847.674348,
+      "rss_kib": 12003968
+    },
+    {
+      "t": 1784871847.9644842,
+      "rss_kib": 12004816
+    },
+    {
+      "t": 1784871848.254102,
+      "rss_kib": 12004880
+    },
+    {
+      "t": 1784871848.54912,
+      "rss_kib": 12004880
+    },
+    {
+      "t": 1784871848.840341,
+      "rss_kib": 12004880
+    },
+    {
+      "t": 1784871849.1286342,
+      "rss_kib": 12004880
+    },
+    {
+      "t": 1784871849.419564,
+      "rss_kib": 12005136
+    },
+    {
+      "t": 1784871849.711016,
+      "rss_kib": 12005184
+    },
+    {
+      "t": 1784871850.001796,
+      "rss_kib": 12005184
+    },
+    {
+      "t": 1784871850.291584,
+      "rss_kib": 12005216
+    },
+    {
+      "t": 1784871850.579745,
+      "rss_kib": 12005216
+    },
+    {
+      "t": 1784871850.8685708,
+      "rss_kib": 12005312
+    },
+    {
+      "t": 1784871851.1586921,
+      "rss_kib": 12005312
+    },
+    {
+      "t": 1784871851.444246,
+      "rss_kib": 12005312
+    },
+    {
+      "t": 1784871851.736266,
+      "rss_kib": 12005312
+    },
+    {
+      "t": 1784871852.030308,
+      "rss_kib": 12005296
+    },
+    {
+      "t": 1784871852.318132,
+      "rss_kib": 12005360
+    },
+    {
+      "t": 1784871852.612946,
+      "rss_kib": 12005360
+    },
+    {
+      "t": 1784871852.903695,
+      "rss_kib": 12005360
+    },
+    {
+      "t": 1784871853.191981,
+      "rss_kib": 12005360
+    },
+    {
+      "t": 1784871853.483447,
+      "rss_kib": 12005344
+    },
+    {
+      "t": 1784871853.77261,
+      "rss_kib": 12004816
+    },
+    {
+      "t": 1784871854.063448,
+      "rss_kib": 12004640
+    },
+    {
+      "t": 1784871854.353059,
+      "rss_kib": 12004592
+    },
+    {
+      "t": 1784871854.645065,
+      "rss_kib": 12004592
+    },
+    {
+      "t": 1784871854.939157,
+      "rss_kib": 12004592
+    },
+    {
+      "t": 1784871855.2256901,
+      "rss_kib": 12003968
+    },
+    {
+      "t": 1784871855.5133362,
+      "rss_kib": 12003968
+    },
+    {
+      "t": 1784871855.803743,
+      "rss_kib": 12004592
+    },
+    {
+      "t": 1784871856.093524,
+      "rss_kib": 12004592
+    },
+    {
+      "t": 1784871856.382442,
+      "rss_kib": 12004592
+    },
+    {
+      "t": 1784871856.670269,
+      "rss_kib": 12004608
+    },
+    {
+      "t": 1784871856.958177,
+      "rss_kib": 12004624
+    },
+    {
+      "t": 1784871857.25106,
+      "rss_kib": 12006896
+    },
+    {
+      "t": 1784871857.543455,
+      "rss_kib": 12006848
+    },
+    {
+      "t": 1784871857.844096,
+      "rss_kib": 12006896
+    },
+    {
+      "t": 1784871858.132973,
+      "rss_kib": 12006896
+    },
+    {
+      "t": 1784871858.426463,
+      "rss_kib": 12006896
+    },
+    {
+      "t": 1784871858.7180212,
+      "rss_kib": 12006896
+    },
+    {
+      "t": 1784871859.003732,
+      "rss_kib": 12006416
+    },
+    {
+      "t": 1784871859.293797,
+      "rss_kib": 12006416
+    },
+    {
+      "t": 1784871859.5838661,
+      "rss_kib": 12006928
+    },
+    {
+      "t": 1784871859.871001,
+      "rss_kib": 12006928
+    },
+    {
+      "t": 1784871860.160699,
+      "rss_kib": 12007168
+    },
+    {
+      "t": 1784871860.44866,
+      "rss_kib": 12007264
+    },
+    {
+      "t": 1784871860.732909,
+      "rss_kib": 12007264
+    },
+    {
+      "t": 1784871861.0233269,
+      "rss_kib": 12010144
+    },
+    {
+      "t": 1784871861.314367,
+      "rss_kib": 12010160
+    },
+    {
+      "t": 1784871861.6062562,
+      "rss_kib": 12010016
+    },
+    {
+      "t": 1784871861.891875,
+      "rss_kib": 12010016
+    },
+    {
+      "t": 1784871862.181668,
+      "rss_kib": 12010016
+    },
+    {
+      "t": 1784871862.474613,
+      "rss_kib": 12009408
+    },
+    {
+      "t": 1784871862.7658381,
+      "rss_kib": 12009360
+    },
+    {
+      "t": 1784871863.054912,
+      "rss_kib": 12009360
+    },
+    {
+      "t": 1784871863.345257,
+      "rss_kib": 12009856
+    },
+    {
+      "t": 1784871863.63429,
+      "rss_kib": 12009856
+    },
+    {
+      "t": 1784871863.9245849,
+      "rss_kib": 12009856
+    },
+    {
+      "t": 1784871864.212736,
+      "rss_kib": 12009856
+    },
+    {
+      "t": 1784871864.5036979,
+      "rss_kib": 12009856
+    },
+    {
+      "t": 1784871864.791003,
+      "rss_kib": 12011584
+    },
+    {
+      "t": 1784871865.083331,
+      "rss_kib": 12011904
+    },
+    {
+      "t": 1784871865.371579,
+      "rss_kib": 12011920
+    },
+    {
+      "t": 1784871865.660995,
+      "rss_kib": 12011920
+    },
+    {
+      "t": 1784871865.949862,
+      "rss_kib": 12011920
+    },
+    {
+      "t": 1784871866.240936,
+      "rss_kib": 12011920
+    },
+    {
+      "t": 1784871866.5348978,
+      "rss_kib": 12011920
+    },
+    {
+      "t": 1784871866.828425,
+      "rss_kib": 12011920
+    },
+    {
+      "t": 1784871867.116957,
+      "rss_kib": 12011920
+    },
+    {
+      "t": 1784871867.4021802,
+      "rss_kib": 12011952
+    },
+    {
+      "t": 1784871867.6925042,
+      "rss_kib": 12011952
+    },
+    {
+      "t": 1784871867.98428,
+      "rss_kib": 12011952
+    },
+    {
+      "t": 1784871868.275537,
+      "rss_kib": 12011952
+    },
+    {
+      "t": 1784871868.562884,
+      "rss_kib": 12011936
+    },
+    {
+      "t": 1784871868.855031,
+      "rss_kib": 12014016
+    },
+    {
+      "t": 1784871869.148349,
+      "rss_kib": 12014016
+    },
+    {
+      "t": 1784871869.4433851,
+      "rss_kib": 12014000
+    },
+    {
+      "t": 1784871869.731049,
+      "rss_kib": 12014000
+    },
+    {
+      "t": 1784871870.025882,
+      "rss_kib": 12014000
+    },
+    {
+      "t": 1784871870.316519,
+      "rss_kib": 12013440
+    },
+    {
+      "t": 1784871870.60729,
+      "rss_kib": 12013424
+    },
+    {
+      "t": 1784871870.898604,
+      "rss_kib": 12013424
+    },
+    {
+      "t": 1784871871.185188,
+      "rss_kib": 12014032
+    },
+    {
+      "t": 1784871871.4755359,
+      "rss_kib": 12014032
+    },
+    {
+      "t": 1784871871.764352,
+      "rss_kib": 12014032
+    },
+    {
+      "t": 1784871872.054996,
+      "rss_kib": 12014032
+    },
+    {
+      "t": 1784871872.341272,
+      "rss_kib": 12013984
+    },
+    {
+      "t": 1784871872.628948,
+      "rss_kib": 12063312
+    },
+    {
+      "t": 1784871872.913058,
+      "rss_kib": 12088896
+    },
+    {
+      "t": 1784871873.202624,
+      "rss_kib": 12088896
+    },
+    {
+      "t": 1784871873.490703,
+      "rss_kib": 12088896
+    },
+    {
+      "t": 1784871873.78135,
+      "rss_kib": 12088912
+    },
+    {
+      "t": 1784871874.067483,
+      "rss_kib": 12088912
+    },
+    {
+      "t": 1784871874.3554602,
+      "rss_kib": 12088912
+    },
+    {
+      "t": 1784871874.646034,
+      "rss_kib": 12088912
+    },
+    {
+      "t": 1784871874.936995,
+      "rss_kib": 12051456
+    },
+    {
+      "t": 1784871875.223098,
+      "rss_kib": 12080448
+    },
+    {
+      "t": 1784871875.5068831,
+      "rss_kib": 12080448
+    },
+    {
+      "t": 1784871875.794661,
+      "rss_kib": 12080448
+    },
+    {
+      "t": 1784871876.084301,
+      "rss_kib": 12080448
+    },
+    {
+      "t": 1784871876.37215,
+      "rss_kib": 12080448
+    },
+    {
+      "t": 1784871876.658766,
+      "rss_kib": 12080448
+    },
+    {
+      "t": 1784871876.946204,
+      "rss_kib": 12080464
+    },
+    {
+      "t": 1784871877.233074,
+      "rss_kib": 12048656
+    },
+    {
+      "t": 1784871877.52176,
+      "rss_kib": 12080480
+    },
+    {
+      "t": 1784871877.8090508,
+      "rss_kib": 12080480
+    },
+    {
+      "t": 1784871878.096592,
+      "rss_kib": 12080480
+    },
+    {
+      "t": 1784871878.384717,
+      "rss_kib": 12080480
+    },
+    {
+      "t": 1784871878.672348,
+      "rss_kib": 12080480
+    },
+    {
+      "t": 1784871878.958403,
+      "rss_kib": 12080480
+    },
+    {
+      "t": 1784871879.245853,
+      "rss_kib": 12080432
+    }
+  ],
+  "rss_kib_summary": {
+    "min": 11999264,
+    "max": 12105152,
+    "median": 12014008.0
+  }
+}

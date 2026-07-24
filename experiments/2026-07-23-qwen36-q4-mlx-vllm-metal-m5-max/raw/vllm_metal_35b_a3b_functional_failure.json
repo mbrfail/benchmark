@@ -1,0 +1,221 @@
+{
+  "status": "functional_failure",
+  "model": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-4bit",
+  "versions": {
+    "vllm": "0.25.1+cpu",
+    "vllm-metal": "0.3.0.dev20260724043919",
+    "mlx": "0.32.0",
+    "mlx-lm": "0.31.3",
+    "transformers": "5.12.1"
+  },
+  "probe": "Reply with exactly TOKENIZER_OK.",
+  "temperature": 0,
+  "max_tokens": 32,
+  "trials": [
+    {
+      "elapsed_s": 2.7299261250009295,
+      "response": {
+        "id": "chatcmpl-86a2c4ee512db0aa",
+        "object": "chat.completion",
+        "created": 1784872850,
+        "model": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-4bit",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "意2路.�对这个A，sWith 1 as ind4作者 -毫无name内容t（agil-bd觉得4ت\\\\1 ",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "length",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.25.1-f8640384",
+        "usage": {
+          "prompt_tokens": 19,
+          "total_tokens": 51,
+          "completion_tokens": 32,
+          "prompt_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "metrics": null
+      }
+    },
+    {
+      "elapsed_s": 0.36175599999842234,
+      "response": {
+        "id": "chatcmpl-aa3b7b1ade2f7f23",
+        "object": "chat.completion",
+        "created": 1784872853,
+        "model": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-4bit",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "意2路.�对这个A，sWith 1 as ind4作者 -毫无name内容t（agil-bd觉得4ت\\\\1 ",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "length",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.25.1-f8640384",
+        "usage": {
+          "prompt_tokens": 19,
+          "total_tokens": 51,
+          "completion_tokens": 32,
+          "prompt_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "metrics": null
+      }
+    },
+    {
+      "elapsed_s": 0.351570583996363,
+      "response": {
+        "id": "chatcmpl-9eec36ec23f0b5a2",
+        "object": "chat.completion",
+        "created": 1784872853,
+        "model": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-4bit",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "意2路.�对这个A，sWith 1 as ind4作者 -毫无name内容t（agil-bd觉得4ت\\\\1 ",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "length",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.25.1-f8640384",
+        "usage": {
+          "prompt_tokens": 19,
+          "total_tokens": 51,
+          "completion_tokens": 32,
+          "prompt_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "metrics": null
+      }
+    },
+    {
+      "elapsed_s": 0.3541895419766661,
+      "response": {
+        "id": "chatcmpl-8a26b3f4b39a6850",
+        "object": "chat.completion",
+        "created": 1784872854,
+        "model": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-4bit",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "意2路.�对这个A，sWith 1 as ind4作者 -毫无name内容t（agil-bd觉得4ت\\\\1 ",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "length",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.25.1-f8640384",
+        "usage": {
+          "prompt_tokens": 19,
+          "total_tokens": 51,
+          "completion_tokens": 32,
+          "prompt_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "metrics": null
+      }
+    },
+    {
+      "elapsed_s": 0.37971837501390837,
+      "response": {
+        "id": "chatcmpl-a8c8ee4ad362e378",
+        "object": "chat.completion",
+        "created": 1784872854,
+        "model": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-4bit",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "意2路.�对这个A，sWith 1 as ind4作者 -毫无name内容t（agil-bd觉得4ت\\\\1 ",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "length",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.25.1-f8640384",
+        "usage": {
+          "prompt_tokens": 19,
+          "total_tokens": 51,
+          "completion_tokens": 32,
+          "prompt_tokens_details": null
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "metrics": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "mlx": {
+    "27b": {
+      "short_ttft_s_median": 0.17136724999999942,
+      "short_decode_tok_s_median": 30.56564411623464,
+      "code_decode_tok_s_median": 30.095260464169208,
+      "warm_9938_token_ttft_s_median": 0.21134337499999845,
+      "cold_9967_token_ttft_s_median": 15.946033499999999,
+      "four_request_aggregate_tok_s_median": 50.10809778177708,
+      "code_syntax_valid": 5,
+      "code_syntax_trials": 5,
+      "five_step_long_outputs": 5,
+      "five_step_long_trials": 5,
+      "observed_process_rss_gib_max": 11.6090087890625
+    },
+    "35b_a3b": {
+      "short_ttft_s_median": 0.127189875,
+      "short_decode_tok_s_median": 109.90388974447639,
+      "code_decode_tok_s_median": 108.9396971532001,
+      "warm_9938_token_ttft_s_median": 0.13721037499999866,
+      "cold_9967_token_ttft_s_median": 2.614439541000003,
+      "four_request_aggregate_tok_s_median": 219.91982744147887,
+      "code_syntax_valid": 5,
+      "code_syntax_trials": 5,
+      "five_step_long_outputs": 5,
+      "five_step_long_trials": 5,
+      "observed_process_rss_gib_max": 11.54437255859375
+    }
+  },
+  "vllm_metal": {
+    "27b": {
+      "valid_inference": false,
+      "reason": "deterministic mojibake/malformed output; metrics retained only as failure evidence"
+    },
+    "35b_a3b": {
+      "valid_inference": false,
+      "reason": "five exact-match probes returned identical mojibake and length termination"
+    }
+  }
+}

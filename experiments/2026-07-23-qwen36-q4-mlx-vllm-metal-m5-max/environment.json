@@ -1,0 +1,44 @@
+{
+  "host": {
+    "hostname": "MacBook-Pro-2.local",
+    "machine": "MacBook Pro",
+    "model_identifier": "Mac17,6",
+    "chip": "Apple M5 Max",
+    "cpu_cores": 18,
+    "memory_gb": 64,
+    "os": "macOS 26.5.2",
+    "build": "25F84",
+    "kernel": "Darwin 25.5.0 arm64",
+    "storage_available_at_inventory": "approximately 1.5 TiB"
+  },
+  "target_note": "User initially described M4 Max 64 GB; live inspection of 192.168.0.130 showed M5 Max 64 GB and user explicitly approved proceeding on that host.",
+  "mlx_runtime": {
+    "python": "/Users/tenglong/.lmstudio/extensions/backends/vendor/_amphibian/app-mlx-generate-mac26-arm64@29/bin/python",
+    "mlx": "0.31.2",
+    "mlx_lm": "0.31.3",
+    "mlx_vlm": "0.6.1",
+    "transformers": "5.10.2"
+  },
+  "vllm_metal_runtime": {
+    "venv": "/Users/tenglong/.venv-vllm-metal",
+    "vllm": "0.25.1+cpu",
+    "vllm_metal": "0.3.0.dev20260724043919",
+    "mlx": "0.32.0",
+    "mlx_lm": "0.31.3",
+    "mlx_vlm": "0.6.4",
+    "transformers": "5.12.1",
+    "installer_sha256": "682373fe2354e52a98dc7bc6c4ceae37f7bd5c56647b72fc0dd06a7ab8b851f9"
+  },
+  "measurement": {
+    "client_location": "on target host via loopback",
+    "endpoint": "OpenAI-compatible /v1/chat/completions",
+    "temperature": 0.0,
+    "thinking": false,
+    "sequential_repetitions": 5,
+    "warmup": "one identical request before each ordinary workload",
+    "cold_prefill": "unique nonce before long body to prevent long-prefix reuse",
+    "concurrency": "three waves of four simultaneous short requests",
+    "power": "not measured; powermetrics required an interactive sudo password",
+    "memory": "process-tree RSS sampling; mmap/unified-memory accounting makes this a lower-bound observation, not total model residency"
+  }
+}
