@@ -1,0 +1,14 @@
+{
+  "models_status": 200,
+  "model": "/Users/tenglong/models/Qwen3.6-35B-A3B-FP8",
+  "max_model_len": 32768,
+  "chat_status": 200,
+  "content": "TOKENIZER_OK",
+  "reasoning": null,
+  "usage": {
+    "prompt_tokens": 22,
+    "total_tokens": 26,
+    "completion_tokens": 4,
+    "prompt_tokens_details": null
+  }
+}

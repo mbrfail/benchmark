@@ -1,0 +1,7 @@
+{
+  "runtime": "vLLM-Metal isolated environment: mlx-lm 0.31.3 / MLX 0.32.0",
+  "model": "/Users/tenglong/.lmstudio/models/lmstudio-community/Qwen3.6-35B-A3B-MLX-4bit",
+  "prompt": "<|im_start|>user\nReply with exactly TOKENIZER_OK and nothing else.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "output": "TOKENIZER_OK",
+  "exact_match": true
+}

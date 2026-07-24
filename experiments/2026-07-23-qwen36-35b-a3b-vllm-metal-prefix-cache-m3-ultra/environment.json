@@ -1,0 +1,54 @@
+{
+  "date": "2026-07-23/24 PDT",
+  "host": {
+    "computer_name": "Teng’s Mac Studio",
+    "hostname": "Tengs-Mac-Studio.local",
+    "model_identifier": "Mac15,14",
+    "chip": "Apple M3 Ultra",
+    "cpu_cores": "28 (20 performance, 8 efficiency)",
+    "gpu_cores": 60,
+    "unified_memory_gb": 256,
+    "metal": "Metal 4",
+    "os": "macOS 26.5.1",
+    "build": "25F80",
+    "kernel": "Darwin 25.5.0 arm64",
+    "storage_available_at_inventory": "381 GiB",
+    "swap_at_inventory": "0 MB"
+  },
+  "runtime": {
+    "python": "3.12.12",
+    "vllm": "0.25.1+cpu",
+    "vllm_metal": "0.3.0.dev20260724043919",
+    "vllm_metal_source_revision": "e60573a1a9f48497ce4f30979083f675076a88fa",
+    "vllm_metal_wheel_sha256": "f44e4f1fc07c7bd5a9fb2a215849df495e94f178c7afe2acbda632e965f64386",
+    "mlx": "0.32.0",
+    "mlx_lm": "0.31.3",
+    "mlx_vlm": "0.6.4",
+    "transformers": "5.12.1",
+    "venv": "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal"
+  },
+  "valid_configuration": {
+    "model_repo": "Qwen/Qwen3.6-35B-A3B-FP8",
+    "model_revision": "95a723d08a9490559dae23d0cff1d9466213d989",
+    "local_path": "/Users/tenglong/models/Qwen3.6-35B-A3B-FP8",
+    "local_regular_file_bytes": 37493015668,
+    "max_model_len": 32768,
+    "max_num_seqs": 4,
+    "paged_attention": true,
+    "metal_memory_fraction": 0.5,
+    "automatic_prefix_caching": false,
+    "thinking": false,
+    "tool_parser": "qwen3_xml",
+    "endpoint": "http://127.0.0.1:8094/v1"
+  },
+  "persistent_service_preserved": {
+    "port": 8081,
+    "model": "lmstudio-community/Qwen3.6-35B-A3B-MLX-8bit",
+    "action": "left untouched"
+  },
+  "install_notes": {
+    "source_install": "Dependencies installed, but native-artifact build failed because local Xcode could not load CoreSimulator.framework.",
+    "resolution": "Installed the verified official release wheel containing prebuilt Metal artifacts.",
+    "temporary_scheduler_diagnostic": "A one-line non-paged admission-only patch was used for one community-Q4 diagnostic and then restored before the valid official-FP8 run."
+  }
+}

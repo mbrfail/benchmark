@@ -1,0 +1,75 @@
+INFO 07-24 00:15:53 [__init__.py:44] Available plugins for group vllm.platform_plugins:
+INFO 07-24 00:15:53 [__init__.py:46] - metal -> vllm_metal:register
+INFO 07-24 00:15:53 [__init__.py:58] Loading plugin metal
+WARNING 07-24 00:15:54 [compat.py:504] Could not install vLLM ByteLevel tokenizer compatibility patch because vLLM tokenizer registry is unavailable: cannot import name 'common_broadcastable_dtype' from partially initialized module 'vllm.utils.torch_utils' (most likely due to a circular import) (/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/utils/torch_utils.py)
+INFO 07-24 00:15:54 [__init__.py:237] Platform plugin metal is activated
+INFO 07-24 00:15:55 [importing.py:88] Triton not installed or not compatible; certain GPU-related functions will not be available.
+objc[10346]: Class AVFFrameReceiver is implemented in both /Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x120fac3a8) and /opt/homebrew/Cellar/ffmpeg/8.1.1/lib/libavdevice.62.3.101.dylib (0x125ac8328). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[10346]: Class AVFAudioReceiver is implemented in both /Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x120fac3f8) and /opt/homebrew/Cellar/ffmpeg/8.1.1/lib/libavdevice.62.3.101.dylib (0x125ac8378). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+(APIServer pid=10346) INFO 07-24 00:15:56 [api_utils.py:339]
+(APIServer pid=10346) INFO 07-24 00:15:56 [api_utils.py:339]        █     █     █▄   ▄█
+(APIServer pid=10346) INFO 07-24 00:15:56 [api_utils.py:339]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.25.1
+(APIServer pid=10346) INFO 07-24 00:15:56 [api_utils.py:339]   █▄█▀ █     █     █     █  model   /Users/tenglong/models/Qwen3.6-35B-A3B-FP8
+(APIServer pid=10346) INFO 07-24 00:15:56 [api_utils.py:339]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=10346) INFO 07-24 00:15:56 [api_utils.py:339]
+(APIServer pid=10346) INFO 07-24 00:15:56 [api_utils.py:273] non-default args: {'model_tag': '/Users/tenglong/models/Qwen3.6-35B-A3B-FP8', 'enable_auto_tool_choice': True, 'tool_call_parser': 'qwen3_xml', 'host': '127.0.0.1', 'port': 8094, 'model': '/Users/tenglong/models/Qwen3.6-35B-A3B-FP8', 'trust_remote_code': True, 'max_model_len': 32768, 'enable_prefix_caching': True, 'max_num_seqs': 4}
+(APIServer pid=10346) WARNING 07-24 00:15:56 [system_utils.py:299] Found ulimit of 2048 and failed to automatically increase with error current limit exceeds maximum limit. This can cause fd limit errors like `OSError: [Errno 24] Too many open files`. Consider increasing with ulimit -n
+(APIServer pid=10346) INFO 07-24 00:15:56 [model.py:619] Resolved architecture: Qwen3_5MoeForConditionalGeneration
+(APIServer pid=10346) INFO 07-24 00:15:56 [model.py:1776] Using max model len 32768
+(APIServer pid=10346) WARNING 07-24 00:15:56 [interface.py:358] Failed to import from vllm._C: ImportError("dlopen(/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/_C.abi3.so, 0x0002): symbol not found in flat namespace '__Z13cpu_fused_moeRN2at6TensorERKS0_S3_S3_RKNSt3__18optionalIS0_EES8_S3_S3_bRKNS4_12basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEESG_'")
+(APIServer pid=10346) WARNING 07-24 00:15:56 [interface.py:358] Failed to import from vllm._C: ImportError("dlopen(/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/_C.abi3.so, 0x0002): symbol not found in flat namespace '__Z13cpu_fused_moeRN2at6TensorERKS0_S3_S3_RKNSt3__18optionalIS0_EES8_S3_S3_bRKNS4_12basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEESG_'")
+(APIServer pid=10346) WARNING 07-24 00:15:56 [interface.py:358] Failed to import from vllm._C: ImportError("dlopen(/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/_C.abi3.so, 0x0002): symbol not found in flat namespace '__Z13cpu_fused_moeRN2at6TensorERKS0_S3_S3_RKNSt3__18optionalIS0_EES8_S3_S3_bRKNS4_12basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEESG_'")
+(APIServer pid=10346) WARNING 07-24 00:15:56 [interface.py:358] Failed to import from vllm._C: ImportError("dlopen(/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/_C.abi3.so, 0x0002): symbol not found in flat namespace '__Z13cpu_fused_moeRN2at6TensorERKS0_S3_S3_RKNSt3__18optionalIS0_EES8_S3_S3_bRKNS4_12basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEESG_'")
+(APIServer pid=10346) INFO 07-24 00:15:56 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=8192.
+(APIServer pid=10346) WARNING 07-24 00:15:56 [config.py:563] Mamba cache mode is set to 'align' for Qwen3_5MoeForConditionalGeneration by default when prefix caching is enabled
+(APIServer pid=10346) INFO 07-24 00:15:56 [config.py:583] Warning: Prefix caching in Mamba cache 'align' mode is currently enabled. Its support for Mamba layers is experimental. Please report any issues you may observe.
+(APIServer pid=10346) INFO 07-24 00:15:56 [vllm.py:1042] Asynchronous scheduling is enabled.
+(APIServer pid=10346) INFO 07-24 00:15:56 [kernel.py:292] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(APIServer pid=10346) Traceback (most recent call last):
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/bin/vllm", line 10, in <module>
+(APIServer pid=10346)     sys.exit(main())
+(APIServer pid=10346)              ^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 95, in main
+(APIServer pid=10346)     args.dispatch_function(args)
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 148, in cmd
+(APIServer pid=10346)     uvloop.run(run_server(args))
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=10346)     return __asyncio.run(
+(APIServer pid=10346)            ^^^^^^^^^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+(APIServer pid=10346)     return runner.run(main)
+(APIServer pid=10346)            ^^^^^^^^^^^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=10346)     return self._loop.run_until_complete(task)
+(APIServer pid=10346)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=10346)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=10346)     return await main
+(APIServer pid=10346)            ^^^^^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 698, in run_server
+(APIServer pid=10346)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 712, in run_server_worker
+(APIServer pid=10346)     async with build_async_engine_client(
+(APIServer pid=10346)                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=10346)     return await anext(self.gen)
+(APIServer pid=10346)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 100, in build_async_engine_client
+(APIServer pid=10346)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=10346)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=10346)     return await anext(self.gen)
+(APIServer pid=10346)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 124, in build_async_engine_client_from_engine_args
+(APIServer pid=10346)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+(APIServer pid=10346)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 2338, in create_engine_config
+(APIServer pid=10346)     config = VllmConfig(
+(APIServer pid=10346)              ^^^^^^^^^^^
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/pydantic/_internal/_dataclasses.py", line 121, in __init__
+(APIServer pid=10346)     s.__pydantic_validator__.validate_python(ArgsKwargs(args, kwargs), self_instance=s)
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm/config/vllm.py", line 1384, in __post_init__
+(APIServer pid=10346)     current_platform.check_and_update_config(self)
+(APIServer pid=10346)   File "/Users/tenglong/vllm-metal-prefix-exp/.venv-vllm-metal/lib/python3.12/site-packages/vllm_metal/platform.py", line 452, in check_and_update_config
+(APIServer pid=10346)     raise NotImplementedError(
+(APIServer pid=10346) NotImplementedError: Prefix caching and Mamba cache modes are not supported for hybrid GDN models on Metal because GDN recurrent state cannot be restored from KV blocks.
